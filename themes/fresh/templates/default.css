@@ -1,0 +1,753 @@
+/* 
+reset.css
+v1.0 | 20080212 */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
+{
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	margin:0;
+	padding:0;
+}
+
+/***********************************************
+           General style rules                
+***********************************************/
+body
+{
+	line-height:1;
+	font-family:Helvetica Neue;
+	font-size:12px;
+	color:#111;
+	background:#e8e8e8;
+}
+
+blockquote,q
+{
+	quotes:none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after
+{
+	content:none;
+}
+
+:focus
+{
+	outline:0;
+}
+
+del
+{
+	text-decoration:line-through;
+}
+
+table
+{
+	border-collapse:collapse;
+	border-spacing:0;
+}
+
+.error
+{
+	color:#c33;
+}
+
+a
+{
+	color:#111;
+	text-decoration:none;
+}
+
+h3
+{
+	font-size:20px;
+}
+
+/***********************************************
+           Wrappers                           
+***********************************************/
+#maincontainer
+{
+	width:1350px;
+}
+
+#sidebar
+{
+	width:180px;
+}
+
+#content
+{
+	margin-top:32px;
+	margin-left:200px;
+	width:945px;
+}
+
+.box
+{
+	margin-top:5px;
+}
+
+#rightbar
+{
+	width:180px;
+	margin-top:32px;
+	margin-left:1155px;
+	position:absolute;
+	clear:both;
+}
+
+/***********************************************
+           Header                             
+***********************************************/
+#header
+{
+	background:#222;
+	line-height:30px;
+	height:50px;
+	padding:7px;
+}
+
+#header .box-inside
+{
+	width:550px;
+	text-align:right;
+	float:right;
+}
+
+#header .clearfix
+{
+	clear:none;
+}
+
+#header .box-inside input
+{
+	border:2px solid #666;
+	border-radius:2px;
+	background:#000;
+	font-weight:700;
+	color:#eee;
+	font-size:10px;
+	width:120px;
+	padding:4px;
+}
+
+#header input.button
+{
+	width:80px;
+	background:#222;
+}
+
+#header #advSearchBtn
+{
+	color:#aaa;
+	padding:4px;
+}
+
+#header #loginInfo
+{
+	color:#eee;
+}
+
+#header #loginInfo a
+{
+	color:#ccc;
+}
+
+/***********************************************
+           Sidebar                            
+***********************************************/
+#sidebar-tabs
+{
+	width:180px;
+	background:#e8e8e8;
+	float:left;
+	padding:7px;
+}
+
+#sidebar-tabs li.sb1
+{
+	float:left;
+	margin-right:5px;
+}
+
+#sidebar-tabs .sb2 li
+{
+	background:#fff;
+	border-radius:4px;
+	margin-top:7px;
+	padding:7px;
+}
+
+#sidebar-page
+{
+	position:absolute;
+	padding-bottom:0.5em;
+	width:180px;
+	left:7px;
+}
+
+#sidebar-tabs .sb2 li h4
+{
+	font-weight:700;
+	display:block;
+	border-radius:3px;
+	background:#ddd;
+	color:#222;
+	padding:5px;
+}
+
+#sidebar-tabs .sb2 li ul li
+{
+	background:#fff;
+	border-radius:0;
+	margin-top:0;
+	padding:0;
+}
+
+#sidebar-tabs .sb2 li ul li a
+{
+	font-weight:700;
+	display:block;
+	border-radius:3px;
+	padding:5px;
+}
+
+#sidebar-tabs .sb2 li ul li a:hover
+{
+	background:#d2e6f9;
+}
+
+#sidebar-tabs .sb2 #browse_filters li
+{
+	background:#f9f9f9;
+}
+
+#sidebar-tabs .sb2 #browse_filters #multi_alpha_filterLabel
+{
+	margin:5px 3px 0;
+	display: block;
+}
+
+#sidebar-tabs .sb2 #browse_filters input
+{
+	border:1px solid #bbb;
+	border-radius:2px;
+	padding:4px;
+}
+
+/***********************************************
+                  Rightbar                    
+***********************************************/
+#rightbar
+{
+	background:#fff;
+	border-radius:4px;
+	padding:7px;
+}
+
+#rightbar #rb_action
+{
+	padding:4px;
+}
+
+#rightbar li#rb_add,#rightbar li#pl_add
+{
+	position:relative;
+	z-index:10;
+}
+
+#rightbar li:hover .submenu
+{
+	display:block;
+}
+
+#rightbar .submenu
+{
+	display:none;
+	position:absolute;
+	left:-50px;
+	top:14px;
+	background:#fff;
+	border:2px solid silver;
+	width:120px;
+	padding:0.6em;
+}
+
+* html #rightbar .submenu
+{
+	right:100px;
+}
+
+/* IE6 fix */
+#rightbar .submenu a
+{
+	display:block;
+	border-bottom:1px dotted #ddd;
+	color:#5b5b5b;
+	text-decoration:none;
+	text-align:left;
+	padding:0.4em;
+}
+
+#rightbar .submenu a:hover,#rightbar #rb_current_playlist a:hover
+{
+	color:#333;
+}
+
+#rightbar #rb_current_playlist li
+{
+	position:relative;
+	line-height:14px;
+	color:#5b5b5b;
+	padding-right:20px;
+}
+
+#rightbar #rb_current_playlist li a
+{
+	display:block;
+	padding:0.2em;
+}
+
+#rightbar .delitem
+{
+	position:absolute;
+	right:0;
+	top:0;
+}
+
+/* Rightbar Localplay Controls */
+#rightbar #localplay-control
+{
+	padding-left:5px;
+}
+
+/***********************************************
+           Content                            
+***********************************************/
+#ajax-loading
+{
+	position:absolute;
+	background:#444;
+	text-align:center;
+	width:90px;
+	top:0;
+	color:#bbb;
+	margin:0 auto;
+	padding: 3px 1px 3px 10px;
+	border: 2px solid #333;
+	border-top: 0px;
+	border-left: 0px;
+	background: #444 url(../images/ajax-loader.gif) no-repeat 2px;
+}
+
+.box-content h3.box-title,#browse_content .box h3.box-title
+{
+	display:block;
+	background:#888;
+	color:#eee;
+	border-bottom:1px solid #335b0d;
+	border-top-right-radius:3px;
+	border-top-left-radius:3px;
+	font-weight:400;
+	padding:7px;
+}
+
+#browse_content .box.browse_song h3.box-title
+{
+	background:#66B717;
+}
+
+#browse_content .box.browse_album h3.box-title
+{
+	background:#09c;
+}
+
+#browse_content .box.browse_artist h3.box-title
+{
+	background:#c60;
+}
+
+.list-header
+{
+	border-left:1px solid #bbb;
+	border-right:1px solid #bbb;
+	padding:7px;
+}
+
+table.tabledata
+{
+	width:100%;
+	text-align:left;
+	border:1px solid #bbb;
+}
+
+table.tabledata th
+{
+	border:1px solid #bbb;
+	border-left:1px solid #ccc;
+	border-right:1px solid #ccc;
+	border-top:1px solid #ccc;
+	background:#eee;
+	font-weight:700;
+	font-size:11px;
+	color:#444;
+	padding:7px 10px;
+}
+
+table.tabledata tbody
+{
+	background:#fff;
+}
+
+table.tabledata tbody td
+{
+	vertical-align:middle;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	padding:4px 10px;
+}
+
+#browse_content table.tabledata tbody tr:hover
+{
+	background:#b3d6f7;
+}
+
+table.tabledata tbody .odd
+{
+	background:#eee;
+}
+
+table.tabledata tbody .cel_add
+{
+	width:14px;
+}
+
+table.tabledata tbody .cel_artist
+{
+	min-width:120px;
+}
+
+table.tabledata tbody .cel_action
+{
+	width:70px;
+}
+
+table.tabledata tbody td.cel_rating
+{
+	min-width:93px;
+	padding:4px 3px;
+}
+
+table.tabledata tbody .cel_tags
+{
+	max-width:80px;
+}
+
+table.tabledata tbody .cel_cover img {
+    border: 4px double #bbb;
+}
+
+/***********************************************
+           Content (info-box)                 
+***********************************************/
+#content .info-box h3
+{
+	margin-top:10px;
+}
+
+#content .info-box .box-content div.star-rating
+{
+	width:150px;
+	max-width:150px;
+}
+
+/* Random */
+#random_selection .random_album
+{
+	float:left;
+	width:100px;
+}
+
+#random_selection .box-bottom
+{
+	clear:left;
+}
+
+/***********************************************
+    Content (Tag cloud)                
+***********************************************/
+.box-content #tag_filter
+{
+	padding:5px 0px;
+}
+
+.clearfix {
+    clear: left;
+}
+
+.box-bottom {
+    clear: both;
+}
+
+span.fatalerror {
+    color: #c60;
+    padding: 5px;
+    display: block;
+}
+
+.box-content #tag_filter span
+{
+	padding: 2px 6px;
+	border: 1px solid #bbb;
+	margin: 1px;
+	float: left;
+	background: #e8e8e8;
+}
+
+.box-content #tag_filter span:hover {
+    background: #ddd;
+    color: #222;
+    border: 1px solid #888;
+}
+
+/***********************************************
+    Content (information-actions)      
+***********************************************/
+#information_actions
+{
+	margin-top:10px;
+	width:300px;
+}
+
+#information_actions h3 {
+    display: none; /* only showing up in album view, so strange..bug*/
+}
+
+#content .info-box .box-content .album_art {
+    float: right;
+    border: 4px double #ccc;
+}
+
+#information_actions ul li
+{
+	border-bottom:1px solid #ccc;
+	padding:3px 0;
+}
+
+#information_actions .star-rating li
+{
+	padding:0;
+}
+
+#information_actions li img
+{
+	vertical-align:top;
+}
+
+#information_actions li a
+{
+	vertical-align:bottom;
+}
+
+#information_actions li a:hover
+{
+	color:#09c;
+}
+
+/***********************************************
+        Styles for the star ratings           
+***********************************************/
+.star-rating
+{
+	position:relative;
+}
+
+.dynamic-star-rating
+{
+	width:95px;
+}
+
+.star-rating ul,.star-rating a:hover,.star-rating .current-rating
+{
+	background:url(../../../themes/eigan/images/ratings/star_rating.png) left -1000px repeat-x;
+}
+
+.star-rating ul
+{
+	position:relative;
+	width:80px;
+	height:15px;
+	overflow:hidden;
+	list-style:none;
+	background-position:left top;
+	margin:0;
+	padding:0;
+}
+
+.star-rating a,.star-rating span,.star-rating .current-rating
+{
+	position:absolute;
+	top:0;
+	left:0;
+	text-indent:-1000em;
+	height:15px;
+	line-height:15px;
+	outline:none;
+	overflow:hidden;
+	border:none;
+}
+
+.star-rating .star1
+{
+	width:20%;
+	z-index:6;
+}
+
+.star-rating .star2
+{
+	width:40%;
+	z-index:5;
+}
+
+.star-rating .star3
+{
+	width:60%;
+	z-index:4;
+}
+
+.star-rating .star4
+{
+	width:80%;
+	z-index:3;
+}
+
+.star-rating .star5
+{
+	width:100%;
+	z-index:2;
+}
+
+.star-rating .current-rating
+{
+	z-index:1;
+	background-position:left bottom;
+}
+
+.star-rating a.star0
+{
+	left:0;
+	width:16px;
+	background:url(../../../images/ratings/x_off.gif) left top;
+}
+
+/* hovering effect only for dynamic star rating */
+.dynamic-star-rating a:hover
+{
+	background-position:left center;
+}
+
+.dynamic-star-rating a:hover.star0
+{
+	background:url(../../../images/ratings/x.gif) left top;
+}
+
+.dynamic-star-rating ul
+{
+	left:16px;
+}
+
+.box_preferences h4
+{
+	font-size:15px;
+	background:#555;
+	color:#eee;
+	font-weight:400;
+	border:1px solid #333;
+	padding:5px;
+}
+
+/***********************************************
+        Content (Track view)                                
+***********************************************/
+dl.song_details {
+    padding: 0.5em;
+}
+
+dl.song_details dd {
+    margin: 0 0 0 110px;
+    padding: 0 0 0.5em 0;
+}
+
+dl.song_details dt {
+    float: left;
+    clear: left;
+    width: 80px;
+    text-align: right;
+    font-weight: bold;
+    color: #c60;
+}
+
+dl.song_details a:hover {
+    color: #09c;
+    text-decoration: underline;
+}
+
+
+/***********************************************
+        Footer                                
+***********************************************/
+#footer
+{
+	text-align:right;
+	width: 1350px;
+	margin-top: 20px;
+}
+
+#footer a:hover {
+    color: #09c;
+    text-decoration: underline;
+}
+
+
+/***********************************************
+        Other                                
+***********************************************/
+ol,ul,#rightbar ul
+{
+	list-style:none;
+}
+
+ins,#rightbar a
+{
+	text-decoration:none;
+}
+
+.clearfix,#content .info-box .box-content,#additional_information
+{
+	clear:both;
+}
+
+#header #headerlogo
+{
+	float:left;
+}
+
+#header .box-inside div,#header .box-inside form,#rightbar #rb_action li,.star-rating li
+{
+	display:inline;
+}
+
+#rightbar a:hover,.list-header a:hover
+{
+	text-decoration:underline;
+}
+
+#localplay-control span,.box-content #tag_filter span
+{
+	cursor:pointer;
+}
