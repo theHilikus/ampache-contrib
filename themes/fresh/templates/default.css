@@ -1,6 +1,6 @@
-/* 
-reset.css
-v1.0 | 20080212 */
+/***********************************************
+           General style rules                
+***********************************************/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td
 {
 	border:0;
@@ -12,13 +12,10 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	padding:0;
 }
 
-/***********************************************
-           General style rules                
-***********************************************/
 body
 {
 	line-height:1;
-	font-family:Helvetica Neue;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size:12px;
 	color:#111;
 	background:#e8e8e8;
@@ -64,6 +61,13 @@ a
 h3
 {
 	font-size:20px;
+}
+
+hr {
+  border-top: 1px solid #bbb; 
+  border-bottom: 1px solid #eee; 
+  border-right: 0;
+  border-left: 0;
 }
 
 /***********************************************
@@ -166,6 +170,7 @@ h3
 	background:#e8e8e8;
 	float:left;
 	padding:7px;
+	margin-left: 8px;
 }
 
 #sidebar-tabs li.sb1
@@ -254,6 +259,10 @@ h3
 	padding:4px;
 }
 
+#rightbar #rb_action li {
+    margin-right: 5px;
+}
+
 #rightbar li#rb_add,#rightbar li#pl_add
 {
 	position:relative;
@@ -277,6 +286,10 @@ h3
 	padding:0.6em;
 }
 
+#rightbar #rb_action .submenu li {
+    margin: 0;
+}
+
 * html #rightbar .submenu
 {
 	right:100px;
@@ -293,7 +306,7 @@ h3
 	padding:0.4em;
 }
 
-#rightbar .submenu a:hover,#rightbar #rb_current_playlist a:hover
+#rightbar .submenu a:hover
 {
 	color:#333;
 }
@@ -301,8 +314,6 @@ h3
 #rightbar #rb_current_playlist li
 {
 	position:relative;
-	line-height:14px;
-	color:#5b5b5b;
 	padding-right:20px;
 }
 
@@ -310,6 +321,19 @@ h3
 {
 	display:block;
 	padding:0.2em;
+	color:#5b5b5b;
+	border-bottom: 1px solid #f3f3f3;
+	line-height:16px;
+}
+
+#rightbar #rb_current_playlist li a:hover 
+{
+    color: #111;
+}
+
+#rightbar #rb_current_playlist li.odd
+{
+    background: #f9f9f9;
 }
 
 #rightbar .delitem
@@ -375,6 +399,7 @@ h3
 {
 	border-left:1px solid #bbb;
 	border-right:1px solid #bbb;
+	border-bottom: 1px solid #bbb;
 	padding:7px;
 }
 
@@ -390,7 +415,6 @@ table.tabledata th
 	border:1px solid #bbb;
 	border-left:1px solid #ccc;
 	border-right:1px solid #ccc;
-	border-top:1px solid #ccc;
 	background:#eee;
 	font-weight:700;
 	font-size:11px;
@@ -398,9 +422,18 @@ table.tabledata th
 	padding:7px 10px;
 }
 
+#browse_content table.tabledata th, #browse_content table.tabledata
+{
+    border-top: 0px;
+}
+
 table.tabledata tbody
 {
 	background:#fff;
+}
+
+table .th-bottom {
+    border-top: 1px solid #ccc;
 }
 
 table.tabledata tbody td
@@ -448,8 +481,19 @@ table.tabledata tbody .cel_tags
 	max-width:80px;
 }
 
-table.tabledata tbody .cel_cover img {
+table.tabledata tbody .cel_cover img
+{
     border: 4px double #bbb;
+}
+
+.box_preferences h4
+{
+	font-size:15px;
+	background:#555;
+	color:#eee;
+	font-weight:400;
+	border:1px solid #333;
+	padding:5px;
 }
 
 /***********************************************
@@ -466,11 +510,24 @@ table.tabledata tbody .cel_cover img {
 	max-width:150px;
 }
 
-/* Random */
+/* Random album (homepage) */
 #random_selection .random_album
 {
 	float:left;
 	width:100px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#random_selection .random_album .star-rating
+{
+    margin-top: 5px;
+}
+
+#random_selection .random_album .play_album
+{
+    display: block;
+    margin-top: 5px;
 }
 
 #random_selection .box-bottom
@@ -509,7 +566,8 @@ span.fatalerror {
 	background: #e8e8e8;
 }
 
-.box-content #tag_filter span:hover {
+.box-content #tag_filter span:hover
+{
     background: #ddd;
     color: #222;
     border: 1px solid #888;
@@ -524,11 +582,13 @@ span.fatalerror {
 	width:300px;
 }
 
-#information_actions h3 {
+#information_actions h3
+{
     display: none; /* only showing up in album view, so strange..bug*/
 }
 
-#content .info-box .box-content .album_art {
+#content .info-box .box-content .album_art
+{
     float: right;
     border: 4px double #ccc;
 }
@@ -559,131 +619,97 @@ span.fatalerror {
 	color:#09c;
 }
 
-/***********************************************
-        Styles for the star ratings           
-***********************************************/
+/************************************************/
+/*        Styles for the star ratings           */
+/************************************************/
 .star-rating
 {
-	position:relative;
+    position:relative;
 }
-
 .dynamic-star-rating
 {
-	width:95px;
+    width:95px;
 }
-
-.star-rating ul,.star-rating a:hover,.star-rating .current-rating
-{
-	background:url(../../../themes/eigan/images/ratings/star_rating.png) left -1000px repeat-x;
-}
-
-.star-rating ul
-{
-	position:relative;
-	width:80px;
-	height:15px;
-	overflow:hidden;
-	list-style:none;
-	background-position:left top;
-	margin:0;
-	padding:0;
-}
-
-.star-rating a,.star-rating span,.star-rating .current-rating
-{
-	position:absolute;
-	top:0;
-	left:0;
-	text-indent:-1000em;
-	height:15px;
-	line-height:15px;
-	outline:none;
-	overflow:hidden;
-	border:none;
-}
-
-.star-rating .star1
-{
-	width:20%;
-	z-index:6;
-}
-
-.star-rating .star2
-{
-	width:40%;
-	z-index:5;
-}
-
-.star-rating .star3
-{
-	width:60%;
-	z-index:4;
-}
-
-.star-rating .star4
-{
-	width:80%;
-	z-index:3;
-}
-
-.star-rating .star5
-{
-	width:100%;
-	z-index:2;
-}
-
+.star-rating ul,
+.star-rating a:hover,
 .star-rating .current-rating
 {
-	z-index:1;
-	background-position:left bottom;
+    background: url(../../../themes/fresh/images/ratings/star_rating.png) left -1000px repeat-x;
 }
+.star-rating ul
+{
+    position:relative;
+    width:80px;
+    height:15px;
+    overflow:hidden;
+    list-style:none;
+    margin:0;
+    padding:0;
+    background-position: left top;
+}
+.star-rating li
+{
+    display: inline;
+}
+
+.star-rating a, .star-rating span,  
+.star-rating .current-rating
+{
+    position:absolute;
+    top:0;
+    left:0;
+    text-indent:-1000em;
+    height:15px;
+    line-height:15px;
+    outline:none;
+    overflow:hidden;
+    border:none;
+}
+
+.star-rating .star1 { width:20%; z-index:6; }
+.star-rating .star2 { width:40%; z-index:5; }
+.star-rating .star3 { width:60%; z-index:4; }
+.star-rating .star4 { width:80%; z-index:3; }
+.star-rating .star5 { width:100%; z-index:2;}
+.star-rating .current-rating { z-index:1; background-position: left bottom; }
 
 .star-rating a.star0
 {
-	left:0;
-	width:16px;
-	background:url(../../../images/ratings/x_off.gif) left top;
+    left:0px;
+    width:16px;
+    background: url(../../../images/ratings/x_off.gif) left top;
 }
 
-/* hovering effect only for dynamic star rating */
 .dynamic-star-rating a:hover
 {
-	background-position:left center;
+    background-position: left center;
 }
 
 .dynamic-star-rating a:hover.star0
 {
-	background:url(../../../images/ratings/x.gif) left top;
+    background: url(../../../images/ratings/x.gif) left top;
 }
-
 .dynamic-star-rating ul
 {
-	left:16px;
-}
-
-.box_preferences h4
-{
-	font-size:15px;
-	background:#555;
-	color:#eee;
-	font-weight:400;
-	border:1px solid #333;
-	padding:5px;
+    left:16px;
 }
 
 /***********************************************
         Content (Track view)                                
 ***********************************************/
-dl.song_details {
+dl.song_details
+{
     padding: 0.5em;
 }
 
-dl.song_details dd {
-    margin: 0 0 0 110px;
+dl.song_details dd
+{
+    margin: 0 0 0 95px;
     padding: 0 0 0.5em 0;
 }
 
-dl.song_details dt {
+dl.song_details dt
+{
     float: left;
     clear: left;
     width: 80px;
@@ -692,7 +718,8 @@ dl.song_details dt {
     color: #c60;
 }
 
-dl.song_details a:hover {
+dl.song_details a:hover
+{
     color: #09c;
     text-decoration: underline;
 }
@@ -711,6 +738,139 @@ dl.song_details a:hover {
 #footer a:hover {
     color: #09c;
     text-decoration: underline;
+}
+
+/***********************************************
+           Login                            
+***********************************************/
+#loginPage #header
+{
+    padding-left: 20px;
+    border: 1px solid #000;
+}
+
+#loginPage #maincontainer {
+    width: 470px;
+    margin: 40px auto 0;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+#loginPage #loginbox {
+    padding: 20px;
+}
+
+#loginPage #loginbox h2
+{
+    display: none;
+}
+
+#loginPage #loginbox label
+{
+	float: left;
+	width: 110px;
+	font-weight: bold;
+	color: #333;
+	text-align: right;
+	vertical-align: middle;
+    line-height: 30px;
+    margin-right: 20px;
+}
+
+#loginPage #loginbox .loginfield input
+{
+	padding: 5px;
+	border: 1px solid #ccc;
+	width: 170px;
+	color: #444;
+	font-size: 12px;
+    outline: 0px;
+    vertical-align: middle;
+}
+
+#loginPage #loginbox a.button
+{
+    color: #777;
+    cursor: pointer;
+    padding: 4px 10px;
+}
+
+#loginPage #loginbox a:hover
+{
+    color: #111;
+}
+
+#loginPage .loginfield
+{
+    width: 400px;
+}
+
+#loginPage span.error
+{
+    display: block;
+    clear: left;
+    padding: 10px;
+    background: #ff9999;
+    border: 1px solid #cc3333;
+    font-weight: bold;
+    color: #990000;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#loginPage .formValidation
+{
+    clear: left;
+    background: #eee;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#loginPage #loginbox input.button
+{
+    padding: 4px 10px;
+    border: 1px solid #bbb;
+    font-weight: bold;
+    color: #333;
+    background: #e9e9e9;
+    cursor: pointer;
+}
+
+#loginPage input#rememberme
+{
+    margin-top: 7px;
+}
+
+#loginPage input#lostpasswordbutton 
+{
+    margin-left: 130px;
+}
+
+#loginPage #loginbox input.button:hover 
+{
+    background: #ddd;
+    border: 1px solid #aaa;
+}
+
+#loginPage #footer 
+{
+    width: 470px;
+    margin: 10px auto;
+    color: #888;
+}
+
+#loginPage #footer a 
+{
+    color: #555;
+}
+
+/***********************************************
+        Server settings                                
+***********************************************/
+table.tabledata .cel_php_setting, table.tabledata .cel_configuration, .cel_preference 
+{
+    width: 200px;
 }
 
 
@@ -742,7 +902,7 @@ ins,#rightbar a
 	display:inline;
 }
 
-#rightbar a:hover,.list-header a:hover
+.list-header a:hover
 {
 	text-decoration:underline;
 }
