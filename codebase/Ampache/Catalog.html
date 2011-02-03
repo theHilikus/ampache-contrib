@@ -1,0 +1,2874 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class Catalog</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Catalog</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Catalog Class</p>
+<p class="description"><p>This class handles all actual work in regards to the catalog,  it contains functions for creating/listing/updated the catalogs.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Karl Vollmer &lt;<a href="mailto:vollmer@ampache.org">vollmer@ampache.org</a>&gt;</li>
+				<li><span class="field">version:</span> Release: 3.6</li>
+				<li><span class="field">copyright:</span> 2001 - 2011 Ampache.org</li>
+				<li><span class="field">link:</span> <a href="http://www.ampache.org/">http://www.ampache.org/</a></li>
+				<li><span class="field">since:</span> Class available since Release 1.0</li>
+				<li><span class="field">license:</span> <a href="http://opensource.org/licenses/gpl-2.0">GPLv2</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---class---catalog.class.php.html">/lib/class/catalog.class.php</a> (line <span class="field">49</span>)
+		</p>
+		
+				
+		<pre><a href="../Ampache/database_object.html">database_object</a>
+   |
+   --Catalog</pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+												<div class="var-title">
+					static <span class="var-type">mixed</span>
+					<a href="#$albums" title="details" class="var-name">$albums</a>
+				</div>
+																<div class="var-title">
+					static <span class="var-type">mixed</span>
+					<a href="#$artists" title="details" class="var-name">$artists</a>
+				</div>
+																																																																																								<div class="var-title">
+					static <span class="var-type">mixed</span>
+					<a href="#$tags" title="details" class="var-name">$tags</a>
+				</div>
+																<div class="var-title">
+					static <span class="var-type">mixed</span>
+					<a href="#$_art_albums" title="details" class="var-name">$_art_albums</a>
+				</div>
+																																																				<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$catalog_type" title="details" class="var-name">$catalog_type</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$key" title="details" class="var-name">$key</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$last_add" title="details" class="var-name">$last_add</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$last_clean" title="details" class="var-name">$last_clean</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$last_update" title="details" class="var-name">$last_update</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$name" title="details" class="var-name">$name</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$path" title="details" class="var-name">$path</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$rename_pattern" title="details" class="var-name">$rename_pattern</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$sort_pattern" title="details" class="var-name">$sort_pattern</a>
+				</div>
+																																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_filecache" title="details" class="var-name">$_filecache</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_playlists" title="details" class="var-name">$_playlists</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																		
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#check_album" title="details" class="method-name">check_album</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$album</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$album_year</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$disk</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$mbid</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$readonly</span> = <span class="var-default">false</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#check_artist" title="details" class="method-name">check_artist</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$artist</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$mbid</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$readonly</span> = <span class="var-default">''</span>])
+									</div>
+																														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#check_tag" title="details" class="method-name">check_tag</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$object_id</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$object_type</span> = <span class="var-default">'song'</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#check_title" title="details" class="method-name">check_title</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">0</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#clean" title="details" class="method-name">clean</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#clean_albums" title="details" class="method-name">clean_albums</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#clean_artists" title="details" class="method-name">clean_artists</a>
+										()
+									</div>
+																						
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#clean_ext_info" title="details" class="method-name">clean_ext_info</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#clean_flagged" title="details" class="method-name">clean_flagged</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#clean_playlists" title="details" class="method-name">clean_playlists</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#clean_shoutbox" title="details" class="method-name">clean_shoutbox</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#clean_stats" title="details" class="method-name">clean_stats</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#clean_tags" title="details" class="method-name">clean_tags</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#clear_stats" title="details" class="method-name">clear_stats</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#count_songs" title="details" class="method-name">count_songs</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">''</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#count_tags" title="details" class="method-name">count_tags</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">0</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#count_users" title="details" class="method-name">count_users</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">''</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#count_video" title="details" class="method-name">count_video</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">0</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#create" title="details" class="method-name">create</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#dump_album_art" title="details" class="method-name">dump_album_art</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$methods</span> = <span class="var-default">array()</span>])
+									</div>
+																																																														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#get_catalogs" title="details" class="method-name">get_catalogs</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#get_catalog_albums" title="details" class="method-name">get_catalog_albums</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span>)
+									</div>
+																						
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#get_catalog_ids" title="details" class="method-name">get_catalog_ids</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#get_disabled" title="details" class="method-name">get_disabled</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">0</span>])
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#get_duplicate_info" title="details" class="method-name">get_duplicate_info</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$item</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$search_type</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#get_duplicate_songs" title="details" class="method-name">get_duplicate_songs</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$search_method</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#get_from_path" title="details" class="method-name">get_from_path</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+																																						
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#get_stats" title="details" class="method-name">get_stats</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">0</span>])
+									</div>
+																																														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#optimize_tables" title="details" class="method-name">optimize_tables</a>
+										()
+									</div>
+																						
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#trim_prefix" title="details" class="method-name">trim_prefix</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$string</span>)
+									</div>
+																																						
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_media_from_tags" title="details" class="method-name">update_media_from_tags</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$media</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$sort_pattern</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$rename_pattern</span> = <span class="var-default">''</span>])
+									</div>
+																														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_settings" title="details" class="method-name">update_settings</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_single_item" title="details" class="method-name">update_single_item</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_song_from_tags" title="details" class="method-name">update_song_from_tags</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$results</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$song</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_video_from_tags" title="details" class="method-name">update_video_from_tags</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$results</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$video</span>)
+									</div>
+																																		
+				<div class="method-definition">
+											<span class="method-result">Catalog</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">''</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#add_files" title="details" class="method-name">add_files</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$path</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#add_to_catalog" title="details" class="method-name">add_to_catalog</a>
+										()
+									</div>
+																														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#check_local_mp3" title="details" class="method-name">check_local_mp3</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$full_file</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$gather_type</span> = <span class="var-default">''</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#check_remote_song" title="details" class="method-name">check_remote_song</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$url</span>)
+									</div>
+																																																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#clean_catalog" title="details" class="method-name">clean_catalog</a>
+										()
+									</div>
+																																																																																																																														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#exists_remote_song" title="details" class="method-name">exists_remote_song</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$url</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#export" title="details" class="method-name">export</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#format" title="details" class="method-name">format</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#generate_thumbnails" title="details" class="method-name">generate_thumbnails</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_album_ids" title="details" class="method-name">get_album_ids</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_art" title="details" class="method-name">get_art</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$all</span> = <span class="var-default">''</span>])
+									</div>
+																														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_catalog_files" title="details" class="method-name">get_catalog_files</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">0</span>])
+									</div>
+																																																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_remote_album_images" title="details" class="method-name">get_remote_album_images</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$token</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_remote_catalog" title="details" class="method-name">get_remote_catalog</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">0</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_remote_song" title="details" class="method-name">get_remote_song</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$token</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$start</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$end</span>)
+									</div>
+																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#import_m3u" title="details" class="method-name">import_m3u</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#insert_local_song" title="details" class="method-name">insert_local_song</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$file_info</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#insert_local_video" title="details" class="method-name">insert_local_video</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$filesize</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#insert_remote_song" title="details" class="method-name">insert_remote_song</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$song</span>)
+									</div>
+																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#run_add" title="details" class="method-name">run_add</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$options</span>)
+									</div>
+																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#update_last_add" title="details" class="method-name">update_last_add</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#update_last_clean" title="details" class="method-name">update_last_clean</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#update_last_update" title="details" class="method-name">update_last_update</a>
+										()
+									</div>
+																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#update_remote_album_images" title="details" class="method-name">update_remote_album_images</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$remote_server</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$auth</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$path</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#update_remote_catalog" title="details" class="method-name">update_remote_catalog</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$root_path</span>)
+									</div>
+																																														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#verify_catalog" title="details" class="method-name">verify_catalog</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_create_filecache" title="details" class="method-name">_create_filecache</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$albums" id="$albums"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$albums</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">68</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$artists" id="$artists"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$artists</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">69</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$tags" id="$tags"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$tags</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">70</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_art_albums" id="$_art_albums"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$_art_albums</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">71</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+
+<a name="var$catalog_type" id="$catalog_type"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$catalog_type</span>
+						(line <span class="line-number">58</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$key" id="$key"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$key</span>
+						(line <span class="line-number">55</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$last_add" id="$last_add"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$last_add</span>
+						(line <span class="line-number">53</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$last_clean" id="$last_clean"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$last_clean</span>
+						(line <span class="line-number">54</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$last_update" id="$last_update"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$last_update</span>
+						(line <span class="line-number">52</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$name" id="$name"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$name</span>
+						(line <span class="line-number">51</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$path" id="$path"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$path</span>
+						(line <span class="line-number">59</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$rename_pattern" id="$rename_pattern"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$rename_pattern</span>
+						(line <span class="line-number">56</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$sort_pattern" id="$sort_pattern"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$sort_pattern</span>
+						(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_filecache" id="$_filecache"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_filecache</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">65</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_playlists" id="$_playlists"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_playlists</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">62</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../Ampache/database_object.html">database_object</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../Ampache/database_object.html#var$cache_hit">database_object::$cache_hit</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../Ampache/database_object.html#var$object_cache">database_object::$object_cache</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../Ampache/database_object.html#var$_enabled">database_object::$_enabled</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcheck_album" id="check_album"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static check_album</span> (line <span class="line-number">2165</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_album</p>
+<p class="description"><p>Searches for album; if found returns id else inserts and returns id</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			check_album
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$album</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$album_year</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$disk</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$mbid</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$readonly</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$album</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$album_year</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$disk</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mbid</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$readonly</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheck_artist" id="check_artist"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static check_artist</span> (line <span class="line-number">2068</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_artist</p>
+<p class="description"><p>$artist checks if there then return id else insert and return id  If readonly is passed then don't create, return false on not found</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			check_artist
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$artist</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$mbid</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$readonly</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$artist</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mbid</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$readonly</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheck_tag" id="check_tag"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static check_tag</span> (line <span class="line-number">2251</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_tag</p>
+<p class="description"><p>This checks the tag we've been passed (name)  and sees if it exists, and if so if it's mapped  to this object, this is only done for songs for now</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			check_tag
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$object_id</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$object_type</span> = <span class="var-default">'song'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$object_id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$object_type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheck_title" id="check_title"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static check_title</span> (line <span class="line-number">2265</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_title</p>
+<p class="description"><p>this checks to make sure something is  set on the title, if it isn't it looks at the  filename and trys to set the title based on that</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			check_title
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$title</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$file</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$title</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclean" id="clean"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static clean</span> (line <span class="line-number">2011</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clean</p>
+<p class="description"><p>This is a wrapper function for all of the different cleaning  functions, it runs them in the correct order and takes a catalog_id</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clean
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclean_albums" id="clean_albums"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static clean_albums</span> (line <span class="line-number">1752</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clean_albums</p>
+<p class="description"><p>This function cleans out unused albums</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clean_albums
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclean_artists" id="clean_artists"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static clean_artists</span> (line <span class="line-number">1779</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clean_artists</p>
+<p class="description"><p>This function cleans out unused artists</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clean_artists
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclean_ext_info" id="clean_ext_info"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static clean_ext_info</span> (line <span class="line-number">1812</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clean_ext_info</p>
+<p class="description"><p>This function clears any ext_info that no longer has a parent</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clean_ext_info
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclean_flagged" id="clean_flagged"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static clean_flagged</span> (line <span class="line-number">1767</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clean_flagged</p>
+<p class="description"><p>This functions cleans ou unused flagged items</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clean_flagged
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclean_playlists" id="clean_playlists"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static clean_playlists</span> (line <span class="line-number">1794</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clean_playlists</p>
+<p class="description"><p>cleans out dead files from playlists</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clean_playlists
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclean_shoutbox" id="clean_shoutbox"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static clean_shoutbox</span> (line <span class="line-number">1728</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clean_shoutbox</p>
+<p class="description"><p>This cleans out any shoutbox items that are now orphaned</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clean_shoutbox
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclean_stats" id="clean_stats"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static clean_stats</span> (line <span class="line-number">1824</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clean_stats</p>
+<p class="description"><p>This functions removes stats for songs/albums that no longer exist</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clean_stats
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclean_tags" id="clean_tags"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static clean_tags</span> (line <span class="line-number">1699</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clean_tags</p>
+<p class="description"><p>This cleans out tag_maps that are not associated with a 'living' object  and then cleans the tags that have no maps</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clean_tags
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodclear_stats" id="clear_stats"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static clear_stats</span> (line <span class="line-number">246</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clear_stats</p>
+<p class="description"><p>This clears all stats for _everything_</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clear_stats
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcount_songs" id="count_songs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static count_songs</span> (line <span class="line-number">391</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">count_songs</p>
+<p class="description"><p>This returns the current # of songs, albums, artists, genres  in this catalog</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			count_songs
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcount_tags" id="count_tags"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static count_tags</span> (line <span class="line-number">375</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">count_tags</p>
+<p class="description"><p>This returns the current # of unique tags that exist in the database</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			count_tags
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcount_users" id="count_users"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static count_users</span> (line <span class="line-number">426</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">count_users</p>
+<p class="description"><p>This returns the total number of users in the ampache instance</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			count_users
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcount_video" id="count_video"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static count_video</span> (line <span class="line-number">358</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">count_video</p>
+<p class="description"><p>This returns the current # of video files we've got in the db</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			count_video
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreate" id="create"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static create</span> (line <span class="line-number">265</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">create</p>
+<p class="description"><p>This creates a new catalog entry and then returns the insert id  it checks to make sure this path is not already used before creating  the catalog</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			create
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static delete</span> (line <span class="line-number">2601</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">delete</p>
+<p class="description"><p>Deletes the catalog and everything associated with it  it takes the catalog id</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			delete
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddump_album_art" id="dump_album_art"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static dump_album_art</span> (line <span class="line-number">924</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">dump_album_art</p>
+<p class="description"><p>This runs through all of the albums and tries to dump the  art for them into the 'folder.jpg' file in the appropriate dir</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			dump_album_art
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$methods</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$methods</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_catalogs" id="get_catalogs"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static get_catalogs</span> (line <span class="line-number">179</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_catalogs</p>
+<p class="description"><p>Pull all the current catalogs and return an array of ids  of what you find</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			get_catalogs
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_catalog_albums" id="get_catalog_albums"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static get_catalog_albums</span> (line <span class="line-number">782</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_catalog_albums()</p>
+<p class="description"><p>Returns an array of the albums from a catalog</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			get_catalog_albums
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_catalog_ids" id="get_catalog_ids"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static get_catalog_ids</span> (line <span class="line-number">198</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_catalog_ids</p>
+<p class="description"><p>This returns an array of all catalog ids</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			get_catalog_ids
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_disabled" id="get_disabled"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static get_disabled</span> (line <span class="line-number">826</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_disabled</p>
+<p class="description"><p>Gets an array of the disabled songs for all catalogs  and returns full song objects with them</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			get_disabled
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$count</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$count</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_duplicate_info" id="get_duplicate_info"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static get_duplicate_info</span> (line <span class="line-number">892</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_duplicate_info</p>
+<p class="description"><p>This takes a song, search type and auto flag and returns the duplicate songs in the correct  order, it sorts them by longest, higest bitrate, largest filesize, checking  the last one as most likely bad</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			get_duplicate_info
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$item</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$search_type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$item</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$search_type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_duplicate_songs" id="get_duplicate_songs"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static get_duplicate_songs</span> (line <span class="line-number">848</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_duplicate_songs  This function takes a search type and returns a list of all song_ids that  are likely to be duplicates based on teh search method selected.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			get_duplicate_songs
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$search_method</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$search_method</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_from_path" id="get_from_path"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static get_from_path</span> (line <span class="line-number">129</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_from_path</p>
+<p class="description"><p>Try to figure out which catalog path most closely resembles this one  This is useful when creating a new catalog to make sure we're not doubling up here</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			get_from_path
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_stats" id="get_stats"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static get_stats</span> (line <span class="line-number">217</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_stats</p>
+<p class="description"><p>This returns an hash with the #'s for the different  objects that are associated with this catalog. This is used  to build the stats box, it also calculates time</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			get_stats
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodoptimize_tables" id="optimize_tables"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static optimize_tables</span> (line <span class="line-number">2032</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">optimize_tables  This runs an optimize on the tables and updates the stats to improve  join speed.</p>
+<p class="description"><p>This can be slow, but is a good idea to do from time to time. We do  it in case the dba isn't doing it... which we're going to assume they  aren't</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			optimize_tables
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodtrim_prefix" id="trim_prefix"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static trim_prefix</span> (line <span class="line-number">2049</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">trim_prefix</p>
+<p class="description"><p>Splits the prefix from the string</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			trim_prefix
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$string</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate_media_from_tags" id="update_media_from_tags"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_media_from_tags</span> (line <span class="line-number">1110</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_media_from_tags</p>
+<p class="description"><p>This is a 'wrapper' function calls the update function for the media  type in question</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_media_from_tags
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$media</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$sort_pattern</span> = <span class="var-default">''</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$rename_pattern</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$media</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$sort_pattern</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$rename_pattern</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate_settings" id="update_settings"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_settings</span> (line <span class="line-number">1040</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_settings</p>
+<p class="description"><p>This function updates the basic setting of the catalog</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_settings
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate_single_item" id="update_single_item"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_single_item</span> (line <span class="line-number">1060</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_single_item</p>
+<p class="description"><p>updates a single album,artist,song from the tag data  this can be done by 75+</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_single_item
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate_song_from_tags" id="update_song_from_tags"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_song_from_tags</span> (line <span class="line-number">1159</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_song_from_tags  Updates the song info based on tags; this is called from a bunch of  different places and passes in a full fledged song object, so it's a  static function.</p>
+<p class="description"><p>FIXME: This is an ugly mess, this really needs to be consolidated and  cleaned up.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_song_from_tags
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$results</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$song</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$results</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$song</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate_video_from_tags" id="update_video_from_tags"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_video_from_tags</span> (line <span class="line-number">1144</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_video_from_tags</p>
+<p class="description"><p>Updates the video info based on tags</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_video_from_tags
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$results</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$video</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$results</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$video</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">78</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+<p class="description"><p>Catalog class constructor, pulls catalog information  $catalog_id 	The ID of the catalog you want to build information from</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Catalog</span>
+		<span class="method-name">
+			__construct
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodadd_files" id="add_files"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">add_files</span> (line <span class="line-number">456</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">add_files  Recurses throught $this-&gt;path and pulls out all mp3s and returns the full  path in an array. Passes gather_type to determin if we need to check id3  information against the db.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add_files
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$path</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodadd_to_catalog" id="add_to_catalog"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">add_to_catalog</span> (line <span class="line-number">1227</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">add_to_catalog</p>
+<p class="description"><p>this function adds new files to an  existing catalog</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add_to_catalog
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcheck_local_mp3" id="check_local_mp3"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">check_local_mp3</span> (line <span class="line-number">2497</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_local_mp3</p>
+<p class="description"><p>Checks the song to see if it's there already returns true if found, false if not</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_local_mp3
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$full_file</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$gather_type</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$full_file</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$gather_type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheck_remote_song" id="check_remote_song"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">check_remote_song</span> (line <span class="line-number">2420</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_remote_song</p>
+<p class="description"><p>checks to see if a remote song exists in the database or not  if it find a song it returns the UID</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_remote_song
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$url</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodclean_catalog" id="clean_catalog"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">clean_catalog</span> (line <span class="line-number">1561</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clean_catalog</p>
+<p class="description"><p>Cleans the Catalog of files that no longer exist grabs from $this-&gt;id or $id passed  Doesn't actually delete anything, disables errored files, and returns them in an array</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			clean_catalog
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodexists_remote_song" id="exists_remote_song"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">exists_remote_song</span> (line <span class="line-number">2440</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">exists_remote_song</p>
+<p class="description"><p>checks to see if a remote song exists in the remote file or not  if it can't find a song it return the false</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			exists_remote_song
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$url</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$url</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodexport" id="export"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">export</span> (line <span class="line-number">2630</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">exports the catalog  it exports all songs in the database to the given export type.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			export
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodformat" id="format"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">format</span> (line <span class="line-number">163</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">format</p>
+<p class="description"><p>This makes the object human readable</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			format
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgenerate_thumbnails" id="generate_thumbnails"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">generate_thumbnails</span> (line <span class="line-number">750</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generate_thumbnails</p>
+<p class="description"><p>This generates the thumbnails from the images for object  of this catalog</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			generate_thumbnails
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_album_ids" id="get_album_ids"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_album_ids</span> (line <span class="line-number">640</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_album_ids</p>
+<p class="description"><p>This returns an array of ids of albums that have songs in this  catalog</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_album_ids
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_art" id="get_art"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_art</span> (line <span class="line-number">661</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_art</p>
+<p class="description"><p>This runs through all of the needs art albums and trys  to find the art for them from the mp3s</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_art
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$all</span> = <span class="var-default">''</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$all</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_catalog_files" id="get_catalog_files"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_catalog_files</span> (line <span class="line-number">802</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_catalog_files</p>
+<p class="description"><p>Returns an array of song objects from a catalog, used by sort_files script</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_catalog_files
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_remote_album_images" id="get_remote_album_images"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_remote_album_images</span> (line <span class="line-number">1426</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_album_images</p>
+<p class="description"><p>This function retrieves the album information from the remote server</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_remote_album_images
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$token</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$client</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$token</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_remote_catalog" id="get_remote_catalog"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_remote_catalog</span> (line <span class="line-number">1297</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_remote_catalog</p>
+<p class="description"><p>get a remote catalog and runs update if needed this requires  the XML RPC stuff and a key to be passed</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_remote_catalog
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_remote_song" id="get_remote_song"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_remote_song</span> (line <span class="line-number">1389</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_remote_song</p>
+<p class="description"><p>This functions takes a start and end point for gathering songs from a remote server. It is broken up  in attempt to get around the problem of very large target catalogs</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_remote_song
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$client</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$token</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$start</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$end</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$client</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$token</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$start</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$end</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodimport_m3u" id="import_m3u"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">import_m3u</span> (line <span class="line-number">2524</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">import_m3u</p>
+<p class="description"><p>this takes m3u filename and then attempts to create a Public Playlist based on the filenames  listed in the m3u</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			import_m3u
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinsert_local_song" id="insert_local_song"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert_local_song</span> (line <span class="line-number">2280</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">insert_local_song</p>
+<p class="description"><p>Insert a song that isn't already in the database this  function is in here so we don't have to create a song object</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			insert_local_song
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$file_info</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file_info</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinsert_local_video" id="insert_local_video"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert_local_video</span> (line <span class="line-number">2382</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">insert_local_video</p>
+<p class="description"><p>This inserts a video file into the video file table the tag  information we can get is super sketchy so it's kind of a crap shoot  here</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			insert_local_video
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$filesize</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filesize</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinsert_remote_song" id="insert_remote_song"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert_remote_song</span> (line <span class="line-number">2357</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">insert_remote_song  takes the information gotten from XML-RPC and  inserts it into the local database. The filename  ends up being the url.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			insert_remote_song
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$song</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$song</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrun_add" id="run_add"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">run_add</span> (line <span class="line-number">316</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">run_add</p>
+<p class="description"><p>This runs the add to catalog function  it includes the javascript refresh stuff and then starts rolling  throught the path for this catalog</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			run_add
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$options</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$options</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate_last_add" id="update_last_add"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">update_last_add</span> (line <span class="line-number">1016</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_last_add</p>
+<p class="description"><p>updates the last_add of the catalog</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			update_last_add
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_last_clean" id="update_last_clean"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">update_last_clean</span> (line <span class="line-number">1028</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_last_clean</p>
+<p class="description"><p>This updates the last clean information</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			update_last_clean
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_last_update" id="update_last_update"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">update_last_update</span> (line <span class="line-number">1003</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_last_update</p>
+<p class="description"><p>updates the last_update of the catalog</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			update_last_update
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_remote_album_images" id="update_remote_album_images"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">update_remote_album_images</span> (line <span class="line-number">1498</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			update_remote_album_images
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$remote_server</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$auth</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$remote_server</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$auth</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate_remote_catalog" id="update_remote_catalog"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">update_remote_catalog</span> (line <span class="line-number">1461</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_remote_catalog</p>
+<p class="description"><p>actually updates from the remote data, takes an array of songs that are base64 encoded and parses them</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			update_remote_catalog
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$root_path</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$root_path</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodverify_catalog" id="verify_catalog"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">verify_catalog</span> (line <span class="line-number">1870</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">verify_catalog</p>
+<p class="description"><p>This function compares the DB's information with the ID3 tags</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			verify_catalog
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_create_filecache" id="_create_filecache"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_create_filecache</span> (line <span class="line-number">99</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_create_filecache</p>
+<p class="description"><p>This poplates an array (filecache) on this object from the database  it is used to speed up the add process</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_create_filecache
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../Ampache/database_object.html">database_object</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../Ampache/database_object.html#methodadd_to_cache">database_object::add_to_cache()</a></span><br>
+													<span class="method-name"><a href="../Ampache/database_object.html#methodget_from_cache">database_object::get_from_cache()</a></span><br>
+													<span class="method-name"><a href="../Ampache/database_object.html#methodget_info">database_object::get_info()</a></span><br>
+													<span class="method-name"><a href="../Ampache/database_object.html#methodis_cached">database_object::is_cached()</a></span><br>
+													<span class="method-name"><a href="../Ampache/database_object.html#methodremove_from_cache">database_object::remove_from_cache()</a></span><br>
+													<span class="method-name"><a href="../Ampache/database_object.html#method_auto_init">database_object::_auto_init()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 03 Feb 2011 10:59:32 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

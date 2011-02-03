@@ -1,1352 +1,1553 @@
-<html>
-<head>
-<title>Docs For Class Update</title>
-<link rel="stylesheet" type="text/css" href="../media/style.css">
-</head>
-<body>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class Update</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Update</h2>
 
-<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
-  <tr>
-    <td class="header_top">Ampache</td>
-  </tr>
-  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
-  <tr>
-    <td class="header_menu">
-        
-                                    
-                                                                                                                                                      		  [ <a href="../classtrees_Ampache.html" class="menu">class tree: Ampache</a> ]
-		  [ <a href="../elementindex_Ampache.html" class="menu">index: Ampache</a> ]
-		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
-    </td>
-  </tr>
-  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
-</table>
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update Class</p>
+<p class="description"><p>this class handles updating from one version of  ampache to the next. Versions are a 6 digit number  <pre>  220000
+  ^
+  Major Revision
 
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr valign="top">
-    <td width="200" class="menu">
-	<div id="todolist">
-			<p><a href="../todolist.html">Todo List</a></p>
+  220000
+   ^
+  Minor Revision</pre></p><p>The last 4 digits are a build number...  If Minor can't go over 9 Major can go as high as we want</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Karl Vollmer &lt;<a href="mailto:vollmer@ampache.org">vollmer@ampache.org</a>&gt;</li>
+				<li><span class="field">version:</span> Release: 3.6</li>
+				<li><span class="field">copyright:</span> 2001 - 2011 Ampache.org</li>
+				<li><span class="field">link:</span> <a href="http://www.ampache.org/">http://www.ampache.org/</a></li>
+				<li><span class="field">since:</span> Class available since Release 1.0</li>
+				<li><span class="field">license:</span> <a href="http://opensource.org/licenses/gpl-2.0">GPLv2</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---class---update.class.php.html">/lib/class/update.class.php</a> (line <span class="field">61</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																												<div class="var-title">
+					static <span class="var-type">mixed</span>
+					<a href="#$versions" title="details" class="var-name">$versions</a>
+				</div>
+																				<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$key" title="details" class="var-name">$key</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$value" title="details" class="var-name">$value</a>
+				</div>
+																			</div>
+		</div>
 	</div>
-      <b>Packages:</b><br />
-              <a href="../li_Ampache.html">Ampache</a><br />
-              <a href="../li_Catalog.html">Catalog</a><br />
-              <a href="../li_Horde_Browser.html">Horde_Browser</a><br />
-              <a href="../li_Search.html">Search</a><br />
-              <a href="../li_Web.html">Web</a><br />
-              <a href="../li_XMLRPC.html">XMLRPC</a><br />
-              <a href="../li_XML_RPC.html">XML_RPC</a><br />
-            <br /><br />
-                        <b>Files:</b><br />
-      	  <div class="package">
-			<a href="../Ampache/_lib---class---access.class.php.html">		access.class.php
-		</a><br>
-			<a href="../Ampache/_admin---access.php.html">		access.php
-		</a><br>
-			<a href="../Ampache/_lib---class---ajax.class.php.html">		ajax.class.php
-		</a><br>
-			<a href="../Ampache/_server---ajax.server.php.html">		ajax.server.php
-		</a><br>
-			<a href="../Ampache/_lib---class---album.class.php.html">		album.class.php
-		</a><br>
-			<a href="../Ampache/_albums.php.html">		albums.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---AmazonSearchEngine.class.php.html">		AmazonSearchEngine.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---ampachemail.class.php.html">		ampachemail.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---ampacherss.class.php.html">		ampacherss.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---api.class.php.html">		api.class.php
-		</a><br>
-			<a href="../Ampache/_modules---archive---archive.lib.php.html">		archive.lib.php
-		</a><br>
-			<a href="../Ampache/_lib---class---artist.class.php.html">		artist.class.php
-		</a><br>
-			<a href="../Ampache/_artists.php.html">		artists.php
-		</a><br>
-			<a href="../Ampache/_lib---batch.lib.php.html">		batch.lib.php
-		</a><br>
-			<a href="../Ampache/_batch.php.html">		batch.php
-		</a><br>
-			<a href="../Ampache/_server---browse.ajax.php.html">		browse.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---browse.class.php.html">		browse.class.php
-		</a><br>
-			<a href="../Ampache/_browse.php.html">		browse.php
-		</a><br>
-			<a href="../Ampache/_modules---captcha---captcha.php.html">		captcha.php
-		</a><br>
-			<a href="../Ampache/_admin---catalog.php.html">		catalog.php
-		</a><br>
-			<a href="../Ampache/_bin---catalog_update.inc.html">		catalog_update.inc
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.nusoap_base.php.html">		class.nusoap_base.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soapclient.php.html">		class.soapclient.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_fault.php.html">		class.soap_fault.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_parser.php.html">		class.soap_parser.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_server.php.html">		class.soap_server.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_transport_http.php.html">		class.soap_transport_http.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_val.php.html">		class.soap_val.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.wsdl.php.html">		class.wsdl.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.wsdlcache.php.html">		class.wsdlcache.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.xmlschema.php.html">		class.xmlschema.php
-		</a><br>
-			<a href="../Ampache/_lib---class---config.class.php.html">		config.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---core.class.php.html">		core.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---database_object.abstract.php.html">		database_object.abstract.php
-		</a><br>
-			<a href="../Ampache/_lib---class---dba.class.php.html">		dba.class.php
-		</a><br>
-			<a href="../Ampache/_lib---debug.lib.php.html">		debug.lib.php
-		</a><br>
-			<a href="../Ampache/_bin---delete_disabled.inc.html">		delete_disabled.inc
-		</a><br>
-			<a href="../Ampache/_server---democratic.ajax.php.html">		democratic.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---democratic.class.php.html">		democratic.class.php
-		</a><br>
-			<a href="../Ampache/_democratic.php.html">		democratic.php
-		</a><br>
-			<a href="../Ampache/_bin---dump_album_art.inc.html">		dump_album_art.inc
-		</a><br>
-			<a href="../Ampache/_admin---duplicates.php.html">		duplicates.php
-		</a><br>
-			<a href="../Ampache/_lib---class---error.class.php.html">		error.class.php
-		</a><br>
-			<a href="../Ampache/_admin---export.php.html">		export.php
-		</a><br>
-			<a href="../Ampache/_bin---fix_filenames.inc.html">		fix_filenames.inc
-		</a><br>
-			<a href="../Ampache/_server---flag.ajax.php.html">		flag.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---flag.class.php.html">		flag.class.php
-		</a><br>
-			<a href="../Ampache/_admin---flag.php.html">		flag.php
-		</a><br>
-			<a href="../Ampache/_flag.php.html">		flag.php
-		</a><br>
-			<a href="../Ampache/_lib---general.lib.php.html">		general.lib.php
-		</a><br>
-			<a href="../Ampache/_lib---class---genre.class.php.html">		genre.class.php
-		</a><br>
-			<a href="../Ampache/_genre.php.html">		genre.php
-		</a><br>
-			<a href="../Ampache/_modules---emulator---gettext.php.html">		gettext.php
-		</a><br>
-			<a href="../Ampache/_lib---gettext.php.html">		gettext.php
-		</a><br>
-			<a href="../Ampache/_modules---localplay---httpq.controller.php.html">		httpq.controller.php
-		</a><br>
-			<a href="../Ampache/_modules---httpq---httpqplayer.class.php.html">		httpqplayer.class.php
-		</a><br>
-			<a href="../Ampache/_image.php.html">		image.php
-		</a><br>
-			<a href="../Ampache/_server---index.ajax.php.html">		index.ajax.php
-		</a><br>
-			<a href="../Ampache/_admin---index.php.html">		index.php
-		</a><br>
-			<a href="../Ampache/_index.php.html">		index.php
-		</a><br>
-			<a href="../Ampache/_play---index.php.html">		index.php
-		</a><br>
-			<a href="../Ampache/_lib---init.php.html">		init.php
-		</a><br>
-			<a href="../Ampache/_install.php.html">		install.php
-		</a><br>
-			<a href="../Ampache/_lib---install.php.html">		install.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---jamendoSearch.class.php.html">		jamendoSearch.class.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---lastfm.class.php.html">		lastfm.class.php
-		</a><br>
-			<a href="../Ampache/_modules---plugins---Lastfm.plugin.php.html">		Lastfm.plugin.php
-		</a><br>
-			<a href="../Ampache/_lib---class---localplay.abstract.php.html">		localplay.abstract.php
-		</a><br>
-			<a href="../Ampache/_server---localplay.ajax.php.html">		localplay.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---localplay.class.php.html">		localplay.class.php
-		</a><br>
-			<a href="../Ampache/_localplay.php.html">		localplay.php
-		</a><br>
-			<a href="../Ampache/_lib---log.lib.php.html">		log.lib.php
-		</a><br>
-			<a href="../Ampache/_login.php.html">		login.php
-		</a><br>
-			<a href="../Ampache/_logout.php.html">		logout.php
-		</a><br>
-			<a href="../Ampache/_admin---mail.php.html">		mail.php
-		</a><br>
-			<a href="../Ampache/_lib---class---media.interface.php.html">		media.interface.php
-		</a><br>
-			<a href="../Ampache/_bin---migrate_config.inc.html">		migrate_config.inc
-		</a><br>
-			<a href="../Ampache/_admin---modules.php.html">		modules.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---mp3tunes.class.php.html">		mp3tunes.class.php
-		</a><br>
-			<a href="../Ampache/_modules---mpd---mpd.class.php.html">		mpd.class.php
-		</a><br>
-			<a href="../Ampache/_modules---localplay---mpd.controller.php.html">		mpd.controller.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---nusoap.php.html">		nusoap.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---nusoapmime.php.html">		nusoapmime.php
-		</a><br>
-			<a href="../Ampache/_server---playlist.ajax.php.html">		playlist.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---playlist.class.php.html">		playlist.class.php
-		</a><br>
-			<a href="../Ampache/_playlist.php.html">		playlist.php
-		</a><br>
-			<a href="../Ampache/_lib---class---plugin.class.php.html">		plugin.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---preference.class.php.html">		preference.class.php
-		</a><br>
-			<a href="../Ampache/_preferences.php.html">		preferences.php
-		</a><br>
-			<a href="../Ampache/_lib---preferences.php.html">		preferences.php
-		</a><br>
-			<a href="../Ampache/_bin---print_tags.inc.html">		print_tags.inc
-		</a><br>
-			<a href="../Ampache/_lib---class---radio.class.php.html">		radio.class.php
-		</a><br>
-			<a href="../Ampache/_radio.php.html">		radio.php
-		</a><br>
-			<a href="../Ampache/_server---random.ajax.php.html">		random.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---random.class.php.html">		random.class.php
-		</a><br>
-			<a href="../Ampache/_random.php.html">		random.php
-		</a><br>
-			<a href="../Ampache/_lib---class---rating.class.php.html">		rating.class.php
-		</a><br>
-			<a href="../Ampache/_lib---rating.lib.php.html">		rating.lib.php
-		</a><br>
-			<a href="../Ampache/_register.php.html">		register.php
-		</a><br>
-			<a href="../Ampache/_lib---class---registration.class.php.html">		registration.class.php
-		</a><br>
-			<a href="../Ampache/_modules---plugins---RioPlayer.plugin.php.html">		RioPlayer.plugin.php
-		</a><br>
-			<a href="../Ampache/_rss.php.html">		rss.php
-		</a><br>
-			<a href="../Ampache/_lib---class---scrobbler.class.php.html">		scrobbler.class.php
-		</a><br>
-			<a href="../Ampache/_search.php.html">		search.php
-		</a><br>
-			<a href="../Ampache/_admin---shout.php.html">		shout.php
-		</a><br>
-			<a href="../Ampache/_shout.php.html">		shout.php
-		</a><br>
-			<a href="../Ampache/_lib---class---shoutbox.class.php.html">		shoutbox.class.php
-		</a><br>
-			<a href="../Ampache/_modules---localplay---shoutcast.controller.php.html">		shoutcast.controller.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---Snoopy.class.php.html">		Snoopy.class.php
-		</a><br>
-			<a href="../Ampache/_server---song.ajax.php.html">		song.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---song.class.php.html">		song.class.php
-		</a><br>
-			<a href="../Ampache/_song.php.html">		song.php
-		</a><br>
-			<a href="../Ampache/_bin---sort_files.inc.html">		sort_files.inc
-		</a><br>
-			<a href="../Ampache/_server---stats.ajax.php.html">		stats.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---stats.class.php.html">		stats.class.php
-		</a><br>
-			<a href="../Ampache/_stats.php.html">		stats.php
-		</a><br>
-			<a href="../Ampache/_server---stream.ajax.php.html">		stream.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---stream.class.php.html">		stream.class.php
-		</a><br>
-			<a href="../Ampache/_lib---stream.lib.php.html">		stream.lib.php
-		</a><br>
-			<a href="../Ampache/_stream.php.html">		stream.php
-		</a><br>
-			<a href="../Ampache/_admin---system.php.html">		system.php
-		</a><br>
-			<a href="../Ampache/_server---tag.ajax.php.html">		tag.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---tag.class.php.html">		tag.class.php
-		</a><br>
-			<a href="../Ampache/_test.php.html">		test.php
-		</a><br>
-			<a href="../Ampache/_lib---themes.php.html">		themes.php
-		</a><br>
-			<a href="../Ampache/_lib---class---tmpplaylist.class.php.html">		tmpplaylist.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---update.class.php.html">		update.class.php
-		</a><br>
-			<a href="../Ampache/_update.php.html">		update.php
-		</a><br>
-			<a href="../Ampache/_lib---class---user.class.php.html">		user.class.php
-		</a><br>
-			<a href="../Ampache/_admin---users.php.html">		users.php
-		</a><br>
-			<a href="../Ampache/_util.php.html">		util.php
-		</a><br>
-			<a href="../Ampache/_lib---class---vainfo.class.php.html">		vainfo.class.php
-		</a><br>
-			<a href="../Ampache/_modules---validatemail---validateEmail.php.html">		validateEmail.php
-		</a><br>
-			<a href="../Ampache/_modules---validatemail---validateEmailFormat.php.html">		validateEmailFormat.php
-		</a><br>
-			<a href="../Ampache/_lib---class---vauth.class.php.html">		vauth.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---video.class.php.html">		video.class.php
-		</a><br>
-			<a href="../Ampache/_bin---write_playlists.inc.html">		write_playlists.inc
-		</a><br>
-			<a href="../Ampache/_bin---write_tags.inc.html">		write_tags.inc
-		</a><br>
-			<a href="../Ampache/_server---xml.server.php.html">		xml.server.php
-		</a><br>
-			<a href="../Ampache/_lib---class---xmldata.class.php.html">		xmldata.class.php
-		</a><br>
-			<a href="../Ampache/_server---xmlrpc.server.php.html">		xmlrpc.server.php
-		</a><br>
-			<a href="../Ampache/_lib---class---xmlrpcclient.class.php.html">		xmlrpcclient.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---xmlrpcserver.class.php.html">		xmlrpcserver.class.php
-		</a><br>
-			<a href="../Ampache/_modules---flash---xspf_player.php.html">		xspf_player.php
-		</a><br>
-	  </div><br />
-      
-            <b>Interfaces:</b><br />
-        <div class="package">
-		    		<a href="../Ampache/media.html">media</a><br />
-	  </div>
-      
-            <b>Classes:</b><br />
-        <div class="package">
-		    		<a href="../Ampache/Access.html">Access</a><br />
-	    		<a href="../Ampache/Ajax.html">Ajax</a><br />
-	    		<a href="../Ampache/Album.html">Album</a><br />
-	    		<a href="../Ampache/AmazonSearch.html">AmazonSearch</a><br />
-	    		<a href="../Ampache/AmpacheHttpq.html">AmpacheHttpq</a><br />
-	    		<a href="../Ampache/AmpacheLastfm.html">AmpacheLastfm</a><br />
-	    		<a href="../Ampache/AmpacheMail.html">AmpacheMail</a><br />
-	    		<a href="../Ampache/AmpacheMpd.html">AmpacheMpd</a><br />
-	    		<a href="../Ampache/AmpacheRioPlayer.html">AmpacheRioPlayer</a><br />
-	    		<a href="../Ampache/AmpacheRSS.html">AmpacheRSS</a><br />
-	    		<a href="../Ampache/AmpacheShoutCast.html">AmpacheShoutCast</a><br />
-	    		<a href="../Ampache/Api.html">Api</a><br />
-	    		<a href="../Ampache/archive.html">archive</a><br />
-	    		<a href="../Ampache/Artist.html">Artist</a><br />
-	    		<a href="../Ampache/Browse.html">Browse</a><br />
-	    		<a href="../Ampache/bzip_file.html">bzip_file</a><br />
-	    		<a href="../Ampache/captcha.html">captcha</a><br />
-	    		<a href="../Ampache/Config.html">Config</a><br />
-	    		<a href="../Ampache/Core.html">Core</a><br />
-	    		<a href="../Ampache/database_object.html">database_object</a><br />
-	    		<a href="../Ampache/Dba.html">Dba</a><br />
-	    		<a href="../Ampache/Democratic.html">Democratic</a><br />
-	    		<a href="../Ampache/easy_captcha.html">easy_captcha</a><br />
-	    		<a href="../Ampache/easy_captcha_dxy_spike.html">easy_captcha_dxy_spike</a><br />
-	    		<a href="../Ampache/easy_captcha_dxy_wave.html">easy_captcha_dxy_wave</a><br />
-	    		<a href="../Ampache/easy_captcha_fuzzy.html">easy_captcha_fuzzy</a><br />
-	    		<a href="../Ampache/easy_captcha_graphic.html">easy_captcha_graphic</a><br />
-	    		<a href="../Ampache/easy_captcha_graphic_image_disturbed.html">easy_captcha_graphic_image_disturbed</a><br />
-	    		<a href="../Ampache/easy_captcha_graphic_image_waved.html">easy_captcha_graphic_image_waved</a><br />
-	    		<a href="../Ampache/easy_captcha_persistent_grant.html">easy_captcha_persistent_grant</a><br />
-	    		<a href="../Ampache/easy_captcha_spamfree_no_new_urls.html">easy_captcha_spamfree_no_new_urls</a><br />
-	    		<a href="../Ampache/easy_captcha_text_disable.html">easy_captcha_text_disable</a><br />
-	    		<a href="../Ampache/easy_captcha_text_math_formula.html">easy_captcha_text_math_formula</a><br />
-	    		<a href="../Ampache/easy_captcha_utility.html">easy_captcha_utility</a><br />
-	    		<a href="../Ampache/Error.html">Error</a><br />
-	    		<a href="../Ampache/Flag.html">Flag</a><br />
-	    		<a href="../Ampache/Genre.html">Genre</a><br />
-	    		<a href="../Ampache/gzip_file.html">gzip_file</a><br />
-	    		<a href="../Ampache/HttpQPlayer.html">HttpQPlayer</a><br />
-	    		<a href="../Ampache/jamendoSearch.html">jamendoSearch</a><br />
-	    		<a href="../Ampache/LastFMSearch.html">LastFMSearch</a><br />
-	    		<a href="../Ampache/Localplay.html">Localplay</a><br />
-	    		<a href="../Ampache/localplay_controller.html">localplay_controller</a><br />
-	    		<a href="../Ampache/mp3tunes.html">mp3tunes</a><br />
-	    		<a href="../Ampache/mpd.html">mpd</a><br />
-	    		<a href="../Ampache/nusoapservermime.html">nusoapservermime</a><br />
-	    		<a href="../Ampache/nusoap_base.html">nusoap_base</a><br />
-	    		<a href="../Ampache/nusoap_client.html">nusoap_client</a><br />
-	    		<a href="../Ampache/nusoap_client_mime.html">nusoap_client_mime</a><br />
-	    		<a href="../Ampache/nusoap_fault.html">nusoap_fault</a><br />
-	    		<a href="../Ampache/nusoap_parser.html">nusoap_parser</a><br />
-	    		<a href="../Ampache/nusoap_server.html">nusoap_server</a><br />
-	    		<a href="../Ampache/nusoap_server_mime.html">nusoap_server_mime</a><br />
-	    		<a href="../Ampache/nusoap_wsdlcache.html">nusoap_wsdlcache</a><br />
-	    		<a href="../Ampache/nusoap_xmlschema.html">nusoap_xmlschema</a><br />
-	    		<a href="../Ampache/Playlist.html">Playlist</a><br />
-	    		<a href="../Ampache/Plugin.html">Plugin</a><br />
-	    		<a href="../Ampache/Preference.html">Preference</a><br />
-	    		<a href="../Ampache/Radio.html">Radio</a><br />
-	    		<a href="../Ampache/Random.html">Random</a><br />
-	    		<a href="../Ampache/Rating.html">Rating</a><br />
-	    		<a href="../Ampache/Registration.html">Registration</a><br />
-	    		<a href="../Ampache/scrobbler.html">scrobbler</a><br />
-	    		<a href="../Ampache/shoutBox.html">shoutBox</a><br />
-	    		<a href="../Ampache/Snoopy.html">Snoopy</a><br />
-	    		<a href="../Ampache/soapclient.html">soapclient</a><br />
-	    		<a href="../Ampache/soapclientmime.html">soapclientmime</a><br />
-	    		<a href="../Ampache/soapval.html">soapval</a><br />
-	    		<a href="../Ampache/soap_fault.html">soap_fault</a><br />
-	    		<a href="../Ampache/soap_parser.html">soap_parser</a><br />
-	    		<a href="../Ampache/soap_server.html">soap_server</a><br />
-	    		<a href="../Ampache/soap_transport_http.html">soap_transport_http</a><br />
-	    		<a href="../Ampache/Song.html">Song</a><br />
-	    		<a href="../Ampache/Stats.html">Stats</a><br />
-	    		<a href="../Ampache/Stream.html">Stream</a><br />
-	    		<a href="../Ampache/Tag.html">Tag</a><br />
-	    		<a href="../Ampache/tar_file.html">tar_file</a><br />
-	    		<a href="../Ampache/tmpPlaylist.html">tmpPlaylist</a><br />
-	    		<a href="../Ampache/Update.html">Update</a><br />
-	    		<a href="../Ampache/User.html">User</a><br />
-	    		<a href="../Ampache/vainfo.html">vainfo</a><br />
-	    		<a href="../Ampache/vauth.html">vauth</a><br />
-	    		<a href="../Ampache/Video.html">Video</a><br />
-	    		<a href="../Ampache/wsdl.html">wsdl</a><br />
-	    		<a href="../Ampache/wsdlcache.html">wsdlcache</a><br />
-	    		<a href="../Ampache/xmlData.html">xmlData</a><br />
-	    		<a href="../Ampache/xmlRpcClient.html">xmlRpcClient</a><br />
-	    		<a href="../Ampache/xmlRpcServer.html">xmlRpcServer</a><br />
-	    		<a href="../Ampache/XMLSchema.html">XMLSchema</a><br />
-	    		<a href="../Ampache/zip_file.html">zip_file</a><br />
-	  </div>
-                </td>
-    <td>
-      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
 
-<h1>Class: Update</h1>
-Source Location: /lib/class/update.class.php<br /><br />
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																		
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#display_update" title="details" class="method-name">display_update</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#format_version" title="details" class="method-name">format_version</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#get_version" title="details" class="method-name">get_version</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#need_update" title="details" class="method-name">need_update</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#plugins_installed" title="details" class="method-name">plugins_installed</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#populate_version" title="details" class="method-name">populate_version</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#run_update" title="details" class="method-name">run_update</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#set_version" title="details" class="method-name">set_version</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$key</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+																														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340003" title="details" class="method-name">update_340003</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340004" title="details" class="method-name">update_340004</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340005" title="details" class="method-name">update_340005</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340006" title="details" class="method-name">update_340006</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340007" title="details" class="method-name">update_340007</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340008" title="details" class="method-name">update_340008</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340009" title="details" class="method-name">update_340009</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340010" title="details" class="method-name">update_340010</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340011" title="details" class="method-name">update_340011</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340012" title="details" class="method-name">update_340012</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340013" title="details" class="method-name">update_340013</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340014" title="details" class="method-name">update_340014</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340015" title="details" class="method-name">update_340015</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340016" title="details" class="method-name">update_340016</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340017" title="details" class="method-name">update_340017</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_340018" title="details" class="method-name">update_340018</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_350001" title="details" class="method-name">update_350001</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_350002" title="details" class="method-name">update_350002</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_350003" title="details" class="method-name">update_350003</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_350004" title="details" class="method-name">update_350004</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_350005" title="details" class="method-name">update_350005</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_350006" title="details" class="method-name">update_350006</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_350007" title="details" class="method-name">update_350007</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_350008" title="details" class="method-name">update_350008</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_360001" title="details" class="method-name">update_360001</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_360002" title="details" class="method-name">update_360002</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_360003" title="details" class="method-name">update_360003</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_360004" title="details" class="method-name">update_360004</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#update_360005" title="details" class="method-name">update_360005</a>
+										()
+									</div>
+																										
+				<div class="method-definition">
+											<span class="method-result">Update</span>
+										<a href="#Update" title="details" class="method-name">Update</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">0</span>])
+									</div>
+																																																																														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#update_340001" title="details" class="method-name">update_340001</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#update_340002" title="details" class="method-name">update_340002</a>
+										()
+									</div>
+																																																																																																																																																																																																																																																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_get_info" title="details" class="method-name">_get_info</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
 
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$versions" id="$versions"><!-- --></A>
+<div class="evenrow">
 
-<table width="100%" border="0">
-<tr><td valign="top">
+	<div class="var-header">
+		<span class="var-title">
+			static <span class="var-type">mixed</span>
+			<span class="var-name">$versions</span>
+						(line <span class="line-number">65</span>)
+		</span>
+	</div>
 
-<h3><a href="#class_details">Class Overview</a></h3>
-<pre></pre><br />
-<div class="description">Update Class</div><br /><br />
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
 
-
-
-
-
-
-        
-</td>
-
-<td valign="top">
-<h3><a href="#class_vars">Variables</a></h3>
-<ul>
-    <li><a href="../Ampache/Update.html#var$key">$key</a></li>
-    <li><a href="../Ampache/Update.html#var$value">$value</a></li>
-    <li><a href="../Ampache/Update.html#var$versions">$versions</a></li>
-  </ul>
-</td>
-
-
-<td valign="top">
-<h3><a href="#class_methods">Methods</a></h3>
-<ul>
-    <li><a href="../Ampache/Update.html#methodUpdate">Update</a></li>
-    <li><a href="../Ampache/Update.html#methoddisplay_update">display_update</a></li>
-    <li><a href="../Ampache/Update.html#methodformat_version">format_version</a></li>
-    <li><a href="../Ampache/Update.html#methodget_version">get_version</a></li>
-    <li><a href="../Ampache/Update.html#methodneed_update">need_update</a></li>
-    <li><a href="../Ampache/Update.html#methodplugins_installed">plugins_installed</a></li>
-    <li><a href="../Ampache/Update.html#methodpopulate_version">populate_version</a></li>
-    <li><a href="../Ampache/Update.html#methodrun_update">run_update</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340003">update_340003</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340004">update_340004</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340005">update_340005</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340006">update_340006</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340007">update_340007</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340008">update_340008</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340009">update_340009</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340010">update_340010</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340011">update_340011</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340012">update_340012</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340013">update_340013</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340014">update_340014</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340015">update_340015</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340016">update_340016</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340017">update_340017</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_340018">update_340018</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_350001">update_350001</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_350002">update_350002</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_350003">update_350003</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_350004">update_350004</a></li>
-    <li><a href="../Ampache/Update.html#methodupdate_350005">update_350005</a></li>
-  </ul>
-</td>
-
-</tr></table>
-<hr />
-
-<table width="100%" border="0"><tr>
-
-
-
-
-
-
-</tr></table>
-<hr />
-
-<a name="class_details"></a>
-<h3>Class Details</h3>
-<div class="tags">
-[line 36]<br />
-Update Class<br /><br /><p>this class handles updating from one version of  ampache to the next. Versions are a 6 digit number   220000   ^   Major Revision</p><p>220000    ^   Minor Revision</p><p>The last 4 digits are a build number...  If Minor can't go over 9 Major can go as high as we want</p><br /></div><br /><br />
-<div class="top">[ <a href="#top">Top</a> ]</div><br />
-
-<hr />
-<a name="class_vars"></a>
-<h3>Class Variables</h3>
-<div class="tags">
-	<a name="var$versions"></a>
-	<p></p>
-	<h4>static $versions = <span class="value"></span></h4>
-	<p>[line 40]</p>
-  <br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
 </div>
 
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$key"></a>
-	<p></p>
-	<h4>$key = <span class="value"></span></h4>
-	<p>[line 38]</p>
-  <br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+<a name="var$key" id="$key"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$key</span>
+						(line <span class="line-number">63</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
 </div>
+<a name="var$value" id="$value"><!-- --></A>
+<div class="evenrow">
 
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$value"></a>
-	<p></p>
-	<h4>$value = <span class="value"></span></h4>
-	<p>[line 39]</p>
-  <br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$value</span>
+						(line <span class="line-number">64</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
 </div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methoddisplay_update" id="display_update"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static display_update</span> (line <span class="line-number">384</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">display_update  This displays a list of the needed  updates to the database. This will actually  echo out the list...</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			display_update
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodformat_version" id="format_version"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static format_version</span> (line <span class="line-number">131</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">format_version</p>
+<p class="description"><p>make the version number pretty</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			format_version
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_version" id="get_version"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static get_version</span> (line <span class="line-number">101</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_version  this checks to see what version you are currently running  because we may not have the update_info table we have to check  for it's existance first.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			get_version
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodneed_update" id="need_update"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static need_update</span> (line <span class="line-number">145</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">need_update</p>
+<p class="description"><p>checks to see if we need to update  ampache at all</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			need_update
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodplugins_installed" id="plugins_installed"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static plugins_installed</span> (line <span class="line-number">174</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">plugins_installed</p>
+<p class="description"><p>This function checks to make sure that there are no plugins  installed before allowing you to run the update. this is  to protect the integrity of the database</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			plugins_installed
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpopulate_version" id="populate_version"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static populate_version</span> (line <span class="line-number">198</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">populate_version</p>
+<p class="description"><p>just sets an array the current differences  that require an update</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			populate_version
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodrun_update" id="run_update"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static run_update</span> (line <span class="line-number">415</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">run_update  This function actually updates the db.</p>
+<p class="description"><p>it goes through versions and finds the ones  that need to be run. Checking to make sure  the function exists first.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			run_update
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodset_version" id="set_version"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static set_version</span> (line <span class="line-number">481</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">set_version</p>
+<p class="description"><p>This updates the 'update_info' which is used by the updater  and plugins</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			set_version
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$key</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$key</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate_340003" id="update_340003"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340003</span> (line <span class="line-number">736</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340003</p>
+<p class="description"><p>This update moves the album art out of the album table  and puts it in an album_data table. It also makes some  minor changes to the song table in an attempt to reduce  the size of each row</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340003
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340004" id="update_340004"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340004</span> (line <span class="line-number">838</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340004</p>
+<p class="description"><p>Update the session.id to varchar(64) to handle  newer configs</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340004
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340005" id="update_340005"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340005</span> (line <span class="line-number">904</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340005</p>
+<p class="description"><p>This update fixes the preferences types</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340005
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340006" id="update_340006"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340006</span> (line <span class="line-number">951</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340006</p>
+<p class="description"><p>This just updates the size of the album_data table  and removes the random_method config option</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340006
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340007" id="update_340007"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340007</span> (line <span class="line-number">991</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340007</p>
+<p class="description"><p>This update converts the session.value to a longtext  and adds a session_stream table</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340007
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340008" id="update_340008"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340008</span> (line <span class="line-number">1027</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340008</p>
+<p class="description"><p>This modifies the playlist table to handle the different types of objects that it needs to be able to  store, and tweaks how dynamic playlist stuff works</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340008
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340009" id="update_340009"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340009</span> (line <span class="line-number">1077</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340009</p>
+<p class="description"><p>This modifies the song table to handle pos fields</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340009
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340010" id="update_340010"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340010</span> (line <span class="line-number">1108</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340010</p>
+<p class="description"><p>Bunch of minor tweaks to the preference table</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340010
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340011" id="update_340011"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340011</span> (line <span class="line-number">1147</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340011</p>
+<p class="description"><p>This updates the democratic play stuff so that can handle a little more complext mojo  It also adds yet another table to the db to handle the sessions for API access. Eventually  should combine all of the session tables, but I'll do that later</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340011
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340012" id="update_340012"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340012</span> (line <span class="line-number">1172</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340012</p>
+<p class="description"><p>This update adds in the democratic stuff, checks for some potentially screwed up indexes  and removes the timestamp from the playlist, and adds the field to the catalog for the upload dir</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340012
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340013" id="update_340013"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340013</span> (line <span class="line-number">1203</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340013</p>
+<p class="description"><p>This update removes a whole bunch of preferences that are no longer  being used in any way, and changes the ACL XML-RPC to just RPC</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340013
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340014" id="update_340014"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340014</span> (line <span class="line-number">1237</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340014</p>
+<p class="description"><p>This update drops the session_api table that I added just two updates ago  it's been nice while it lasted but it's time to pack your stuff and GTFO  at the same time it updates the core session table to handle the additional  stuff we're going to ask it to do.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340014
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340015" id="update_340015"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340015</span> (line <span class="line-number">1263</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340015</p>
+<p class="description"><p>This update tweaks the playlist table responding to complaints from usres  who say it doesn't work, unreproduceable. This also adds an index to the  album art table to try to make the random album art faster</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340015
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340016" id="update_340016"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340016</span> (line <span class="line-number">1305</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340016</p>
+<p class="description"><p>This adds in the base_playlist to the democratic table... should have  done this in the previous one but I screwed up... sigh</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340016
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340017" id="update_340017"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340017</span> (line <span class="line-number">1321</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340017  This finalizes the democratic table.</p>
+<p class="description"><p>and fixes the charset crap</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340017
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340018" id="update_340018"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_340018</span> (line <span class="line-number">1347</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340018</p>
+<p class="description"><p>This attempts to correct the charset on your database, it does some checking  to make sure that if we do this it will actually will work. We will fail this update  if it would cause problems</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_340018
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_350001" id="update_350001"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_350001</span> (line <span class="line-number">1436</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_350001</p>
+<p class="description"><p>This updates modifies the tag tables per codeunde1load's specs from his tag patch  it also adjusts the prefix fields so that we can use more prefixes</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_350001
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_350002" id="update_350002"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_350002</span> (line <span class="line-number">1465</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_350002</p>
+<p class="description"><p>This update adds in the browse_cache table that we use to hold peoples cached browse results  rather then try to store everything in the session we split them out into one serilized array per  row, per person. A little slow this way when browsing, but faster when now browsing and more flexible</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_350002
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_350003" id="update_350003"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_350003</span> (line <span class="line-number">1495</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_350003  This update tweakes the tag tables a little bit more, we're going to simplify things for the first little bit and then  then if it all works out we will worry about making it complex again. One thing at a time people...</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_350003
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_350004" id="update_350004"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_350004</span> (line <span class="line-number">1524</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_350004</p>
+<p class="description"><p>This update makes some changes to the ACL table so that it can support IPv6 entries as well as some other feature  enhancements</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_350004
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_350005" id="update_350005"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_350005</span> (line <span class="line-number">1632</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_350005</p>
+<p class="description"><p>This update adds the video table... *gasp* no you didn't &lt;head shake&gt;</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_350005
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_350006" id="update_350006"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_350006</span> (line <span class="line-number">1672</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_350006  This update inserts the Lyrics pref table...</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_350006
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_350007" id="update_350007"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_350007</span> (line <span class="line-number">1700</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_350007</p>
+<p class="description"><p>This update adds in the random rules tables, and also increases the size of the blobs  on the album and artist data. Also add track to tmp_playlist_data</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_350007
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_350008" id="update_350008"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_350008</span> (line <span class="line-number">1767</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_350008</p>
+<p class="description"><p>Change song_id references to be object so they are a little more general  add a type to now playing table so that we can handle different playing information</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_350008
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_360001" id="update_360001"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_360001</span> (line <span class="line-number">1813</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_360001</p>
+<p class="description"><p>This adds the MB UUIDs to the different tables as well as some additional cleanup</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_360001
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_360002" id="update_360002"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_360002</span> (line <span class="line-number">1850</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_360002</p>
+<p class="description"><p>This update makes changes to the cataloging to accomodate the new method for syncing between  Ampache instances, could be adapted to sync with whatever for &quot;full&quot; catalog</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_360002
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_360003" id="update_360003"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_360003</span> (line <span class="line-number">1914</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_360003  This update moves the image data to its own table.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_360003
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_360004" id="update_360004"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_360004</span> (line <span class="line-number">1955</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_360004  This update creates an index on the rating table.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_360004
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_360005" id="update_360005"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static update_360005</span> (line <span class="line-number">1966</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_360005  This changes the tmp_browse table around.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			update_360005
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodUpdate" id="Update"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor Update</span> (line <span class="line-number">71</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update</p>
+<p class="description"><p>Constructor, pulls out information about the desired key</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">Update</span>
+		<span class="method-name">
+			Update
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$key</span> = <span class="var-default">0</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodupdate_340001" id="update_340001"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">update_340001</span> (line <span class="line-number">494</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340001</p>
+<p class="description"><p>This update moves back to the ID for user UID and  adds date to the user_vote so that it can be sorted  correctly</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			update_340001
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_340002" id="update_340002"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">update_340002</span> (line <span class="line-number">716</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_340002</p>
+<p class="description"><p>This update tweaks the preferences a little more and make sure that the  min_object_count has a rational value</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			update_340002
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_get_info" id="_get_info"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_get_info</span> (line <span class="line-number">86</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_get_info</p>
+<p class="description"><p>gets the information for the zone</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_get_info
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
 
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-</div><br />
 
-<hr />
-<a name="class_methods"></a>
-<h3>Class Methods</h3>
-<div class="tags">
-  <hr />
-	<a name="methoddisplay_update"></a>
-	<h3>static method display_update <span class="smalllinenumber">[line 316]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void display_update(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		display_update  This displays a list of the needed  updates to the database. This will actually  echo out the list...<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodformat_version"></a>
-	<h3>static method format_version <span class="smalllinenumber">[line 106]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void format_version(
-
-$data)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		format_version<br /><br /><p>make the version number pretty</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$data</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodget_version"></a>
-	<h3>static method get_version <span class="smalllinenumber">[line 76]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void get_version(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		get_version  this checks to see what version you are currently running  because we may not have the update_info table we have to check  for it's existance first.<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodneed_update"></a>
-	<h3>static method need_update <span class="smalllinenumber">[line 120]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void need_update(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		need_update<br /><br /><p>checks to see if we need to update  ampache at all</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodplugins_installed"></a>
-	<h3>static method plugins_installed <span class="smalllinenumber">[line 149]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void plugins_installed(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		plugins_installed<br /><br /><p>This function checks to make sure that there are no plugins  installed before allowing you to run the update. this is  to protect the integrity of the database</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodpopulate_version"></a>
-	<h3>static method populate_version <span class="smalllinenumber">[line 173]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void populate_version(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		populate_version<br /><br /><p>just sets an array the current differences  that require an update</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodrun_update"></a>
-	<h3>static method run_update <span class="smalllinenumber">[line 347]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void run_update(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		run_update  This function actually updates the db.<br /><br /><p>it goes through versions and finds the ones  that need to be run. Checking to make sure  the function exists first.</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340003"></a>
-	<h3>static method update_340003 <span class="smalllinenumber">[line 664]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340003(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340003<br /><br /><p>This update moves the album art out of the album table  and puts it in an album_data table. It also makes some  minor changes to the song table in an attempt to reduce  the size of each row</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340004"></a>
-	<h3>static method update_340004 <span class="smalllinenumber">[line 766]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340004(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340004<br /><br /><p>Update the session.id to varchar(64) to handle  newer configs</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340005"></a>
-	<h3>static method update_340005 <span class="smalllinenumber">[line 832]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340005(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340005<br /><br /><p>This update fixes the preferences types</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340006"></a>
-	<h3>static method update_340006 <span class="smalllinenumber">[line 879]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340006(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340006<br /><br /><p>This just updates the size of the album_data table  and removes the random_method config option</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340007"></a>
-	<h3>static method update_340007 <span class="smalllinenumber">[line 919]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340007(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340007<br /><br /><p>This update converts the session.value to a longtext  and adds a session_stream table</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340008"></a>
-	<h3>static method update_340008 <span class="smalllinenumber">[line 955]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340008(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340008<br /><br /><p>This modifies the playlist table to handle the different types of objects that it needs to be able to  store, and tweaks how dynamic playlist stuff works</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340009"></a>
-	<h3>static method update_340009 <span class="smalllinenumber">[line 1005]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340009(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340009<br /><br /><p>This modifies the song table to handle pos fields</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340010"></a>
-	<h3>static method update_340010 <span class="smalllinenumber">[line 1036]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340010(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340010<br /><br /><p>Bunch of minor tweaks to the preference table</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340011"></a>
-	<h3>static method update_340011 <span class="smalllinenumber">[line 1075]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340011(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340011<br /><br /><p>This updates the democratic play stuff so that can handle a little more complext mojo  It also adds yet another table to the db to handle the sessions for API access. Eventually  should combine all of the session tables, but I'll do that later</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340012"></a>
-	<h3>static method update_340012 <span class="smalllinenumber">[line 1100]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340012(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340012<br /><br /><p>This update adds in the democratic stuff, checks for some potentially screwed up indexes  and removes the timestamp from the playlist, and adds the field to the catalog for the upload dir</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340013"></a>
-	<h3>static method update_340013 <span class="smalllinenumber">[line 1131]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340013(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340013<br /><br /><p>This update removes a whole bunch of preferences that are no longer  being used in any way, and changes the ACL XML-RPC to just RPC</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340014"></a>
-	<h3>static method update_340014 <span class="smalllinenumber">[line 1165]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340014(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340014<br /><br /><p>This update drops the session_api table that I added just two updates ago  it's been nice while it lasted but it's time to pack your stuff and GTFO  at the same time it updates the core session table to handle the additional  stuff we're going to ask it to do.</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340015"></a>
-	<h3>static method update_340015 <span class="smalllinenumber">[line 1191]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340015(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340015<br /><br /><p>This update tweaks the playlist table responding to complaints from usres  who say it doesn't work, unreproduceable. This also adds an index to the  album art table to try to make the random album art faster</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340016"></a>
-	<h3>static method update_340016 <span class="smalllinenumber">[line 1233]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340016(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340016<br /><br /><p>This adds in the base_playlist to the democratic table... should have  done this in the previous one but I screwed up... sigh</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340017"></a>
-	<h3>static method update_340017 <span class="smalllinenumber">[line 1249]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340017(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340017  This finalizes the democratic table.<br /><br /><p>and fixes the charset crap</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_340018"></a>
-	<h3>static method update_340018 <span class="smalllinenumber">[line 1275]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_340018(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_340018<br /><br /><p>This attempts to correct the charset on your database, it does some checking  to make sure that if we do this it will actually will work. We will fail this update  if it would cause problems</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_350001"></a>
-	<h3>static method update_350001 <span class="smalllinenumber">[line 1361]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_350001(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_350001<br /><br /><p>This updates modifies the tag tables per codeunde1load's specs from his tag patch  it also adjusts the prefix fields so that we can use more prefixes</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_350002"></a>
-	<h3>static method update_350002 <span class="smalllinenumber">[line 1390]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_350002(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_350002<br /><br /><p>This update adds in the browse_cache table that we use to hold peoples cached browse results  rather then try to store everything in the session we split them out into one serilized array per  row, per person. A little slow this way when browsing, but faster when now browsing and more flexible</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_350003"></a>
-	<h3>static method update_350003 <span class="smalllinenumber">[line 1420]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_350003(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_350003  This update tweakes the tag tables a little bit more, we're going to simplify things for the first little bit and then  then if it all works out we will worry about making it complex again. One thing at a time people...<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_350004"></a>
-	<h3>static method update_350004 <span class="smalllinenumber">[line 1449]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_350004(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_350004<br /><br /><p>This update makes some changes to the ACL table so that it can support IPv6 entries as well as some other feature  enhancements</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_350005"></a>
-	<h3>static method update_350005 <span class="smalllinenumber">[line 1557]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void update_350005(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_350005<br /><br /><p>This update adds the video table... *gasp* no you didn't &lt;head shake&gt;</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-
-  <hr />
-	<a name="methodUpdate"></a>
-	<h3>constructor Update <span class="smalllinenumber">[line 46]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>Update Update(
-[
-$key = 0])</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Update<br /><br /><p>Constructor, pulls out information about the desired key</p><br /><br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$key</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-</div><br />
-
-
-        <div class="credit">
-		    <hr />
-		    Documentation generated on Thu, 12 Feb 2009 08:00:11 +0900 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
-	      </div>
-      </td></tr></table>
-    </td>
-  </tr>
-</table>
-
-</body>
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 03 Feb 2011 10:59:38 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
 </html>

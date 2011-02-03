@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title></title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+											</head>
+		<body>
+						<div align="center"><h1>PLUGINS</h1></div>
+<pre>
+Plugins are placed in modules/plugins; the name of the file must be
+&lt;Name&gt;.plugin.php, e.g. Dummy.plugin.php. The file must declare a
+corresponding class and the name of the class must be prefixed with
+Ampache, e.g. AmpacheDummy.
+
+The following public variables must be declared:
+    name (string)
+    description (string)
+    version (int) - This plugin&#039;s version
+    min_ampache (int) - Minimum Ampache DB version required
+    max_ampache (int) - Maximum Ampache DB version supported
+
+The following public methods must be implemented:
+    install
+    uninstall
+    load
+
+The following public methods may be implemented:
+    upgrade
+
+Finally, for the plugin to actually be useful one or more of the following hooks
+should be implemented as a public method:
+    get_metadata(Array $metadata)
+        The passed array contains the best metadata we&#039;ve got.
+    save_rating(Rating $rating, int $new_value)
+    save_songplay(Song $song)
+
+
+</pre>
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 03 Feb 2011 10:59:28 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</body>
+</html>

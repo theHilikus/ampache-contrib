@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs for page ui.lib.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/lib/ui.lib.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">UI Function Library</p>
+<p class="description"><p>This contains functions that are generic, and display information  things like a confirmation box, etc and so forth</p><p>PHP version 5</p><p>LICENSE: GNU General Public License, version 2 (GPLv2)  Copyright (c) 2001 - 2011 Ampache.org All Rights Reserved</p><p>This program is free software; you can redistribute it and/or  modify it under the terms of the GNU General Public License v2  as published by the Free Software Foundation.</p><p>This program is distributed in the hope that it will be useful,  but WITHOUT ANY WARRANTY; without even the implied warranty of  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the  GNU General Public License for more details.</p><p>You should have received a copy of the GNU General Public License  along with this program; if not, write to the Free Software  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Karl Vollmer &lt;<a href="mailto:vollmer@ampache.org">vollmer@ampache.org</a>&gt;</li>
+				<li><span class="field">version:</span> PHP 5.2</li>
+				<li><span class="field">copyright:</span> 2001 - 2011 Ampache.org</li>
+				<li><span class="field">link:</span> <a href="http://www.ampache.org/">http://www.ampache.org/</a></li>
+				<li><span class="field">since:</span> File available since Release 1.0</li>
+				<li><span class="field">license:</span> <a href="http://opensource.org/licenses/gpl-2.0">GPLv2</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionaccess_denied" id="functionaccess_denied"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">access_denied</span> (line <span class="line-number">104</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">access_denied  Throws an error if they try to do something that they aren't allowed to.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			access_denied
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionajax_include" id="functionajax_include"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">ajax_include</span> (line <span class="line-number">724</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ajax_include</p>
+<p class="description"><p>This does an ob_start, getcontents, clean  on the specified require, only works if you  don't need to pass data in</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ajax_include
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$include</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$include</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionflip_class" id="functionflip_class"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">flip_class</span> (line <span class="line-number">63</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">flip_class  First called with an array of 2 class names.  Subsequent calls reverse the  array then return the first element.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			flip_class
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$array</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$array</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionget_location" id="functionget_location"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">get_location</span> (line <span class="line-number">209</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_location  This function gets the information about a person's current location.</p>
+<p class="description"><p>This is used for A) sidebar highlighting &amp; submenu showing and B) titlebar  information. It returns an array of information about what they are currently  doing.  Possible array elements  ['title']	Text name for the page  ['page']	actual page name  ['section']	name of the section we are in, admin, browse etc (submenu)</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_location
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionget_user_icon" id="functionget_user_icon"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">get_user_icon</span> (line <span class="line-number">493</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_user_icon</p>
+<p class="description"><p>this function takes a name and a returns either a text representation  or an &lt;img /&gt; tag</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_user_icon
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$title</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionngettext" id="functionngettext"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">ngettext</span> (line <span class="line-number">95</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">ngettext</p>
+<p class="description"><p>checks for ngettext and defines it if it doesn't exist</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			ngettext
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$string</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionprint_bool" id="functionprint_bool"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">print_bool</span> (line <span class="line-number">762</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">print_bool  This function takes a boolean value and then prints out a friendly text  message.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			print_bool
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionreturn_referer" id="functionreturn_referer"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">return_referer</span> (line <span class="line-number">119</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return_referer</p>
+<p class="description"><p>returns the script part of the referer address passed by the web browser  this is not %100 accurate. Also because this is not passed by us we need  to clean it up, take the filename then check for a /admin/ and dump the rest</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			return_referer
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshow_album_select" id="functionshow_album_select"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">show_album_select</span> (line <span class="line-number">313</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_album_select</p>
+<p class="description"><p>This displays a select of every album that we've got in Ampache (which can be  hella long). It's used by the Edit page and takes a $name and a $album_id</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_album_select
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">&#039;album&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$album_id</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$allow_add</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$song_id</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$album_id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$allow_add</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$song_id</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionshow_artist_select" id="functionshow_artist_select"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">show_artist_select</span> (line <span class="line-number">353</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_artist_select</p>
+<p class="description"><p>This is the same as show_album_select except it's *gasp* for artists! How  inventive!</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_artist_select
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">&#039;artist&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$artist_id</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$allow_add</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$song_id</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$artist_id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$allow_add</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$song_id</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionshow_box_bottom" id="functionshow_box_bottom"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">show_box_bottom</span> (line <span class="line-number">482</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_box_bottom</p>
+<p class="description"><p>This function requires the bottom part of the box  it does not take any arguments</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_box_bottom
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshow_box_top" id="functionshow_box_top"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">show_box_top</span> (line <span class="line-number">471</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_box_top</p>
+<p class="description"><p>This function requires the top part of the box  it takes title as an optional argument</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_box_top
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$title</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$class</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$title</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$class</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionshow_catalog_select" id="functionshow_catalog_select"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">show_catalog_select</span> (line <span class="line-number">392</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_catalog_select  Yet another one of these buggers. this shows a drop down of all of your  catalogs.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_catalog_select
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">&#039;catalog&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$catalog_id</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$style</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$catalog_id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$style</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionshow_confirmation" id="functionshow_confirmation"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">show_confirmation</span> (line <span class="line-number">45</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_confirmation</p>
+<p class="description"><p>shows a confirmation of an action  $next_url	Where to go next  $title	The Title of the message  $text	The details of the message  $cancel	T/F show a cancel button that uses return_referrer()</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_confirmation
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$title</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$text</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$next_url</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$cancel</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$form_name</span> = <span class="var-default">&#039;confirmation&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$title</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$text</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$next_url</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$cancel</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$form_name</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionshow_footer" id="functionshow_footer"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">show_footer</span> (line <span class="line-number">188</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_footer</p>
+<p class="description"><p>shows the footer of the page</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_footer
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshow_header" id="functionshow_header"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">show_header</span> (line <span class="line-number">178</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_header</p>
+<p class="description"><p>This shows the header.inc.php, it may do something  more in the future</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_header
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshow_now_playing" id="functionshow_now_playing"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">show_now_playing</span> (line <span class="line-number">780</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_now_playing</p>
+<p class="description"><p>This shows the now playing templates and does some garbage collecion  this should really be somewhere else</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_now_playing
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functionshow_playlist_select" id="functionshow_playlist_select"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">show_playlist_select</span> (line <span class="line-number">445</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_playlist_select</p>
+<p class="description"><p>This one is for playlists!</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_playlist_select
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$selected</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$style</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$selected</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$style</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionshow_preference_box" id="functionshow_preference_box"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">show_preference_box</span> (line <span class="line-number">302</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_preference_box  This shows the preference box for the preferences pages.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_preference_box
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$preferences</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$preferences</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionshow_user_select" id="functionshow_user_select"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">show_user_select</span> (line <span class="line-number">418</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">show_user_select</p>
+<p class="description"><p>This one is for users! shows a select/option statement so you can pick a user  to blame</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			show_user_select
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$selected</span> = <span class="var-default">&#039;&#039;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$style</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$selected</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$style</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiontoggle_visible" id="functiontoggle_visible"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">toggle_visible</span> (line <span class="line-number">739</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">toggle_visible</p>
+<p class="description"><p>This is identical to the javascript command that it actually calls</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			toggle_visible
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$element</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$element</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiontruncate_with_ellipsis" id="functiontruncate_with_ellipsis"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">truncate_with_ellipsis</span> (line <span class="line-number">144</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">truncate_with_ellipsis  Function that truncates text to a specific length and appends an ellipsis to  the end.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			truncate_with_ellipsis
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$text</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$max</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$text</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$max</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionupdate_text" id="functionupdate_text"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">update_text</span> (line <span class="line-number">751</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_text</p>
+<p class="description"><p>Convenience function</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			update_text
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$field</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionxml_from_array" id="functionxml_from_array"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">xml_from_array</span> (line <span class="line-number">565</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">xml_from_array  This takes a one dimensional array and creates a XML document from it. For  use primarily by the ajax mojo.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			xml_from_array
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$array</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$callback</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$type</span> = <span class="var-default">&#039;&#039;</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$array</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$callback</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionxml_get_footer" id="functionxml_get_footer"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">xml_get_footer</span> (line <span class="line-number">699</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">xml_get_footer</p>
+<p class="description"><p>This takes the type and returns the correct xml footer</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			xml_get_footer
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functionxml_get_header" id="functionxml_get_header"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">xml_get_header</span> (line <span class="line-number">660</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">xml_get_header</p>
+<p class="description"><p>This takes the type and returns the correct xml header</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			xml_get_header
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function_" id="function_"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">_</span> (line <span class="line-number">84</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_  Check to see if the gettext alias _ is defined. If it isn't we define it as  a noop.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$string</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$string</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 03 Feb 2011 10:59:38 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

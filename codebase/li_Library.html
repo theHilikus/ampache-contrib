@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title></title>
+			<link rel="stylesheet" href="media/stylesheet.css" />
+						<script src="media/lib/classTree.js"></script>
+									<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+									<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "media/images/plus.png";
+				imgMinus.src = "media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+						<h3 class="package-title">Library</h3>
+<div class="tree">
+<script language="Javascript">
+if (document.getElementById) {
+			var tree = new WebFXTree('<span class="package">Library</span>');
+		tree.setBehavior('classic');
+	
+		
+		var class_trees = new WebFXTreeItem('Class trees', 'classtrees_Library.html');
+		tree.add(class_trees);
+
+		var elements = new WebFXTreeItem('Index of elements', 'elementindex_Library.html');		
+		tree.add(elements);
+
+		var parent_node;
+
+			
+		    						    				
+					var tree_function = new WebFXTreeItem('Function(s)', '');
+			
+							var fic = new WebFXTreeItem('access_denied', 'Library/_lib---ui.lib.php.html#functionaccess_denied');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('ajax_include', 'Library/_lib---ui.lib.php.html#functionajax_include');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('ampache_error_handler', 'Library/_lib---log.lib.php.html#functionampache_error_handler');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_config_values', 'Library/_lib---debug.lib.php.html#functioncheck_config_values');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_database', 'Library/_lib---debug.lib.php.html#functioncheck_database');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_database_inserted', 'Library/_lib---debug.lib.php.html#functioncheck_database_inserted');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_gettext', 'Library/_lib---debug.lib.php.html#functioncheck_gettext');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_mbstring', 'Library/_lib---debug.lib.php.html#functioncheck_mbstring');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_php_iconv', 'Library/_lib---debug.lib.php.html#functioncheck_php_iconv');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_php_memory', 'Library/_lib---debug.lib.php.html#functioncheck_php_memory');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_php_mysql', 'Library/_lib---debug.lib.php.html#functioncheck_php_mysql');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_php_pcre', 'Library/_lib---debug.lib.php.html#functioncheck_php_pcre');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_php_session', 'Library/_lib---debug.lib.php.html#functioncheck_php_session');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_php_timelimit', 'Library/_lib---debug.lib.php.html#functioncheck_php_timelimit');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_php_ver', 'Library/_lib---debug.lib.php.html#functioncheck_php_ver');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('check_putenv', 'Library/_lib---debug.lib.php.html#functioncheck_putenv');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('create_preference_input', 'Library/_lib---preferences.php.html#functioncreate_preference_input');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('debug_event', 'Library/_lib---log.lib.php.html#functiondebug_event');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('debug_result', 'Library/_lib---debug.lib.php.html#functiondebug_result');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('flip_class', 'Library/_lib---ui.lib.php.html#functionflip_class');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('format_bytes', 'Library/_lib---general.lib.php.html#functionformat_bytes');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('generate_config', 'Library/_lib---debug.lib.php.html#functiongenerate_config');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('generate_password', 'Library/_lib---general.lib.php.html#functiongenerate_password');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('gettext_noop', 'Library/_lib---gettext.php.html#functiongettext_noop');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('get_languages', 'Library/_lib---general.lib.php.html#functionget_languages');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('get_location', 'Library/_lib---ui.lib.php.html#functionget_location');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('get_rating_name', 'Library/_lib---rating.lib.php.html#functionget_rating_name');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('get_song_files', 'Library/_lib---batch.lib.php.html#functionget_song_files');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('get_theme', 'Library/_lib---themes.php.html#functionget_theme');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('get_themes', 'Library/_lib---themes.php.html#functionget_themes');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('get_theme_author', 'Library/_lib---themes.php.html#functionget_theme_author');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('get_user_icon', 'Library/_lib---ui.lib.php.html#functionget_user_icon');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('install_check_status', 'Library/_lib---install.php.html#functioninstall_check_status');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('install_create_account', 'Library/_lib---install.php.html#functioninstall_create_account');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('install_create_config', 'Library/_lib---install.php.html#functioninstall_create_config');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('install_insert_db', 'Library/_lib---install.php.html#functioninstall_insert_db');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('invert_bool', 'Library/_lib---general.lib.php.html#functioninvert_bool');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('is_rtl', 'Library/_lib---general.lib.php.html#functionis_rtl');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('load_gettext', 'Library/_lib---gettext.php.html#functionload_gettext');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('log_event', 'Library/_lib---log.lib.php.html#functionlog_event');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('make_bool', 'Library/_lib---general.lib.php.html#functionmake_bool');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('ngettext', 'Library/_lib---ui.lib.php.html#functionngettext');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('print_bool', 'Library/_lib---ui.lib.php.html#functionprint_bool');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('return_referer', 'Library/_lib---ui.lib.php.html#functionreturn_referer');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('run_search', 'Library/_lib---search.php.html#functionrun_search');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('scrub_in', 'Library/_lib---general.lib.php.html#functionscrub_in');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('scrub_out', 'Library/_lib---general.lib.php.html#functionscrub_out');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('search_song', 'Library/_lib---search.php.html#functionsearch_song');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('send_zip', 'Library/_lib---batch.lib.php.html#functionsend_zip');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('set_memory_limit', 'Library/_lib---general.lib.php.html#functionset_memory_limit');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_album_select', 'Library/_lib---ui.lib.php.html#functionshow_album_select');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_artist_select', 'Library/_lib---ui.lib.php.html#functionshow_artist_select');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_box_bottom', 'Library/_lib---ui.lib.php.html#functionshow_box_bottom');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_box_top', 'Library/_lib---ui.lib.php.html#functionshow_box_top');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_catalog_select', 'Library/_lib---ui.lib.php.html#functionshow_catalog_select');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_confirmation', 'Library/_lib---ui.lib.php.html#functionshow_confirmation');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_footer', 'Library/_lib---ui.lib.php.html#functionshow_footer');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_header', 'Library/_lib---ui.lib.php.html#functionshow_header');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_now_playing', 'Library/_lib---ui.lib.php.html#functionshow_now_playing');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_playlist_select', 'Library/_lib---ui.lib.php.html#functionshow_playlist_select');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_preference_box', 'Library/_lib---ui.lib.php.html#functionshow_preference_box');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_rating', 'Library/_lib---rating.lib.php.html#functionshow_rating');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_rating_static', 'Library/_lib---rating.lib.php.html#functionshow_rating_static');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('show_user_select', 'Library/_lib---ui.lib.php.html#functionshow_user_select');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('split_sql', 'Library/_lib---install.php.html#functionsplit_sql');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('theme_exists', 'Library/_lib---themes.php.html#functiontheme_exists');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('toggle_visible', 'Library/_lib---ui.lib.php.html#functiontoggle_visible');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('translate_pattern_code', 'Library/_lib---general.lib.php.html#functiontranslate_pattern_code');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('truncate_with_ellipsis', 'Library/_lib---ui.lib.php.html#functiontruncate_with_ellipsis');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('unhtmlentities', 'Library/_lib---general.lib.php.html#functionunhtmlentities');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('update_preference', 'Library/_lib---preferences.php.html#functionupdate_preference');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('update_preferences', 'Library/_lib---preferences.php.html#functionupdate_preferences');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('update_text', 'Library/_lib---ui.lib.php.html#functionupdate_text');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('xml_from_array', 'Library/_lib---ui.lib.php.html#functionxml_from_array');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('xml_get_footer', 'Library/_lib---ui.lib.php.html#functionxml_get_footer');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('xml_get_header', 'Library/_lib---ui.lib.php.html#functionxml_get_header');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('_', 'Library/_lib---ui.lib.php.html#function_');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('__', 'Library/_lib---gettext.php.html#function__');
+				tree_function.add(fic);
+							var fic = new WebFXTreeItem('__autoload', 'Library/_lib---general.lib.php.html#function__autoload');
+				tree_function.add(fic);
+					
+			tree.add(tree_function);
+			
+					var tree_file = new WebFXTreeItem('File(s)', '');
+	
+							var file = new WebFXTreeItem('batch.lib.php', 'Library/_lib---batch.lib.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('debug.lib.php', 'Library/_lib---debug.lib.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('general.lib.php', 'Library/_lib---general.lib.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('gettext.php', 'Library/_lib---gettext.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('init.php', 'Library/_lib---init.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('install.php', 'Library/_lib---install.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('log.lib.php', 'Library/_lib---log.lib.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('preferences.php', 'Library/_lib---preferences.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('rating.lib.php', 'Library/_lib---rating.lib.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('search.php', 'Library/_lib---search.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('themes.php', 'Library/_lib---themes.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('ui.lib.php', 'Library/_lib---ui.lib.php.html');
+				tree_file.add(file);
+				
+			tree.add(tree_file);
+		
+	
+document.write(tree);
+}
+</script>
+</div>
+<p class="notes">
+	Generated by 
+	<a href="http://www.phpdoc.org" target="_blank">phpDocumentor <span class="field">1.4.3</span></a>
+</p>
+</body>
+</html>

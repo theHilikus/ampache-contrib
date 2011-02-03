@@ -1,949 +1,1376 @@
-<html>
-<head>
-<title>Docs For Class vainfo</title>
-<link rel="stylesheet" type="text/css" href="../media/style.css">
-</head>
-<body>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class vainfo</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class vainfo</h2>
 
-<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
-  <tr>
-    <td class="header_top">Ampache</td>
-  </tr>
-  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
-  <tr>
-    <td class="header_menu">
-        
-                                    
-                                                                                                                                                      		  [ <a href="../classtrees_Ampache.html" class="menu">class tree: Ampache</a> ]
-		  [ <a href="../elementindex_Ampache.html" class="menu">index: Ampache</a> ]
-		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
-    </td>
-  </tr>
-  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
-</table>
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">vainfo Class</p>
+<p class="description"><p>This class takes the information pulled from getID3 and returns it in a  Ampache friendly way.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Karl Vollmer &lt;<a href="mailto:vollmer@ampache.org">vollmer@ampache.org</a>&gt;</li>
+				<li><span class="field">version:</span> Release: 3.6</li>
+				<li><span class="field">copyright:</span> 2001 - 2011 Ampache.org</li>
+				<li><span class="field">link:</span> <a href="http://www.ampache.org/">http://www.ampache.org/</a></li>
+				<li><span class="field">since:</span> Class available since Release 1.0</li>
+				<li><span class="field">license:</span> <a href="http://opensource.org/licenses/gpl-2.0">GPLv2</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---class---vainfo.class.php.html">/lib/class/vainfo.class.php</a> (line <span class="field">49</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
 
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr valign="top">
-    <td width="200" class="menu">
-	<div id="todolist">
-			<p><a href="../todolist.html">Todo List</a></p>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																																																																																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$encoding" title="details" class="var-name">$encoding</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$encoding_id3v1" title="details" class="var-name">$encoding_id3v1</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$filename" title="details" class="var-name">$filename</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$tags" title="details" class="var-name">$tags</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$type" title="details" class="var-name">$type</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_broken" title="details" class="var-name">$_broken</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_dir_pattern" title="details" class="var-name">$_dir_pattern</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_file_encoding" title="details" class="var-name">$_file_encoding</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_file_pattern" title="details" class="var-name">$_file_pattern</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_getID3" title="details" class="var-name">$_getID3</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_iconv" title="details" class="var-name">$_iconv</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_pathinfo" title="details" class="var-name">$_pathinfo</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_raw" title="details" class="var-name">$_raw</a>
+				</div>
+											</div>
+		</div>
 	</div>
-      <b>Packages:</b><br />
-              <a href="../li_Ampache.html">Ampache</a><br />
-              <a href="../li_Catalog.html">Catalog</a><br />
-              <a href="../li_Horde_Browser.html">Horde_Browser</a><br />
-              <a href="../li_Search.html">Search</a><br />
-              <a href="../li_Web.html">Web</a><br />
-              <a href="../li_XMLRPC.html">XMLRPC</a><br />
-              <a href="../li_XML_RPC.html">XML_RPC</a><br />
-            <br /><br />
-                        <b>Files:</b><br />
-      	  <div class="package">
-			<a href="../Ampache/_lib---class---access.class.php.html">		access.class.php
-		</a><br>
-			<a href="../Ampache/_admin---access.php.html">		access.php
-		</a><br>
-			<a href="../Ampache/_lib---class---ajax.class.php.html">		ajax.class.php
-		</a><br>
-			<a href="../Ampache/_server---ajax.server.php.html">		ajax.server.php
-		</a><br>
-			<a href="../Ampache/_lib---class---album.class.php.html">		album.class.php
-		</a><br>
-			<a href="../Ampache/_albums.php.html">		albums.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---AmazonSearchEngine.class.php.html">		AmazonSearchEngine.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---ampachemail.class.php.html">		ampachemail.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---ampacherss.class.php.html">		ampacherss.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---api.class.php.html">		api.class.php
-		</a><br>
-			<a href="../Ampache/_modules---archive---archive.lib.php.html">		archive.lib.php
-		</a><br>
-			<a href="../Ampache/_lib---class---artist.class.php.html">		artist.class.php
-		</a><br>
-			<a href="../Ampache/_artists.php.html">		artists.php
-		</a><br>
-			<a href="../Ampache/_lib---batch.lib.php.html">		batch.lib.php
-		</a><br>
-			<a href="../Ampache/_batch.php.html">		batch.php
-		</a><br>
-			<a href="../Ampache/_server---browse.ajax.php.html">		browse.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---browse.class.php.html">		browse.class.php
-		</a><br>
-			<a href="../Ampache/_browse.php.html">		browse.php
-		</a><br>
-			<a href="../Ampache/_modules---captcha---captcha.php.html">		captcha.php
-		</a><br>
-			<a href="../Ampache/_admin---catalog.php.html">		catalog.php
-		</a><br>
-			<a href="../Ampache/_bin---catalog_update.inc.html">		catalog_update.inc
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.nusoap_base.php.html">		class.nusoap_base.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soapclient.php.html">		class.soapclient.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_fault.php.html">		class.soap_fault.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_parser.php.html">		class.soap_parser.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_server.php.html">		class.soap_server.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_transport_http.php.html">		class.soap_transport_http.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_val.php.html">		class.soap_val.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.wsdl.php.html">		class.wsdl.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.wsdlcache.php.html">		class.wsdlcache.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.xmlschema.php.html">		class.xmlschema.php
-		</a><br>
-			<a href="../Ampache/_lib---class---config.class.php.html">		config.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---core.class.php.html">		core.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---database_object.abstract.php.html">		database_object.abstract.php
-		</a><br>
-			<a href="../Ampache/_lib---class---dba.class.php.html">		dba.class.php
-		</a><br>
-			<a href="../Ampache/_lib---debug.lib.php.html">		debug.lib.php
-		</a><br>
-			<a href="../Ampache/_bin---delete_disabled.inc.html">		delete_disabled.inc
-		</a><br>
-			<a href="../Ampache/_server---democratic.ajax.php.html">		democratic.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---democratic.class.php.html">		democratic.class.php
-		</a><br>
-			<a href="../Ampache/_democratic.php.html">		democratic.php
-		</a><br>
-			<a href="../Ampache/_bin---dump_album_art.inc.html">		dump_album_art.inc
-		</a><br>
-			<a href="../Ampache/_admin---duplicates.php.html">		duplicates.php
-		</a><br>
-			<a href="../Ampache/_lib---class---error.class.php.html">		error.class.php
-		</a><br>
-			<a href="../Ampache/_admin---export.php.html">		export.php
-		</a><br>
-			<a href="../Ampache/_bin---fix_filenames.inc.html">		fix_filenames.inc
-		</a><br>
-			<a href="../Ampache/_server---flag.ajax.php.html">		flag.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---flag.class.php.html">		flag.class.php
-		</a><br>
-			<a href="../Ampache/_admin---flag.php.html">		flag.php
-		</a><br>
-			<a href="../Ampache/_flag.php.html">		flag.php
-		</a><br>
-			<a href="../Ampache/_lib---general.lib.php.html">		general.lib.php
-		</a><br>
-			<a href="../Ampache/_lib---class---genre.class.php.html">		genre.class.php
-		</a><br>
-			<a href="../Ampache/_genre.php.html">		genre.php
-		</a><br>
-			<a href="../Ampache/_modules---emulator---gettext.php.html">		gettext.php
-		</a><br>
-			<a href="../Ampache/_lib---gettext.php.html">		gettext.php
-		</a><br>
-			<a href="../Ampache/_modules---localplay---httpq.controller.php.html">		httpq.controller.php
-		</a><br>
-			<a href="../Ampache/_modules---httpq---httpqplayer.class.php.html">		httpqplayer.class.php
-		</a><br>
-			<a href="../Ampache/_image.php.html">		image.php
-		</a><br>
-			<a href="../Ampache/_server---index.ajax.php.html">		index.ajax.php
-		</a><br>
-			<a href="../Ampache/_admin---index.php.html">		index.php
-		</a><br>
-			<a href="../Ampache/_index.php.html">		index.php
-		</a><br>
-			<a href="../Ampache/_play---index.php.html">		index.php
-		</a><br>
-			<a href="../Ampache/_lib---init.php.html">		init.php
-		</a><br>
-			<a href="../Ampache/_install.php.html">		install.php
-		</a><br>
-			<a href="../Ampache/_lib---install.php.html">		install.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---jamendoSearch.class.php.html">		jamendoSearch.class.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---lastfm.class.php.html">		lastfm.class.php
-		</a><br>
-			<a href="../Ampache/_modules---plugins---Lastfm.plugin.php.html">		Lastfm.plugin.php
-		</a><br>
-			<a href="../Ampache/_lib---class---localplay.abstract.php.html">		localplay.abstract.php
-		</a><br>
-			<a href="../Ampache/_server---localplay.ajax.php.html">		localplay.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---localplay.class.php.html">		localplay.class.php
-		</a><br>
-			<a href="../Ampache/_localplay.php.html">		localplay.php
-		</a><br>
-			<a href="../Ampache/_lib---log.lib.php.html">		log.lib.php
-		</a><br>
-			<a href="../Ampache/_login.php.html">		login.php
-		</a><br>
-			<a href="../Ampache/_logout.php.html">		logout.php
-		</a><br>
-			<a href="../Ampache/_admin---mail.php.html">		mail.php
-		</a><br>
-			<a href="../Ampache/_lib---class---media.interface.php.html">		media.interface.php
-		</a><br>
-			<a href="../Ampache/_bin---migrate_config.inc.html">		migrate_config.inc
-		</a><br>
-			<a href="../Ampache/_admin---modules.php.html">		modules.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---mp3tunes.class.php.html">		mp3tunes.class.php
-		</a><br>
-			<a href="../Ampache/_modules---mpd---mpd.class.php.html">		mpd.class.php
-		</a><br>
-			<a href="../Ampache/_modules---localplay---mpd.controller.php.html">		mpd.controller.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---nusoap.php.html">		nusoap.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---nusoapmime.php.html">		nusoapmime.php
-		</a><br>
-			<a href="../Ampache/_server---playlist.ajax.php.html">		playlist.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---playlist.class.php.html">		playlist.class.php
-		</a><br>
-			<a href="../Ampache/_playlist.php.html">		playlist.php
-		</a><br>
-			<a href="../Ampache/_lib---class---plugin.class.php.html">		plugin.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---preference.class.php.html">		preference.class.php
-		</a><br>
-			<a href="../Ampache/_preferences.php.html">		preferences.php
-		</a><br>
-			<a href="../Ampache/_lib---preferences.php.html">		preferences.php
-		</a><br>
-			<a href="../Ampache/_bin---print_tags.inc.html">		print_tags.inc
-		</a><br>
-			<a href="../Ampache/_lib---class---radio.class.php.html">		radio.class.php
-		</a><br>
-			<a href="../Ampache/_radio.php.html">		radio.php
-		</a><br>
-			<a href="../Ampache/_server---random.ajax.php.html">		random.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---random.class.php.html">		random.class.php
-		</a><br>
-			<a href="../Ampache/_random.php.html">		random.php
-		</a><br>
-			<a href="../Ampache/_lib---class---rating.class.php.html">		rating.class.php
-		</a><br>
-			<a href="../Ampache/_lib---rating.lib.php.html">		rating.lib.php
-		</a><br>
-			<a href="../Ampache/_register.php.html">		register.php
-		</a><br>
-			<a href="../Ampache/_lib---class---registration.class.php.html">		registration.class.php
-		</a><br>
-			<a href="../Ampache/_modules---plugins---RioPlayer.plugin.php.html">		RioPlayer.plugin.php
-		</a><br>
-			<a href="../Ampache/_rss.php.html">		rss.php
-		</a><br>
-			<a href="../Ampache/_lib---class---scrobbler.class.php.html">		scrobbler.class.php
-		</a><br>
-			<a href="../Ampache/_search.php.html">		search.php
-		</a><br>
-			<a href="../Ampache/_admin---shout.php.html">		shout.php
-		</a><br>
-			<a href="../Ampache/_shout.php.html">		shout.php
-		</a><br>
-			<a href="../Ampache/_lib---class---shoutbox.class.php.html">		shoutbox.class.php
-		</a><br>
-			<a href="../Ampache/_modules---localplay---shoutcast.controller.php.html">		shoutcast.controller.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---Snoopy.class.php.html">		Snoopy.class.php
-		</a><br>
-			<a href="../Ampache/_server---song.ajax.php.html">		song.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---song.class.php.html">		song.class.php
-		</a><br>
-			<a href="../Ampache/_song.php.html">		song.php
-		</a><br>
-			<a href="../Ampache/_bin---sort_files.inc.html">		sort_files.inc
-		</a><br>
-			<a href="../Ampache/_server---stats.ajax.php.html">		stats.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---stats.class.php.html">		stats.class.php
-		</a><br>
-			<a href="../Ampache/_stats.php.html">		stats.php
-		</a><br>
-			<a href="../Ampache/_server---stream.ajax.php.html">		stream.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---stream.class.php.html">		stream.class.php
-		</a><br>
-			<a href="../Ampache/_lib---stream.lib.php.html">		stream.lib.php
-		</a><br>
-			<a href="../Ampache/_stream.php.html">		stream.php
-		</a><br>
-			<a href="../Ampache/_admin---system.php.html">		system.php
-		</a><br>
-			<a href="../Ampache/_server---tag.ajax.php.html">		tag.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---tag.class.php.html">		tag.class.php
-		</a><br>
-			<a href="../Ampache/_test.php.html">		test.php
-		</a><br>
-			<a href="../Ampache/_lib---themes.php.html">		themes.php
-		</a><br>
-			<a href="../Ampache/_lib---class---tmpplaylist.class.php.html">		tmpplaylist.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---update.class.php.html">		update.class.php
-		</a><br>
-			<a href="../Ampache/_update.php.html">		update.php
-		</a><br>
-			<a href="../Ampache/_lib---class---user.class.php.html">		user.class.php
-		</a><br>
-			<a href="../Ampache/_admin---users.php.html">		users.php
-		</a><br>
-			<a href="../Ampache/_util.php.html">		util.php
-		</a><br>
-			<a href="../Ampache/_lib---class---vainfo.class.php.html">		vainfo.class.php
-		</a><br>
-			<a href="../Ampache/_modules---validatemail---validateEmail.php.html">		validateEmail.php
-		</a><br>
-			<a href="../Ampache/_modules---validatemail---validateEmailFormat.php.html">		validateEmailFormat.php
-		</a><br>
-			<a href="../Ampache/_lib---class---vauth.class.php.html">		vauth.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---video.class.php.html">		video.class.php
-		</a><br>
-			<a href="../Ampache/_bin---write_playlists.inc.html">		write_playlists.inc
-		</a><br>
-			<a href="../Ampache/_bin---write_tags.inc.html">		write_tags.inc
-		</a><br>
-			<a href="../Ampache/_server---xml.server.php.html">		xml.server.php
-		</a><br>
-			<a href="../Ampache/_lib---class---xmldata.class.php.html">		xmldata.class.php
-		</a><br>
-			<a href="../Ampache/_server---xmlrpc.server.php.html">		xmlrpc.server.php
-		</a><br>
-			<a href="../Ampache/_lib---class---xmlrpcclient.class.php.html">		xmlrpcclient.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---xmlrpcserver.class.php.html">		xmlrpcserver.class.php
-		</a><br>
-			<a href="../Ampache/_modules---flash---xspf_player.php.html">		xspf_player.php
-		</a><br>
-	  </div><br />
-      
-            <b>Interfaces:</b><br />
-        <div class="package">
-		    		<a href="../Ampache/media.html">media</a><br />
-	  </div>
-      
-            <b>Classes:</b><br />
-        <div class="package">
-		    		<a href="../Ampache/Access.html">Access</a><br />
-	    		<a href="../Ampache/Ajax.html">Ajax</a><br />
-	    		<a href="../Ampache/Album.html">Album</a><br />
-	    		<a href="../Ampache/AmazonSearch.html">AmazonSearch</a><br />
-	    		<a href="../Ampache/AmpacheHttpq.html">AmpacheHttpq</a><br />
-	    		<a href="../Ampache/AmpacheLastfm.html">AmpacheLastfm</a><br />
-	    		<a href="../Ampache/AmpacheMail.html">AmpacheMail</a><br />
-	    		<a href="../Ampache/AmpacheMpd.html">AmpacheMpd</a><br />
-	    		<a href="../Ampache/AmpacheRioPlayer.html">AmpacheRioPlayer</a><br />
-	    		<a href="../Ampache/AmpacheRSS.html">AmpacheRSS</a><br />
-	    		<a href="../Ampache/AmpacheShoutCast.html">AmpacheShoutCast</a><br />
-	    		<a href="../Ampache/Api.html">Api</a><br />
-	    		<a href="../Ampache/archive.html">archive</a><br />
-	    		<a href="../Ampache/Artist.html">Artist</a><br />
-	    		<a href="../Ampache/Browse.html">Browse</a><br />
-	    		<a href="../Ampache/bzip_file.html">bzip_file</a><br />
-	    		<a href="../Ampache/captcha.html">captcha</a><br />
-	    		<a href="../Ampache/Config.html">Config</a><br />
-	    		<a href="../Ampache/Core.html">Core</a><br />
-	    		<a href="../Ampache/database_object.html">database_object</a><br />
-	    		<a href="../Ampache/Dba.html">Dba</a><br />
-	    		<a href="../Ampache/Democratic.html">Democratic</a><br />
-	    		<a href="../Ampache/easy_captcha.html">easy_captcha</a><br />
-	    		<a href="../Ampache/easy_captcha_dxy_spike.html">easy_captcha_dxy_spike</a><br />
-	    		<a href="../Ampache/easy_captcha_dxy_wave.html">easy_captcha_dxy_wave</a><br />
-	    		<a href="../Ampache/easy_captcha_fuzzy.html">easy_captcha_fuzzy</a><br />
-	    		<a href="../Ampache/easy_captcha_graphic.html">easy_captcha_graphic</a><br />
-	    		<a href="../Ampache/easy_captcha_graphic_image_disturbed.html">easy_captcha_graphic_image_disturbed</a><br />
-	    		<a href="../Ampache/easy_captcha_graphic_image_waved.html">easy_captcha_graphic_image_waved</a><br />
-	    		<a href="../Ampache/easy_captcha_persistent_grant.html">easy_captcha_persistent_grant</a><br />
-	    		<a href="../Ampache/easy_captcha_spamfree_no_new_urls.html">easy_captcha_spamfree_no_new_urls</a><br />
-	    		<a href="../Ampache/easy_captcha_text_disable.html">easy_captcha_text_disable</a><br />
-	    		<a href="../Ampache/easy_captcha_text_math_formula.html">easy_captcha_text_math_formula</a><br />
-	    		<a href="../Ampache/easy_captcha_utility.html">easy_captcha_utility</a><br />
-	    		<a href="../Ampache/Error.html">Error</a><br />
-	    		<a href="../Ampache/Flag.html">Flag</a><br />
-	    		<a href="../Ampache/Genre.html">Genre</a><br />
-	    		<a href="../Ampache/gzip_file.html">gzip_file</a><br />
-	    		<a href="../Ampache/HttpQPlayer.html">HttpQPlayer</a><br />
-	    		<a href="../Ampache/jamendoSearch.html">jamendoSearch</a><br />
-	    		<a href="../Ampache/LastFMSearch.html">LastFMSearch</a><br />
-	    		<a href="../Ampache/Localplay.html">Localplay</a><br />
-	    		<a href="../Ampache/localplay_controller.html">localplay_controller</a><br />
-	    		<a href="../Ampache/mp3tunes.html">mp3tunes</a><br />
-	    		<a href="../Ampache/mpd.html">mpd</a><br />
-	    		<a href="../Ampache/nusoapservermime.html">nusoapservermime</a><br />
-	    		<a href="../Ampache/nusoap_base.html">nusoap_base</a><br />
-	    		<a href="../Ampache/nusoap_client.html">nusoap_client</a><br />
-	    		<a href="../Ampache/nusoap_client_mime.html">nusoap_client_mime</a><br />
-	    		<a href="../Ampache/nusoap_fault.html">nusoap_fault</a><br />
-	    		<a href="../Ampache/nusoap_parser.html">nusoap_parser</a><br />
-	    		<a href="../Ampache/nusoap_server.html">nusoap_server</a><br />
-	    		<a href="../Ampache/nusoap_server_mime.html">nusoap_server_mime</a><br />
-	    		<a href="../Ampache/nusoap_wsdlcache.html">nusoap_wsdlcache</a><br />
-	    		<a href="../Ampache/nusoap_xmlschema.html">nusoap_xmlschema</a><br />
-	    		<a href="../Ampache/Playlist.html">Playlist</a><br />
-	    		<a href="../Ampache/Plugin.html">Plugin</a><br />
-	    		<a href="../Ampache/Preference.html">Preference</a><br />
-	    		<a href="../Ampache/Radio.html">Radio</a><br />
-	    		<a href="../Ampache/Random.html">Random</a><br />
-	    		<a href="../Ampache/Rating.html">Rating</a><br />
-	    		<a href="../Ampache/Registration.html">Registration</a><br />
-	    		<a href="../Ampache/scrobbler.html">scrobbler</a><br />
-	    		<a href="../Ampache/shoutBox.html">shoutBox</a><br />
-	    		<a href="../Ampache/Snoopy.html">Snoopy</a><br />
-	    		<a href="../Ampache/soapclient.html">soapclient</a><br />
-	    		<a href="../Ampache/soapclientmime.html">soapclientmime</a><br />
-	    		<a href="../Ampache/soapval.html">soapval</a><br />
-	    		<a href="../Ampache/soap_fault.html">soap_fault</a><br />
-	    		<a href="../Ampache/soap_parser.html">soap_parser</a><br />
-	    		<a href="../Ampache/soap_server.html">soap_server</a><br />
-	    		<a href="../Ampache/soap_transport_http.html">soap_transport_http</a><br />
-	    		<a href="../Ampache/Song.html">Song</a><br />
-	    		<a href="../Ampache/Stats.html">Stats</a><br />
-	    		<a href="../Ampache/Stream.html">Stream</a><br />
-	    		<a href="../Ampache/Tag.html">Tag</a><br />
-	    		<a href="../Ampache/tar_file.html">tar_file</a><br />
-	    		<a href="../Ampache/tmpPlaylist.html">tmpPlaylist</a><br />
-	    		<a href="../Ampache/Update.html">Update</a><br />
-	    		<a href="../Ampache/User.html">User</a><br />
-	    		<a href="../Ampache/vainfo.html">vainfo</a><br />
-	    		<a href="../Ampache/vauth.html">vauth</a><br />
-	    		<a href="../Ampache/Video.html">Video</a><br />
-	    		<a href="../Ampache/wsdl.html">wsdl</a><br />
-	    		<a href="../Ampache/wsdlcache.html">wsdlcache</a><br />
-	    		<a href="../Ampache/xmlData.html">xmlData</a><br />
-	    		<a href="../Ampache/xmlRpcClient.html">xmlRpcClient</a><br />
-	    		<a href="../Ampache/xmlRpcServer.html">xmlRpcServer</a><br />
-	    		<a href="../Ampache/XMLSchema.html">XMLSchema</a><br />
-	    		<a href="../Ampache/zip_file.html">zip_file</a><br />
-	  </div>
-                </td>
-    <td>
-      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
 
-<h1>Class: vainfo</h1>
-Source Location: /lib/class/vainfo.class.php<br /><br />
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																		
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#clean_tag_info" title="details" class="method-name">clean_tag_info</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$results</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$keys</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span> = <span class="var-default">null</span>])
+									</div>
+																						
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#get_tag_type" title="details" class="method-name">get_tag_type</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$results</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$config_key</span> = <span class="var-default">'metadata_order'</span>])
+									</div>
+																																																																																																																																																																																		
+				<div class="method-definition">
+											<span class="method-result">vainfo</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding_id3v1</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding_id3v2</span> = <span class="var-default">null</span>], <span class="var-type"></span>&nbsp;<span class="var-name">$dir_pattern</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$file_pattern</span>)
+									</div>
+																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_info" title="details" class="method-name">get_info</a>
+										()
+									</div>
+																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_broken" title="details" class="method-name">set_broken</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_clean_tag" title="details" class="method-name">_clean_tag</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tag</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">null</span>])
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_clean_type" title="details" class="method-name">_clean_type</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_get_info" title="details" class="method-name">_get_info</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_get_plugin_tags" title="details" class="method-name">_get_plugin_tags</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_get_tags" title="details" class="method-name">_get_tags</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_get_type" title="details" class="method-name">_get_type</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_id3v2_tag_to_frame" title="details" class="method-name">_id3v2_tag_to_frame</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tag_name</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_ape" title="details" class="method-name">_parse_ape</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_avi" title="details" class="method-name">_parse_avi</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_filename" title="details" class="method-name">_parse_filename</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_flv" title="details" class="method-name">_parse_flv</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_id3v1" title="details" class="method-name">_parse_id3v1</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_id3v2" title="details" class="method-name">_parse_id3v2</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_lyrics" title="details" class="method-name">_parse_lyrics</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_mpg" title="details" class="method-name">_parse_mpg</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_quicktime" title="details" class="method-name">_parse_quicktime</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_riff" title="details" class="method-name">_parse_riff</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_vorbiscomment" title="details" class="method-name">_parse_vorbiscomment</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_parse_wmv" title="details" class="method-name">_parse_wmv</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
 
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$encoding" id="$encoding"><!-- --></A>
+<div class="evenrow">
 
-<table width="100%" border="0">
-<tr><td valign="top">
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$encoding</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">52</span>)
+		</span>
+	</div>
 
-<h3><a href="#class_details">Class Overview</a></h3>
-<pre></pre><br />
-<div class="description">vainfo  This class takes the information pulled from getID3 and returns it in a  Ampache friendly way.</div><br /><br />
-
-
-
-
-
-
-        
-</td>
-
-<td valign="top">
-<h3><a href="#class_vars">Variables</a></h3>
-<ul>
-    <li><a href="../Ampache/vainfo.html#var$encoding">$encoding</a></li>
-    <li><a href="../Ampache/vainfo.html#var$encoding_id3v1">$encoding_id3v1</a></li>
-    <li><a href="../Ampache/vainfo.html#var$encoding_id3v2">$encoding_id3v2</a></li>
-    <li><a href="../Ampache/vainfo.html#var$filename">$filename</a></li>
-    <li><a href="../Ampache/vainfo.html#var$tags">$tags</a></li>
-    <li><a href="../Ampache/vainfo.html#var$type">$type</a></li>
-    <li><a href="../Ampache/vainfo.html#var$_dir_pattern">$_dir_pattern</a></li>
-    <li><a href="../Ampache/vainfo.html#var$_file_encoding">$_file_encoding</a></li>
-    <li><a href="../Ampache/vainfo.html#var$_file_pattern">$_file_pattern</a></li>
-    <li><a href="../Ampache/vainfo.html#var$_getID3">$_getID3</a></li>
-    <li><a href="../Ampache/vainfo.html#var$_iconv">$_iconv</a></li>
-    <li><a href="../Ampache/vainfo.html#var$_raw">$_raw</a></li>
-    <li><a href="../Ampache/vainfo.html#var$_raw2">$_raw2</a></li>
-  </ul>
-</td>
-
-
-<td valign="top">
-<h3><a href="#class_methods">Methods</a></h3>
-<ul>
-    <li><a href="../Ampache/vainfo.html#method__construct">__construct</a></li>
-    <li><a href="../Ampache/vainfo.html#methodclean_tag_info">clean_tag_info</a></li>
-    <li><a href="../Ampache/vainfo.html#methodget_info">get_info</a></li>
-    <li><a href="../Ampache/vainfo.html#methodget_tag_type">get_tag_type</a></li>
-    <li><a href="../Ampache/vainfo.html#method_get_tags">_get_tags</a></li>
-    <li><a href="../Ampache/vainfo.html#method_get_type">_get_type</a></li>
-  </ul>
-</td>
-
-</tr></table>
-<hr />
-
-<table width="100%" border="0"><tr>
-
-
-
-
-
-
-</tr></table>
-<hr />
-
-<a name="class_details"></a>
-<h3>Class Details</h3>
-<div class="tags">
-[line 27]<br />
-vainfo  This class takes the information pulled from getID3 and returns it in a  Ampache friendly way.<br /><br /></div><br /><br />
-<div class="top">[ <a href="#top">Top</a> ]</div><br />
-
-<hr />
-<a name="class_vars"></a>
-<h3>Class Variables</h3>
-<div class="tags">
-	<a name="var$encoding"></a>
-	<p></p>
-	<h4>$encoding = <span class="value">&nbsp;''</span></h4>
-	<p>[line 30]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$encoding_id3v1"></a>
-	<p></p>
-	<h4>$encoding_id3v1 = <span class="value">&nbsp;''</span></h4>
-	<p>[line 31]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$encoding_id3v2"></a>
-	<p></p>
-	<h4>$encoding_id3v2 = <span class="value">&nbsp;''</span></h4>
-	<p>[line 32]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$filename"></a>
-	<p></p>
-	<h4>$filename = <span class="value">&nbsp;''</span></h4>
-	<p>[line 35]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$tags"></a>
-	<p></p>
-	<h4>$tags = <span class="value">array()</span></h4>
-	<p>[line 37]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$type"></a>
-	<p></p>
-	<h4>$type = <span class="value">&nbsp;''</span></h4>
-	<p>[line 36]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$_dir_pattern"></a>
-	<p></p>
-	<h4>$_dir_pattern = <span class="value">&nbsp;''</span></h4>
-	<p>[line 46]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$_file_encoding"></a>
-	<p></p>
-	<h4>$_file_encoding = <span class="value">&nbsp;''</span></h4>
-	<p>[line 44]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$_file_pattern"></a>
-	<p></p>
-	<h4>$_file_pattern = <span class="value">&nbsp;''</span></h4>
-	<p>[line 45]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$_getID3"></a>
-	<p></p>
-	<h4>$_getID3 = <span class="value">&nbsp;''</span></h4>
-	<p>[line 42]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$_iconv"></a>
-	<p></p>
-	<h4>$_iconv = <span class="value">&nbsp;false</span></h4>
-	<p>[line 43]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$_raw"></a>
-	<p></p>
-	<h4>$_raw = <span class="value">array()</span></h4>
-	<p>[line 40]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-	<a name="var$_raw2"></a>
-	<p></p>
-	<h4>$_raw2 = <span class="value">array()</span></h4>
-	<p>[line 41]</p>
-  
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-</div><br />
-
-<hr />
-<a name="class_methods"></a>
-<h3>Class Methods</h3>
-<div class="tags">
-  <hr />
-	<a name="methodclean_tag_info"></a>
-	<h3>static method clean_tag_info <span class="smalllinenumber">[line 205]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void clean_tag_info(
-
-$results, 
-$key, 
-$filename)</code>
-    </td></tr></table>
-    </td></tr></table><br />
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
 	
-		clean_tag_info<br /><br /><p>This function takes the array from vainfo along with the  key we've decided on and the filename and returns it in a  sanatized format that ampache can actually use</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+	
+		
+		
+
 </div>
-<br /><br />
+<a name="var$encoding_id3v1" id="$encoding_id3v1"><!-- --></A>
+<div class="oddrow">
 
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$results</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$key</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$filename</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodget_tag_type"></a>
-	<h3>static method get_tag_type <span class="smalllinenumber">[line 168]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void get_tag_type(
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$encoding_id3v1</span>
+			 = <span class="var-default"> 'ISO-8859-1'</span>			(line <span class="line-number">53</span>)
+		</span>
+	</div>
 
-$results)</code>
-    </td></tr></table>
-    </td></tr></table><br />
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
 	
-		get_tag_type<br /><br /><p>This takes the result set, and the the tag_order  As defined by your config file and trys to figure out  which tag type it should use, if your tag_order  doesn't match anything then it just takes the first one  it finds in the results.</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+	
+		
+		
+
 </div>
-<br /><br />
+<a name="var$filename" id="$filename"><!-- --></A>
+<div class="evenrow">
 
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$filename</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">56</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
 	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$results</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-
-  <hr />
-	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 53]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>vainfo __construct(
-
-$file, [
-$encoding = ''], [
-$encoding_id3v1 = ''], [
-$encoding_id3v2 = ''], 
-$dir_pattern, 
-$file_pattern)</code>
-    </td></tr></table>
-    </td></tr></table><br />
 	
-		Constructor<br /><br /><p>This function just sets up the class, it doesn't  actually pull the information</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+		
+		
+
 </div>
-<br /><br />
+<a name="var$tags" id="$tags"><!-- --></A>
+<div class="oddrow">
 
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$tags</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">58</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
 	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$file</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$encoding</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$encoding_id3v1</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$encoding_id3v2</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$dir_pattern</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$file_pattern</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodget_info"></a>
-	<h3>method get_info <span class="smalllinenumber">[line 135]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void get_info(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
 	
-		get_info<br /><br /><p>This function takes a filename and returns the $_info array  all filled up with tagie goodness or if specified filename  pattern goodness</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+		
+		
+
 </div>
-<br /><br />
+<a name="var$type" id="$type"><!-- --></A>
+<div class="evenrow">
 
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$type</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
 	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="method_get_tags"></a>
-	<h3>method _get_tags <span class="smalllinenumber">[line 302]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void _get_tags(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
 	
-		_get_tags<br /><br /><p>This function takes the raw information and the type and  attempts to gather the tags and then normalize them into  ['tag_name']['var'] = value</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+		
+		
+
 </div>
-<br /><br />
+<a name="var$_broken" id="$_broken"><!-- --></A>
+<div class="oddrow">
 
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_broken</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">70</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
 	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="method_get_type"></a>
-	<h3>method _get_type <span class="smalllinenumber">[line 261]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void _get_type(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
 	
-		_get_type<br /><br /><p>This function takes the raw information and figures out  what type of file we are dealing with for use by the tag  function</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+		
+		
+
 </div>
-<br /><br />
+<a name="var$_dir_pattern" id="$_dir_pattern"><!-- --></A>
+<div class="evenrow">
 
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_dir_pattern</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">66</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
 	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-</div><br />
+	
+		
+		
+
+</div>
+<a name="var$_file_encoding" id="$_file_encoding"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_file_encoding</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">64</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_file_pattern" id="$_file_pattern"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_file_pattern</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">65</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_getID3" id="$_getID3"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_getID3</span>
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">62</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_iconv" id="$_iconv"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_iconv</span>
+			 = <span class="var-default"> false</span>			(line <span class="line-number">63</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_pathinfo" id="$_pathinfo"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_pathinfo</span>
+						(line <span class="line-number">69</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_raw" id="$_raw"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_raw</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">61</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodclean_tag_info" id="clean_tag_info"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static clean_tag_info</span> (line <span class="line-number">240</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">clean_tag_info</p>
+<p class="description"><p>This function takes the array from vainfo along with the  key we've decided on and the filename and returns it in a  sanitized format that ampache can actually use</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			clean_tag_info
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$results</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$keys</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$results</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$keys</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_tag_type" id="get_tag_type"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static get_tag_type</span> (line <span class="line-number">209</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_tag_type</p>
+<p class="description"><p>This takes the result set and the tag_order defined in your config  file and tries to figure out which tag type(s) it should use. If your  tag_order doesn't match anything then it throws up its hands and uses  everything.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			get_tag_type
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$results</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$config_key</span> = <span class="var-default">'metadata_order'</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$results</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$config_key</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">77</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+<p class="description"><p>This function just sets up the class, it doesn't  actually pull the information</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">vainfo</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding_id3v1</span> = <span class="var-default">null</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding_id3v2</span> = <span class="var-default">null</span>], <span class="var-type"></span>&nbsp;<span class="var-name">$dir_pattern</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$file_pattern</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$encoding</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$encoding_id3v1</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$encoding_id3v2</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dir_pattern</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file_pattern</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_info" id="get_info"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_info</span> (line <span class="line-number">168</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_info</p>
+<p class="description"><p>This function runs the various steps to gathering the metadata</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_info
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodset_broken" id="set_broken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_broken</span> (line <span class="line-number">1059</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">set_broken</p>
+<p class="description"><p>This fills all tag types with Unknown (Broken)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_broken
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_clean_tag" id="_clean_tag"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_clean_tag</span> (line <span class="line-number">1032</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_clean_tag</p>
+<p class="description"><p>This function cleans up the tag that it's passed using Iconv  if we've got it. It also takes an optional encoding param  for the cases where we know what the tags source encoding  is, and or if it's different then the encoding recorded  in the file</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_clean_tag
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tag</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tag</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$encoding</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_clean_type" id="_clean_type"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_clean_type</span> (line <span class="line-number">579</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_clean_type  This standardizes the type that we are given into a recognized type.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_clean_type
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_get_info" id="_get_info"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_get_info</span> (line <span class="line-number">536</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_get_info</p>
+<p class="description"><p>Gather and return the general information about a song (vbr/cbr,  sample rate, channels, etc.)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_get_info
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_get_plugin_tags" id="_get_plugin_tags"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_get_plugin_tags</span> (line <span class="line-number">514</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_get_plugin_tags</p>
+<p class="description"><p>Get additional metadata from plugins</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_get_plugin_tags
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_get_tags" id="_get_tags"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_get_tags</span> (line <span class="line-number">439</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_get_tags</p>
+<p class="description"><p>This function takes the raw information and the type and  attempts to gather the tags and then normalize them into  ['tag_name']['var'] = value</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_get_tags
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_get_type" id="_get_type"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_get_type</span> (line <span class="line-number">386</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_get_type</p>
+<p class="description"><p>This function takes the raw information and figures out  what type of file we are dealing with for use by the tag  function</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_get_type
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_id3v2_tag_to_frame" id="_id3v2_tag_to_frame"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_id3v2_tag_to_frame</span> (line <span class="line-number">1003</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_id3v2_tag_to_frame</p>
+<p class="description"><p>This translates the tag name to a frame, if there a many it returns the first  one if finds that exists in the raw</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_id3v2_tag_to_frame
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tag_name</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tag_name</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_ape" id="_parse_ape"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_ape</span> (line <span class="line-number">771</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_ape</p>
+<p class="description"><p>This function takes ape tags set by getid3() and then  returns the elements translated using iconv if needed in a  pretty little format</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_ape
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_avi" id="_parse_avi"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_avi</span> (line <span class="line-number">863</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_avi</p>
+<p class="description"><p>This attempts to parse our the information on an avi file and present it in some  kind of sane format, this is a little hard as these files don't have tags</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_avi
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_filename" id="_parse_filename"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_filename</span> (line <span class="line-number">959</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_filename</p>
+<p class="description"><p>This function uses the passed file and dir patterns  To pull out extra tag information and populate it into  its own array</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_filename
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_flv" id="_parse_flv"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_flv</span> (line <span class="line-number">937</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_flv</p>
+<p class="description"><p>This attempts to parse our the information on an flv file and present it in some  kind of sane format, this is a little hard as these files don't have tags</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_flv
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_id3v1" id="_parse_id3v1"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_id3v1</span> (line <span class="line-number">680</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_id3v1  This function takes an id3v1 tag set from getid3() and then  returns the elements (translated using iconv if needed) in a  pretty little format.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_id3v1
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_id3v2" id="_parse_id3v2"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_id3v2</span> (line <span class="line-number">704</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_id3v2  This function takes an id3v2 tag set from getid3() and then  returns the elements (translated using iconv if needed) in a  pretty little format.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_id3v2
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_lyrics" id="_parse_lyrics"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_lyrics</span> (line <span class="line-number">613</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_lyrics</p>
+<p class="description"><p>This function takes a lyrics3 from getid3()  nothing to do?</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_lyrics
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_mpg" id="_parse_mpg"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_mpg</span> (line <span class="line-number">884</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_mpg</p>
+<p class="description"><p>This attempts to parse our the information on a mpg file and present it in some  kind of sane format, this is a little hard as these files don't have tags</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_mpg
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_quicktime" id="_parse_quicktime"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_quicktime</span> (line <span class="line-number">824</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_quicktime</p>
+<p class="description"><p>this function takes the quicktime tags set by getid3() and then  returns the elements translated using iconv if needed in a  pretty little format</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_quicktime
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_riff" id="_parse_riff"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_riff</span> (line <span class="line-number">799</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_riff</p>
+<p class="description"><p>this function takes the riff take information passed by getid3() and  then reformats it so that it matches the other formats. May require iconv</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_riff
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_vorbiscomment" id="_parse_vorbiscomment"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_vorbiscomment</span> (line <span class="line-number">637</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_vorbiscomment</p>
+<p class="description"><p>This function takes a vorbiscomment from getid3() and then  returns the elements translated using iconv if needed in a  pretty little format</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_vorbiscomment
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method_parse_wmv" id="_parse_wmv"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_parse_wmv</span> (line <span class="line-number">905</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_parse_wmv</p>
+<p class="description"><p>This attempts to parse our the information on a asf/wmv file and present it in some  kind of sane format, this is a little hard as these files don't have tags</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_parse_wmv
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$tags</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$tags</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
 
 
-        <div class="credit">
-		    <hr />
-		    Documentation generated on Thu, 12 Feb 2009 08:00:12 +0900 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
-	      </div>
-      </td></tr></table>
-    </td>
-  </tr>
-</table>
-
-</body>
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 03 Feb 2011 10:59:38 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
 </html>

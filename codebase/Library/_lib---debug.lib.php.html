@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs for page debug.lib.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/lib/debug.lib.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Debug Library</p>
+<p class="description"><p>This library is loaded when somehow our mojo has  been lost, it contains functions for checking sql  connections, web paths etc..</p><p>PHP version 5</p><p>LICENSE: GNU General Public License, version 2 (GPLv2)  Copyright (c) 2001 - 2011 Ampache.org All Rights Reserved</p><p>This program is free software; you can redistribute it and/or  modify it under the terms of the GNU General Public License v2  as published by the Free Software Foundation.</p><p>This program is distributed in the hope that it will be useful,  but WITHOUT ANY WARRANTY; without even the implied warranty of  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the  GNU General Public License for more details.</p><p>You should have received a copy of the GNU General Public License  along with this program; if not, write to the Free Software  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Karl Vollmer &lt;<a href="mailto:vollmer@ampache.org">vollmer@ampache.org</a>&gt;</li>
+				<li><span class="field">version:</span> PHP 5.2</li>
+				<li><span class="field">copyright:</span> 2001 - 2011 Ampache.org</li>
+				<li><span class="field">link:</span> <a href="http://www.ampache.org/">http://www.ampache.org/</a></li>
+				<li><span class="field">since:</span> File available since Release 1.0</li>
+				<li><span class="field">license:</span> <a href="http://opensource.org/licenses/gpl-2.0">GPLv2</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functioncheck_config_values" id="functioncheck_config_values"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">check_config_values</span> (line <span class="line-number">176</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_config_values</p>
+<p class="description"><p>checks to make sure that they have at least set the needed variables</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_config_values
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$conf</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$conf</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncheck_database" id="functioncheck_database"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">check_database</span> (line <span class="line-number">48</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_database</p>
+<p class="description"><p>checks the local mysql db and make sure life is good</p></p>
+	<ul class="tags">
+				<li><span class="field">return:</span> false or Database resource</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			check_database
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$host</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$username</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$pass</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$host</span><span class="var-description">: Hostname</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$username</span><span class="var-description">: Username</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$pass</span><span class="var-description">: Password</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncheck_database_inserted" id="functioncheck_database_inserted"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">check_database_inserted</span> (line <span class="line-number">68</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_database_inserted</p>
+<p class="description"><p>checks to make sure that you have inserted the database  and that the user you are using has access to it</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_database_inserted
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$dbh</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$db_name</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$dbh</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$db_name</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncheck_gettext" id="functioncheck_gettext"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">check_gettext</span> (line <span class="line-number">294</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_gettext</p>
+<p class="description"><p>This checks to see if you've got gettext installed</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_gettext
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioncheck_mbstring" id="functioncheck_mbstring"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">check_mbstring</span> (line <span class="line-number">308</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_mbstring</p>
+<p class="description"><p>This checks for mbstring support</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_mbstring
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioncheck_php_iconv" id="functioncheck_php_iconv"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">check_php_iconv</span> (line <span class="line-number">147</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_php_iconv</p>
+<p class="description"><p>checks to see if you have iconv installed</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_php_iconv
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioncheck_php_memory" id="functioncheck_php_memory"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">check_php_memory</span> (line <span class="line-number">218</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_php_memory  This checks to make sure that the php memory limit is withing the  recommended range, this doesn't take into account the size of your  catalog.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_php_memory
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioncheck_php_mysql" id="functioncheck_php_mysql"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">check_php_mysql</span> (line <span class="line-number">118</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_php_mysql</p>
+<p class="description"><p>checks for mysql support by looking for the mysql_query function</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_php_mysql
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioncheck_php_pcre" id="functioncheck_php_pcre"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">check_php_pcre</span> (line <span class="line-number">162</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_php_pcre</p>
+<p class="description"><p>This makes sure they have pcre (preg_???) support  compiled into PHP this is required!</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_php_pcre
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioncheck_php_session" id="functioncheck_php_session"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">check_php_session</span> (line <span class="line-number">133</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_php_session</p>
+<p class="description"><p>checks to make sure the needed functions  for sessions exist</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_php_session
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioncheck_php_timelimit" id="functioncheck_php_timelimit"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">check_php_timelimit</span> (line <span class="line-number">236</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_php_timelimit</p>
+<p class="description"><p>This checks to make sure that the php timelimit is set to some  semi-sane limit, IE greater then 30 seconds</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_php_timelimit
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functioncheck_php_ver" id="functioncheck_php_ver"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">check_php_ver</span> (line <span class="line-number">91</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_php_ver</p>
+<p class="description"><p>checks the php version and makes  sure that it's good enough</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_php_ver
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$level</span> = <span class="var-default">0</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$level</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functioncheck_putenv" id="functioncheck_putenv"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">check_putenv</span> (line <span class="line-number">253</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">check_putenv</p>
+<p class="description"><p>This checks to see if we can manually set the  memory limit, and other putenvs we need for  ampache to work correctly</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			check_putenv
+		</span>
+				()
+			</div>
+
+		
+	
+</div>
+<a name="functiondebug_result" id="functiondebug_result"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">debug_result</span> (line <span class="line-number">367</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">debug_ok</p>
+<p class="description"><p>Return an &quot;OK&quot; with the specified string</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			debug_result
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$comment</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$status</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$value</span> = <span class="var-default">false</span>])
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$comment</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$status</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="functiongenerate_config" id="functiongenerate_config"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">generate_config</span> (line <span class="line-number">323</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">generate_config</p>
+<p class="description"><p>This takes an array of results and re-generates the config file  this is used by the installer and by the admin/system page</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			generate_config
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$current</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$current</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 03 Feb 2011 10:59:32 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
+</html>

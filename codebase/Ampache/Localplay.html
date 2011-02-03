@@ -1,1685 +1,1611 @@
-<html>
-<head>
-<title>Docs For Class Localplay</title>
-<link rel="stylesheet" type="text/css" href="../media/style.css">
-</head>
-<body>
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class Localplay</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Localplay</h2>
 
-<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
-  <tr>
-    <td class="header_top">Ampache</td>
-  </tr>
-  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
-  <tr>
-    <td class="header_menu">
-        
-                                    
-                                                                                                                                                      		  [ <a href="../classtrees_Ampache.html" class="menu">class tree: Ampache</a> ]
-		  [ <a href="../elementindex_Ampache.html" class="menu">index: Ampache</a> ]
-		  	    [ <a href="../elementindex.html" class="menu">all elements</a> ]
-    </td>
-  </tr>
-  <tr><td class="header_line"><img src="../media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
-</table>
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Localplay Class</p>
+<p class="description"><p>Description here...</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Karl Vollmer &lt;<a href="mailto:vollmer@ampache.org">vollmer@ampache.org</a>&gt;</li>
+				<li><span class="field">version:</span> Release: 3.6</li>
+				<li><span class="field">copyright:</span> 2001 - 2011 Ampache.org</li>
+				<li><span class="field">link:</span> <a href="http://www.ampache.org/">http://www.ampache.org/</a></li>
+				<li><span class="field">since:</span> Class available since Release 1.0</li>
+				<li><span class="field">license:</span> <a href="http://opensource.org/licenses/gpl-2.0">GPLv2</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_lib---class---localplay.class.php.html">/lib/class/localplay.class.php</a> (line <span class="field">48</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
 
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
-  <tr valign="top">
-    <td width="200" class="menu">
-	<div id="todolist">
-			<p><a href="../todolist.html">Todo List</a></p>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$type" title="details" class="var-name">$type</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_function_map" title="details" class="var-name">$_function_map</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_player" title="details" class="var-name">$_player</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_preferences" title="details" class="var-name">$_preferences</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_template" title="details" class="var-name">$_template</a>
+				</div>
+											</div>
+		</div>
 	</div>
-      <b>Packages:</b><br />
-              <a href="../li_Ampache.html">Ampache</a><br />
-              <a href="../li_Catalog.html">Catalog</a><br />
-              <a href="../li_Horde_Browser.html">Horde_Browser</a><br />
-              <a href="../li_Search.html">Search</a><br />
-              <a href="../li_Web.html">Web</a><br />
-              <a href="../li_XMLRPC.html">XMLRPC</a><br />
-              <a href="../li_XML_RPC.html">XML_RPC</a><br />
-            <br /><br />
-                        <b>Files:</b><br />
-      	  <div class="package">
-			<a href="../Ampache/_lib---class---access.class.php.html">		access.class.php
-		</a><br>
-			<a href="../Ampache/_admin---access.php.html">		access.php
-		</a><br>
-			<a href="../Ampache/_lib---class---ajax.class.php.html">		ajax.class.php
-		</a><br>
-			<a href="../Ampache/_server---ajax.server.php.html">		ajax.server.php
-		</a><br>
-			<a href="../Ampache/_lib---class---album.class.php.html">		album.class.php
-		</a><br>
-			<a href="../Ampache/_albums.php.html">		albums.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---AmazonSearchEngine.class.php.html">		AmazonSearchEngine.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---ampachemail.class.php.html">		ampachemail.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---ampacherss.class.php.html">		ampacherss.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---api.class.php.html">		api.class.php
-		</a><br>
-			<a href="../Ampache/_modules---archive---archive.lib.php.html">		archive.lib.php
-		</a><br>
-			<a href="../Ampache/_lib---class---artist.class.php.html">		artist.class.php
-		</a><br>
-			<a href="../Ampache/_artists.php.html">		artists.php
-		</a><br>
-			<a href="../Ampache/_lib---batch.lib.php.html">		batch.lib.php
-		</a><br>
-			<a href="../Ampache/_batch.php.html">		batch.php
-		</a><br>
-			<a href="../Ampache/_server---browse.ajax.php.html">		browse.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---browse.class.php.html">		browse.class.php
-		</a><br>
-			<a href="../Ampache/_browse.php.html">		browse.php
-		</a><br>
-			<a href="../Ampache/_modules---captcha---captcha.php.html">		captcha.php
-		</a><br>
-			<a href="../Ampache/_admin---catalog.php.html">		catalog.php
-		</a><br>
-			<a href="../Ampache/_bin---catalog_update.inc.html">		catalog_update.inc
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.nusoap_base.php.html">		class.nusoap_base.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soapclient.php.html">		class.soapclient.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_fault.php.html">		class.soap_fault.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_parser.php.html">		class.soap_parser.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_server.php.html">		class.soap_server.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_transport_http.php.html">		class.soap_transport_http.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.soap_val.php.html">		class.soap_val.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.wsdl.php.html">		class.wsdl.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.wsdlcache.php.html">		class.wsdlcache.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---class.xmlschema.php.html">		class.xmlschema.php
-		</a><br>
-			<a href="../Ampache/_lib---class---config.class.php.html">		config.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---core.class.php.html">		core.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---database_object.abstract.php.html">		database_object.abstract.php
-		</a><br>
-			<a href="../Ampache/_lib---class---dba.class.php.html">		dba.class.php
-		</a><br>
-			<a href="../Ampache/_lib---debug.lib.php.html">		debug.lib.php
-		</a><br>
-			<a href="../Ampache/_bin---delete_disabled.inc.html">		delete_disabled.inc
-		</a><br>
-			<a href="../Ampache/_server---democratic.ajax.php.html">		democratic.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---democratic.class.php.html">		democratic.class.php
-		</a><br>
-			<a href="../Ampache/_democratic.php.html">		democratic.php
-		</a><br>
-			<a href="../Ampache/_bin---dump_album_art.inc.html">		dump_album_art.inc
-		</a><br>
-			<a href="../Ampache/_admin---duplicates.php.html">		duplicates.php
-		</a><br>
-			<a href="../Ampache/_lib---class---error.class.php.html">		error.class.php
-		</a><br>
-			<a href="../Ampache/_admin---export.php.html">		export.php
-		</a><br>
-			<a href="../Ampache/_bin---fix_filenames.inc.html">		fix_filenames.inc
-		</a><br>
-			<a href="../Ampache/_server---flag.ajax.php.html">		flag.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---flag.class.php.html">		flag.class.php
-		</a><br>
-			<a href="../Ampache/_admin---flag.php.html">		flag.php
-		</a><br>
-			<a href="../Ampache/_flag.php.html">		flag.php
-		</a><br>
-			<a href="../Ampache/_lib---general.lib.php.html">		general.lib.php
-		</a><br>
-			<a href="../Ampache/_lib---class---genre.class.php.html">		genre.class.php
-		</a><br>
-			<a href="../Ampache/_genre.php.html">		genre.php
-		</a><br>
-			<a href="../Ampache/_modules---emulator---gettext.php.html">		gettext.php
-		</a><br>
-			<a href="../Ampache/_lib---gettext.php.html">		gettext.php
-		</a><br>
-			<a href="../Ampache/_modules---localplay---httpq.controller.php.html">		httpq.controller.php
-		</a><br>
-			<a href="../Ampache/_modules---httpq---httpqplayer.class.php.html">		httpqplayer.class.php
-		</a><br>
-			<a href="../Ampache/_image.php.html">		image.php
-		</a><br>
-			<a href="../Ampache/_server---index.ajax.php.html">		index.ajax.php
-		</a><br>
-			<a href="../Ampache/_admin---index.php.html">		index.php
-		</a><br>
-			<a href="../Ampache/_index.php.html">		index.php
-		</a><br>
-			<a href="../Ampache/_play---index.php.html">		index.php
-		</a><br>
-			<a href="../Ampache/_lib---init.php.html">		init.php
-		</a><br>
-			<a href="../Ampache/_install.php.html">		install.php
-		</a><br>
-			<a href="../Ampache/_lib---install.php.html">		install.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---jamendoSearch.class.php.html">		jamendoSearch.class.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---lastfm.class.php.html">		lastfm.class.php
-		</a><br>
-			<a href="../Ampache/_modules---plugins---Lastfm.plugin.php.html">		Lastfm.plugin.php
-		</a><br>
-			<a href="../Ampache/_lib---class---localplay.abstract.php.html">		localplay.abstract.php
-		</a><br>
-			<a href="../Ampache/_server---localplay.ajax.php.html">		localplay.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---localplay.class.php.html">		localplay.class.php
-		</a><br>
-			<a href="../Ampache/_localplay.php.html">		localplay.php
-		</a><br>
-			<a href="../Ampache/_lib---log.lib.php.html">		log.lib.php
-		</a><br>
-			<a href="../Ampache/_login.php.html">		login.php
-		</a><br>
-			<a href="../Ampache/_logout.php.html">		logout.php
-		</a><br>
-			<a href="../Ampache/_admin---mail.php.html">		mail.php
-		</a><br>
-			<a href="../Ampache/_lib---class---media.interface.php.html">		media.interface.php
-		</a><br>
-			<a href="../Ampache/_bin---migrate_config.inc.html">		migrate_config.inc
-		</a><br>
-			<a href="../Ampache/_admin---modules.php.html">		modules.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---mp3tunes.class.php.html">		mp3tunes.class.php
-		</a><br>
-			<a href="../Ampache/_modules---mpd---mpd.class.php.html">		mpd.class.php
-		</a><br>
-			<a href="../Ampache/_modules---localplay---mpd.controller.php.html">		mpd.controller.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---nusoap.php.html">		nusoap.php
-		</a><br>
-			<a href="../Ampache/_modules---nusoap---nusoapmime.php.html">		nusoapmime.php
-		</a><br>
-			<a href="../Ampache/_server---playlist.ajax.php.html">		playlist.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---playlist.class.php.html">		playlist.class.php
-		</a><br>
-			<a href="../Ampache/_playlist.php.html">		playlist.php
-		</a><br>
-			<a href="../Ampache/_lib---class---plugin.class.php.html">		plugin.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---preference.class.php.html">		preference.class.php
-		</a><br>
-			<a href="../Ampache/_preferences.php.html">		preferences.php
-		</a><br>
-			<a href="../Ampache/_lib---preferences.php.html">		preferences.php
-		</a><br>
-			<a href="../Ampache/_bin---print_tags.inc.html">		print_tags.inc
-		</a><br>
-			<a href="../Ampache/_lib---class---radio.class.php.html">		radio.class.php
-		</a><br>
-			<a href="../Ampache/_radio.php.html">		radio.php
-		</a><br>
-			<a href="../Ampache/_server---random.ajax.php.html">		random.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---random.class.php.html">		random.class.php
-		</a><br>
-			<a href="../Ampache/_random.php.html">		random.php
-		</a><br>
-			<a href="../Ampache/_lib---class---rating.class.php.html">		rating.class.php
-		</a><br>
-			<a href="../Ampache/_lib---rating.lib.php.html">		rating.lib.php
-		</a><br>
-			<a href="../Ampache/_register.php.html">		register.php
-		</a><br>
-			<a href="../Ampache/_lib---class---registration.class.php.html">		registration.class.php
-		</a><br>
-			<a href="../Ampache/_modules---plugins---RioPlayer.plugin.php.html">		RioPlayer.plugin.php
-		</a><br>
-			<a href="../Ampache/_rss.php.html">		rss.php
-		</a><br>
-			<a href="../Ampache/_lib---class---scrobbler.class.php.html">		scrobbler.class.php
-		</a><br>
-			<a href="../Ampache/_search.php.html">		search.php
-		</a><br>
-			<a href="../Ampache/_admin---shout.php.html">		shout.php
-		</a><br>
-			<a href="../Ampache/_shout.php.html">		shout.php
-		</a><br>
-			<a href="../Ampache/_lib---class---shoutbox.class.php.html">		shoutbox.class.php
-		</a><br>
-			<a href="../Ampache/_modules---localplay---shoutcast.controller.php.html">		shoutcast.controller.php
-		</a><br>
-			<a href="../Ampache/_modules---infotools---Snoopy.class.php.html">		Snoopy.class.php
-		</a><br>
-			<a href="../Ampache/_server---song.ajax.php.html">		song.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---song.class.php.html">		song.class.php
-		</a><br>
-			<a href="../Ampache/_song.php.html">		song.php
-		</a><br>
-			<a href="../Ampache/_bin---sort_files.inc.html">		sort_files.inc
-		</a><br>
-			<a href="../Ampache/_server---stats.ajax.php.html">		stats.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---stats.class.php.html">		stats.class.php
-		</a><br>
-			<a href="../Ampache/_stats.php.html">		stats.php
-		</a><br>
-			<a href="../Ampache/_server---stream.ajax.php.html">		stream.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---stream.class.php.html">		stream.class.php
-		</a><br>
-			<a href="../Ampache/_lib---stream.lib.php.html">		stream.lib.php
-		</a><br>
-			<a href="../Ampache/_stream.php.html">		stream.php
-		</a><br>
-			<a href="../Ampache/_admin---system.php.html">		system.php
-		</a><br>
-			<a href="../Ampache/_server---tag.ajax.php.html">		tag.ajax.php
-		</a><br>
-			<a href="../Ampache/_lib---class---tag.class.php.html">		tag.class.php
-		</a><br>
-			<a href="../Ampache/_test.php.html">		test.php
-		</a><br>
-			<a href="../Ampache/_lib---themes.php.html">		themes.php
-		</a><br>
-			<a href="../Ampache/_lib---class---tmpplaylist.class.php.html">		tmpplaylist.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---update.class.php.html">		update.class.php
-		</a><br>
-			<a href="../Ampache/_update.php.html">		update.php
-		</a><br>
-			<a href="../Ampache/_lib---class---user.class.php.html">		user.class.php
-		</a><br>
-			<a href="../Ampache/_admin---users.php.html">		users.php
-		</a><br>
-			<a href="../Ampache/_util.php.html">		util.php
-		</a><br>
-			<a href="../Ampache/_lib---class---vainfo.class.php.html">		vainfo.class.php
-		</a><br>
-			<a href="../Ampache/_modules---validatemail---validateEmail.php.html">		validateEmail.php
-		</a><br>
-			<a href="../Ampache/_modules---validatemail---validateEmailFormat.php.html">		validateEmailFormat.php
-		</a><br>
-			<a href="../Ampache/_lib---class---vauth.class.php.html">		vauth.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---video.class.php.html">		video.class.php
-		</a><br>
-			<a href="../Ampache/_bin---write_playlists.inc.html">		write_playlists.inc
-		</a><br>
-			<a href="../Ampache/_bin---write_tags.inc.html">		write_tags.inc
-		</a><br>
-			<a href="../Ampache/_server---xml.server.php.html">		xml.server.php
-		</a><br>
-			<a href="../Ampache/_lib---class---xmldata.class.php.html">		xmldata.class.php
-		</a><br>
-			<a href="../Ampache/_server---xmlrpc.server.php.html">		xmlrpc.server.php
-		</a><br>
-			<a href="../Ampache/_lib---class---xmlrpcclient.class.php.html">		xmlrpcclient.class.php
-		</a><br>
-			<a href="../Ampache/_lib---class---xmlrpcserver.class.php.html">		xmlrpcserver.class.php
-		</a><br>
-			<a href="../Ampache/_modules---flash---xspf_player.php.html">		xspf_player.php
-		</a><br>
-	  </div><br />
-      
-            <b>Interfaces:</b><br />
-        <div class="package">
-		    		<a href="../Ampache/media.html">media</a><br />
-	  </div>
-      
-            <b>Classes:</b><br />
-        <div class="package">
-		    		<a href="../Ampache/Access.html">Access</a><br />
-	    		<a href="../Ampache/Ajax.html">Ajax</a><br />
-	    		<a href="../Ampache/Album.html">Album</a><br />
-	    		<a href="../Ampache/AmazonSearch.html">AmazonSearch</a><br />
-	    		<a href="../Ampache/AmpacheHttpq.html">AmpacheHttpq</a><br />
-	    		<a href="../Ampache/AmpacheLastfm.html">AmpacheLastfm</a><br />
-	    		<a href="../Ampache/AmpacheMail.html">AmpacheMail</a><br />
-	    		<a href="../Ampache/AmpacheMpd.html">AmpacheMpd</a><br />
-	    		<a href="../Ampache/AmpacheRioPlayer.html">AmpacheRioPlayer</a><br />
-	    		<a href="../Ampache/AmpacheRSS.html">AmpacheRSS</a><br />
-	    		<a href="../Ampache/AmpacheShoutCast.html">AmpacheShoutCast</a><br />
-	    		<a href="../Ampache/Api.html">Api</a><br />
-	    		<a href="../Ampache/archive.html">archive</a><br />
-	    		<a href="../Ampache/Artist.html">Artist</a><br />
-	    		<a href="../Ampache/Browse.html">Browse</a><br />
-	    		<a href="../Ampache/bzip_file.html">bzip_file</a><br />
-	    		<a href="../Ampache/captcha.html">captcha</a><br />
-	    		<a href="../Ampache/Config.html">Config</a><br />
-	    		<a href="../Ampache/Core.html">Core</a><br />
-	    		<a href="../Ampache/database_object.html">database_object</a><br />
-	    		<a href="../Ampache/Dba.html">Dba</a><br />
-	    		<a href="../Ampache/Democratic.html">Democratic</a><br />
-	    		<a href="../Ampache/easy_captcha.html">easy_captcha</a><br />
-	    		<a href="../Ampache/easy_captcha_dxy_spike.html">easy_captcha_dxy_spike</a><br />
-	    		<a href="../Ampache/easy_captcha_dxy_wave.html">easy_captcha_dxy_wave</a><br />
-	    		<a href="../Ampache/easy_captcha_fuzzy.html">easy_captcha_fuzzy</a><br />
-	    		<a href="../Ampache/easy_captcha_graphic.html">easy_captcha_graphic</a><br />
-	    		<a href="../Ampache/easy_captcha_graphic_image_disturbed.html">easy_captcha_graphic_image_disturbed</a><br />
-	    		<a href="../Ampache/easy_captcha_graphic_image_waved.html">easy_captcha_graphic_image_waved</a><br />
-	    		<a href="../Ampache/easy_captcha_persistent_grant.html">easy_captcha_persistent_grant</a><br />
-	    		<a href="../Ampache/easy_captcha_spamfree_no_new_urls.html">easy_captcha_spamfree_no_new_urls</a><br />
-	    		<a href="../Ampache/easy_captcha_text_disable.html">easy_captcha_text_disable</a><br />
-	    		<a href="../Ampache/easy_captcha_text_math_formula.html">easy_captcha_text_math_formula</a><br />
-	    		<a href="../Ampache/easy_captcha_utility.html">easy_captcha_utility</a><br />
-	    		<a href="../Ampache/Error.html">Error</a><br />
-	    		<a href="../Ampache/Flag.html">Flag</a><br />
-	    		<a href="../Ampache/Genre.html">Genre</a><br />
-	    		<a href="../Ampache/gzip_file.html">gzip_file</a><br />
-	    		<a href="../Ampache/HttpQPlayer.html">HttpQPlayer</a><br />
-	    		<a href="../Ampache/jamendoSearch.html">jamendoSearch</a><br />
-	    		<a href="../Ampache/LastFMSearch.html">LastFMSearch</a><br />
-	    		<a href="../Ampache/Localplay.html">Localplay</a><br />
-	    		<a href="../Ampache/localplay_controller.html">localplay_controller</a><br />
-	    		<a href="../Ampache/mp3tunes.html">mp3tunes</a><br />
-	    		<a href="../Ampache/mpd.html">mpd</a><br />
-	    		<a href="../Ampache/nusoapservermime.html">nusoapservermime</a><br />
-	    		<a href="../Ampache/nusoap_base.html">nusoap_base</a><br />
-	    		<a href="../Ampache/nusoap_client.html">nusoap_client</a><br />
-	    		<a href="../Ampache/nusoap_client_mime.html">nusoap_client_mime</a><br />
-	    		<a href="../Ampache/nusoap_fault.html">nusoap_fault</a><br />
-	    		<a href="../Ampache/nusoap_parser.html">nusoap_parser</a><br />
-	    		<a href="../Ampache/nusoap_server.html">nusoap_server</a><br />
-	    		<a href="../Ampache/nusoap_server_mime.html">nusoap_server_mime</a><br />
-	    		<a href="../Ampache/nusoap_wsdlcache.html">nusoap_wsdlcache</a><br />
-	    		<a href="../Ampache/nusoap_xmlschema.html">nusoap_xmlschema</a><br />
-	    		<a href="../Ampache/Playlist.html">Playlist</a><br />
-	    		<a href="../Ampache/Plugin.html">Plugin</a><br />
-	    		<a href="../Ampache/Preference.html">Preference</a><br />
-	    		<a href="../Ampache/Radio.html">Radio</a><br />
-	    		<a href="../Ampache/Random.html">Random</a><br />
-	    		<a href="../Ampache/Rating.html">Rating</a><br />
-	    		<a href="../Ampache/Registration.html">Registration</a><br />
-	    		<a href="../Ampache/scrobbler.html">scrobbler</a><br />
-	    		<a href="../Ampache/shoutBox.html">shoutBox</a><br />
-	    		<a href="../Ampache/Snoopy.html">Snoopy</a><br />
-	    		<a href="../Ampache/soapclient.html">soapclient</a><br />
-	    		<a href="../Ampache/soapclientmime.html">soapclientmime</a><br />
-	    		<a href="../Ampache/soapval.html">soapval</a><br />
-	    		<a href="../Ampache/soap_fault.html">soap_fault</a><br />
-	    		<a href="../Ampache/soap_parser.html">soap_parser</a><br />
-	    		<a href="../Ampache/soap_server.html">soap_server</a><br />
-	    		<a href="../Ampache/soap_transport_http.html">soap_transport_http</a><br />
-	    		<a href="../Ampache/Song.html">Song</a><br />
-	    		<a href="../Ampache/Stats.html">Stats</a><br />
-	    		<a href="../Ampache/Stream.html">Stream</a><br />
-	    		<a href="../Ampache/Tag.html">Tag</a><br />
-	    		<a href="../Ampache/tar_file.html">tar_file</a><br />
-	    		<a href="../Ampache/tmpPlaylist.html">tmpPlaylist</a><br />
-	    		<a href="../Ampache/Update.html">Update</a><br />
-	    		<a href="../Ampache/User.html">User</a><br />
-	    		<a href="../Ampache/vainfo.html">vainfo</a><br />
-	    		<a href="../Ampache/vauth.html">vauth</a><br />
-	    		<a href="../Ampache/Video.html">Video</a><br />
-	    		<a href="../Ampache/wsdl.html">wsdl</a><br />
-	    		<a href="../Ampache/wsdlcache.html">wsdlcache</a><br />
-	    		<a href="../Ampache/xmlData.html">xmlData</a><br />
-	    		<a href="../Ampache/xmlRpcClient.html">xmlRpcClient</a><br />
-	    		<a href="../Ampache/xmlRpcServer.html">xmlRpcServer</a><br />
-	    		<a href="../Ampache/XMLSchema.html">XMLSchema</a><br />
-	    		<a href="../Ampache/zip_file.html">zip_file</a><br />
-	  </div>
-                </td>
-    <td>
-      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
 
-<h1>Class: Localplay</h1>
-Source Location: /lib/class/localplay.class.php<br /><br />
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																										
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#get_controllers" title="details" class="method-name">get_controllers</a>
+										()
+									</div>
+																																																														
+				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#is_enabled" title="details" class="method-name">is_enabled</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$controller</span>)
+									</div>
+																																																																																																																																																																										
+				<div class="method-definition">
+											<span class="method-result">Localplay</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#add" title="details" class="method-name">add</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$object</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#add_instance" title="details" class="method-name">add_instance</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#add_url" title="details" class="method-name">add_url</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$urls</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#connect" title="details" class="method-name">connect</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#current_instance" title="details" class="method-name">current_instance</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#delete_all" title="details" class="method-name">delete_all</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#delete_instance" title="details" class="method-name">delete_instance</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$instance_uid</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#delete_track" title="details" class="method-name">delete_track</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$object_id</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#format" title="details" class="method-name">format</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#format_name" title="details" class="method-name">format_name</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get" title="details" class="method-name">get</a>
+										()
+									</div>
+																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_instance" title="details" class="method-name">get_instance</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$uid</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_instances" title="details" class="method-name">get_instances</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_instance_fields" title="details" class="method-name">get_instance_fields</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_user_playing" title="details" class="method-name">get_user_playing</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_user_state" title="details" class="method-name">get_user_state</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$state</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#install" title="details" class="method-name">install</a>
+										()
+									</div>
+																						
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#next" title="details" class="method-name">next</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#pause" title="details" class="method-name">pause</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#play" title="details" class="method-name">play</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#player_loaded" title="details" class="method-name">player_loaded</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#prev" title="details" class="method-name">prev</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#random" title="details" class="method-name">random</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$state</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#repeat" title="details" class="method-name">repeat</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$state</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_active_instance" title="details" class="method-name">set_active_instance</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$instance</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#skip" title="details" class="method-name">skip</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$track_id</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#status" title="details" class="method-name">status</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#stop" title="details" class="method-name">stop</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#uninstall" title="details" class="method-name">uninstall</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#update_instance" title="details" class="method-name">update_instance</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$uid</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#volume_down" title="details" class="method-name">volume_down</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#volume_mute" title="details" class="method-name">volume_mute</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#volume_set" title="details" class="method-name">volume_set</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#volume_up" title="details" class="method-name">volume_up</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_get_info" title="details" class="method-name">_get_info</a>
+										()
+									</div>
+														
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_load_player" title="details" class="method-name">_load_player</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
 
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$type" id="$type"><!-- --></A>
+<div class="evenrow">
 
-<table width="100%" border="0">
-<tr><td valign="top">
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$type</span>
+						(line <span class="line-number">51</span>)
+		</span>
+	</div>
 
-<h3><a href="#class_details">Class Overview</a></h3>
-<pre></pre><br />
-<div class="description"></div><br /><br />
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
 
-
-
-
-
-
-        
-</td>
-
-<td valign="top">
-<h3><a href="#class_vars">Variables</a></h3>
-<ul>
-    <li><a href="../Ampache/Localplay.html#var$type">$type</a></li>
-  </ul>
-</td>
-
-
-<td valign="top">
-<h3><a href="#class_methods">Methods</a></h3>
-<ul>
-    <li><a href="../Ampache/Localplay.html#method__construct">__construct</a></li>
-    <li><a href="../Ampache/Localplay.html#methodadd">add</a></li>
-    <li><a href="../Ampache/Localplay.html#methodadd_instance">add_instance</a></li>
-    <li><a href="../Ampache/Localplay.html#methodadd_url">add_url</a></li>
-    <li><a href="../Ampache/Localplay.html#methodconnect">connect</a></li>
-    <li><a href="../Ampache/Localplay.html#methodcurrent_instance">current_instance</a></li>
-    <li><a href="../Ampache/Localplay.html#methoddelete_all">delete_all</a></li>
-    <li><a href="../Ampache/Localplay.html#methoddelete_instance">delete_instance</a></li>
-    <li><a href="../Ampache/Localplay.html#methoddelete_track">delete_track</a></li>
-    <li><a href="../Ampache/Localplay.html#methodformat">format</a></li>
-    <li><a href="../Ampache/Localplay.html#methodformat_name">format_name</a></li>
-    <li><a href="../Ampache/Localplay.html#methodget">get</a></li>
-    <li><a href="../Ampache/Localplay.html#methodget_controllers">get_controllers</a></li>
-    <li><a href="../Ampache/Localplay.html#methodget_instance">get_instance</a></li>
-    <li><a href="../Ampache/Localplay.html#methodget_instances">get_instances</a></li>
-    <li><a href="../Ampache/Localplay.html#methodget_instance_fields">get_instance_fields</a></li>
-    <li><a href="../Ampache/Localplay.html#methodget_user_playing">get_user_playing</a></li>
-    <li><a href="../Ampache/Localplay.html#methodget_user_state">get_user_state</a></li>
-    <li><a href="../Ampache/Localplay.html#methodinstall">install</a></li>
-    <li><a href="../Ampache/Localplay.html#methodis_enabled">is_enabled</a></li>
-    <li><a href="../Ampache/Localplay.html#methodnext">next</a></li>
-    <li><a href="../Ampache/Localplay.html#methodpause">pause</a></li>
-    <li><a href="../Ampache/Localplay.html#methodplay">play</a></li>
-    <li><a href="../Ampache/Localplay.html#methodplayer_loaded">player_loaded</a></li>
-    <li><a href="../Ampache/Localplay.html#methodprev">prev</a></li>
-    <li><a href="../Ampache/Localplay.html#methodrandom">random</a></li>
-    <li><a href="../Ampache/Localplay.html#methodrepeat">repeat</a></li>
-    <li><a href="../Ampache/Localplay.html#methodset_active_instance">set_active_instance</a></li>
-    <li><a href="../Ampache/Localplay.html#methodskip">skip</a></li>
-    <li><a href="../Ampache/Localplay.html#methodstatus">status</a></li>
-    <li><a href="../Ampache/Localplay.html#methodstop">stop</a></li>
-    <li><a href="../Ampache/Localplay.html#methoduninstall">uninstall</a></li>
-    <li><a href="../Ampache/Localplay.html#methodupdate_instance">update_instance</a></li>
-    <li><a href="../Ampache/Localplay.html#methodvolume_down">volume_down</a></li>
-    <li><a href="../Ampache/Localplay.html#methodvolume_mute">volume_mute</a></li>
-    <li><a href="../Ampache/Localplay.html#methodvolume_set">volume_set</a></li>
-    <li><a href="../Ampache/Localplay.html#methodvolume_up">volume_up</a></li>
-  </ul>
-</td>
-
-</tr></table>
-<hr />
-
-<table width="100%" border="0"><tr>
-
-
-
-
-
-
-</tr></table>
-<hr />
-
-<a name="class_details"></a>
-<h3>Class Details</h3>
-<div class="tags">
-[line 22]<br />
-</div><br /><br />
-<div class="top">[ <a href="#top">Top</a> ]</div><br />
-
-<hr />
-<a name="class_vars"></a>
-<h3>Class Variables</h3>
-<div class="tags">
-	<a name="var$type"></a>
-	<p></p>
-	<h4>$type = <span class="value"></span></h4>
-	<p>[line 25]</p>
-  <br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
 </div>
+<a name="var$_function_map" id="$_function_map"><!-- --></A>
+<div class="oddrow">
 
-  <br />
-	<div class="tags">
-  <table border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td><b>Type:</b>&nbsp;&nbsp;</td>
-      <td>mixed</td>
-    </tr>
-      </table>
-	</div><br /><br />
-	<div class="top">[ <a href="#top">Top</a> ]</div><br />
-</div><br />
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_function_map</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">54</span>)
+		</span>
+	</div>
 
-<hr />
-<a name="class_methods"></a>
-<h3>Class Methods</h3>
-<div class="tags">
-  <hr />
-	<a name="methodget_controllers"></a>
-	<h3>static method get_controllers <span class="smalllinenumber">[line 140]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void get_controllers(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
 	
-		get_controllers<br /><br /><p>This returns the controllers that are currently loaded into this instance</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+	
+		
+		
+
 </div>
-<br /><br />
+<a name="var$_player" id="$_player"><!-- --></A>
+<div class="evenrow">
 
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodis_enabled"></a>
-	<h3>static method is_enabled <span class="smalllinenumber">[line 173]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>static void is_enabled(
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_player</span>
+						(line <span class="line-number">57</span>)
+		</span>
+	</div>
 
-$controller)</code>
-    </td></tr></table>
-    </td></tr></table><br />
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
 	
-		is_enabled<br /><br /><p>This returns true or false depending on if the specified controller  is currently enabled</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+	
+		
+		
+
 </div>
-<br /><br />
+<a name="var$_preferences" id="$_preferences"><!-- --></A>
+<div class="oddrow">
 
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_preferences</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number">56</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
 	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$controller</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-
-  <hr />
-	<a name="method__construct"></a>
-	<h3>constructor __construct <span class="smalllinenumber">[line 39]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>Localplay __construct(
-
-$type)</code>
-    </td></tr></table>
-    </td></tr></table><br />
 	
-		Constructor<br /><br /><p>This must be called with a localplay type, it then loads the config  file for the specified type and attempts to load in the function  map, the preferences and the template</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+		
+		
+
 </div>
-<br /><br />
+<a name="var$_template" id="$_template"><!-- --></A>
+<div class="evenrow">
 
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$type</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodadd"></a>
-	<h3>method add <span class="smalllinenumber">[line 270]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void add(
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_template</span>
+						(line <span class="line-number">55</span>)
+		</span>
+	</div>
 
-$object)</code>
-    </td></tr></table>
-    </td></tr></table><br />
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
 	
-		add  This function takes a single object and then passes it to  to the player, this is a required function.<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
+	
+		
+		
+
 </div>
-<br /><br />
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodget_controllers" id="get_controllers"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static get_controllers</span> (line <span class="line-number">166</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_controllers</p>
+<p class="description"><p>This returns the controllers that are currently loaded into this instance</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			get_controllers
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodis_enabled" id="is_enabled"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static is_enabled</span> (line <span class="line-number">199</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">is_enabled</p>
+<p class="description"><p>This returns true or false depending on if the specified controller  is currently enabled</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			is_enabled
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$controller</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$controller</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">65</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Constructor</p>
+<p class="description"><p>This must be called with a localplay type, it then loads the config  file for the specified type and attempts to load in the function  map, the preferences and the template</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">Localplay</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$type</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$type</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodadd" id="add"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">add</span> (line <span class="line-number">296</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">add  This function takes a single object and then passes it to  to the player, this is a required function.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$object</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$object</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodadd_instance" id="add_instance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">add_instance</span> (line <span class="line-number">584</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">add_instance</p>
+<p class="description"><p>This adds a new instance for the current controller type</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add_instance
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodadd_url" id="add_url"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">add_url</span> (line <span class="line-number">312</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">add_url</p>
+<p class="description"><p>This directly adds an array of URLs to the localplay module. This is really how I should  have done add, will migrate to this eventually</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			add_url
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$urls</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$urls</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodconnect" id="connect"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">connect</span> (line <span class="line-number">248</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">connect</p>
+<p class="description"><p>This function attempts to connect to the localplay  player that we are using</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			connect
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodcurrent_instance" id="current_instance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">current_instance</span> (line <span class="line-number">548</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">current_instance</p>
+<p class="description"><p>This returns the UID of the current Instance</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			current_instance
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddelete_all" id="delete_all"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">delete_all</span> (line <span class="line-number">632</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">delete_all</p>
+<p class="description"><p>This removes every song from the players playlist as defined by the delete_all function  map</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			delete_all
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoddelete_instance" id="delete_instance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">delete_instance</span> (line <span class="line-number">594</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">delete_instance</p>
+<p class="description"><p>This removes an instance (it actually calls the players function)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			delete_instance
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$instance_uid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$instance_uid</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelete_track" id="delete_track"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">delete_track</span> (line <span class="line-number">615</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">delete_track</p>
+<p class="description"><p>This removes songs from the players playlist it takes a single ID as provided  by the get command</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			delete_track
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$object_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$object_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodformat" id="format"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">format</span> (line <span class="line-number">107</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">format</p>
+<p class="description"><p>This makes the localplay/plugin information  human readable</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			format
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodformat_name" id="format_name"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">format_name</span> (line <span class="line-number">154</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">format_name</p>
+<p class="description"><p>This function takes the track name and checks to see if 'skip'  is supported in the current player, if so it returns a 'skip to'  link, otherwise it returns just the text</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			format_name
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$name</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget" id="get"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get</span> (line <span class="line-number">384</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get</p>
+<p class="description"><p>This calls the get function of the player and then returns  the array of current songs for display or whatever  an empty array is passed on failure</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_instance" id="get_instance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_instance</span> (line <span class="line-number">560</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_instance</p>
+<p class="description"><p>This returns the specified instance</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_instance
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$uid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$uid</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodget_instances" id="get_instances"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_instances</span> (line <span class="line-number">536</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_instances</p>
+<p class="description"><p>This returns the instances of the current type</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_instances
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_instance_fields" id="get_instance_fields"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_instance_fields</span> (line <span class="line-number">648</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_instance_fields</p>
+<p class="description"><p>This loads the fields from the localplay  player and returns them</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_instance_fields
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_user_playing" id="get_user_playing"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_user_playing</span> (line <span class="line-number">685</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_user_playing</p>
+<p class="description"><p>This attempts to return a nice user friendly  currently playing string</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_user_playing
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodget_user_state" id="get_user_state"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_user_state</span> (line <span class="line-number">661</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">get_user_state</p>
+<p class="description"><p>This function returns a user friendly version  of the current player state</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_user_state
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$state</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$state</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinstall" id="install"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">install</span> (line <span class="line-number">215</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">install</p>
+<p class="description"><p>This runs the install for the localplay controller we've  currently got pimped out</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			install
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodnext" id="next"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">next</span> (line <span class="line-number">488</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">next</p>
+<p class="description"><p>This isn't a required function, it tells the daemon to go to the next  song</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			next
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodpause" id="pause"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">pause</span> (line <span class="line-number">521</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">pause</p>
+<p class="description"><p>This isn't a required function, it tells the daemon to pause the  song</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			pause
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodplay" id="play"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">play</span> (line <span class="line-number">264</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">play</p>
+<p class="description"><p>This function passes NULL and calls the play function of the player  object</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			play
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodplayer_loaded" id="player_loaded"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">player_loaded</span> (line <span class="line-number">91</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">player_loaded</p>
+<p class="description"><p>This returns true / false if the player load  failed / worked</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			player_loaded
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodprev" id="prev"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">prev</span> (line <span class="line-number">504</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">prev</p>
+<p class="description"><p>This isn't a required function, it tells the daemon to go the the previous  song</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			prev
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodrandom" id="random"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">random</span> (line <span class="line-number">348</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">random</p>
+<p class="description"><p>This turns on the random feature of a localplay method  It takes a 0/1 value</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			random
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$state</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$state</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrepeat" id="repeat"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">repeat</span> (line <span class="line-number">331</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">repeat</p>
+<p class="description"><p>This turns the repeat feature of a localplay method on or  off, takes a 0/1 value</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			repeat
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$state</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$state</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset_active_instance" id="set_active_instance"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_active_instance</span> (line <span class="line-number">604</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">set_active_instance</p>
+<p class="description"><p>This sets the active instance of the localplay controller</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_active_instance
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$instance</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$instance</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodskip" id="skip"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">skip</span> (line <span class="line-number">472</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">skip</p>
+<p class="description"><p>This isn't a required function, it tells the daemon to skip to the specified song</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			skip
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$track_id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$track_id</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodstatus" id="status"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">status</span> (line <span class="line-number">365</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">status</p>
+<p class="description"><p>This returns current information about the state of the player  There is an expected array format</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			status
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodstop" id="stop"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">stop</span> (line <span class="line-number">280</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">stop</p>
+<p class="description"><p>This functions passes NULl and calls the stop function of the player  object, it should recieve a true/false boolean value</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			stop
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methoduninstall" id="uninstall"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">uninstall</span> (line <span class="line-number">229</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">uninstall</p>
+<p class="description"><p>This runs the uninstall for the localplay controller we've  currently pimped out</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			uninstall
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodupdate_instance" id="update_instance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">update_instance</span> (line <span class="line-number">572</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">update_instance</p>
+<p class="description"><p>This updates the specified instance with a named array of data (_POST most likely)</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			update_instance
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$uid</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$uid</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$data</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvolume_down" id="volume_down"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">volume_down</span> (line <span class="line-number">441</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">volume_down  This function isn't required. It tells the daemon to decrese the volume  by a pre-defined amount controlled by the controller.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			volume_down
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodvolume_mute" id="volume_mute"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">volume_mute</span> (line <span class="line-number">457</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">volume_mute</p>
+<p class="description"><p>This function isn't required, It tells the daemon to mute all output  It's up to the controller to decide what that actually entails</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			volume_mute
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodvolume_set" id="volume_set"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">volume_set</span> (line <span class="line-number">403</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">volume_set</p>
+<p class="description"><p>This isn't a required function, it sets the volume to a specified value  as passed in the variable it is a 0 - 100 scale the controller is  responsible for adjusting the scale if nessecary</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			volume_set
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvolume_up" id="volume_up"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">volume_up</span> (line <span class="line-number">425</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">volume_up</p>
+<p class="description"><p>This function isn't required. It tells the daemon to increase the volume  by a pre-defined amount controlled by the controller</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			volume_up
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_get_info" id="_get_info"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_get_info</span> (line <span class="line-number">80</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_get_info</p>
+<p class="description"><p>This functions takes the type and attempts to get all the  information needed to load it. Will log errors if there are  any failures, fatal errors will actually return something to the  gui</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_get_info
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method_load_player" id="_load_player"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_load_player</span> (line <span class="line-number">124</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">_load_player</p>
+<p class="description"><p>This function attempts to load the player class that localplay  Will interface with in order to make all this magical stuf work  all LocalPlay modules should be located in /modules/&lt;name&gt;/&lt;name&gt;.class.php</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> private</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_load_player
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
 
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$object</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodadd_instance"></a>
-	<h3>method add_instance <span class="smalllinenumber">[line 558]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void add_instance(
 
-$data)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		add_instance<br /><br /><p>This adds a new instance for the current controller type</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$data</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodadd_url"></a>
-	<h3>method add_url <span class="smalllinenumber">[line 286]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void add_url(
-
-$urls)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		add_url<br /><br /><p>This directly adds an array of URLs to the localplay module. This is really how I should  have done add, will migrate to this eventually</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$urls</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodconnect"></a>
-	<h3>method connect <span class="smalllinenumber">[line 222]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void connect(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		connect<br /><br /><p>This function attempts to connect to the localplay  player that we are using</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodcurrent_instance"></a>
-	<h3>method current_instance <span class="smalllinenumber">[line 522]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void current_instance(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		current_instance<br /><br /><p>This returns the UID of the current Instance</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methoddelete_all"></a>
-	<h3>method delete_all <span class="smalllinenumber">[line 606]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void delete_all(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		delete_all<br /><br /><p>This removes every song from the players playlist as defined by the delete_all function  map</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methoddelete_instance"></a>
-	<h3>method delete_instance <span class="smalllinenumber">[line 568]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void delete_instance(
-
-$instance_uid)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		delete_instance<br /><br /><p>This removes an instance (it actually calls the players function)</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$instance_uid</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methoddelete_track"></a>
-	<h3>method delete_track <span class="smalllinenumber">[line 589]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void delete_track(
-
-$object_id)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		delete_track<br /><br /><p>This removes songs from the players playlist it takes a single ID as provided  by the get command</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$object_id</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodformat"></a>
-	<h3>method format <span class="smalllinenumber">[line 81]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void format(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		format<br /><br /><p>This makes the localplay/plugin information  human readable</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodformat_name"></a>
-	<h3>method format_name <span class="smalllinenumber">[line 128]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void format_name(
-
-$name, 
-$id)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		format_name<br /><br /><p>This function takes the track name and checks to see if 'skip'  is supported in the current player, if so it returns a 'skip to'  link, otherwise it returns just the text</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$name</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$id</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodget"></a>
-	<h3>method get <span class="smalllinenumber">[line 358]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void get(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		get<br /><br /><p>This calls the get function of the player and then returns  the array of current songs for display or whatever  an empty array is passed on failure</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodget_instance"></a>
-	<h3>method get_instance <span class="smalllinenumber">[line 534]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void get_instance(
-
-$uid)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		get_instance<br /><br /><p>This returns the specified instance</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$uid</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodget_instances"></a>
-	<h3>method get_instances <span class="smalllinenumber">[line 510]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void get_instances(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		get_instances<br /><br /><p>This returns the instances of the current type</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodget_instance_fields"></a>
-	<h3>method get_instance_fields <span class="smalllinenumber">[line 622]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void get_instance_fields(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		get_instance_fields<br /><br /><p>This loads the fields from the localplay  player and returns them</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodget_user_playing"></a>
-	<h3>method get_user_playing <span class="smalllinenumber">[line 659]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void get_user_playing(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		get_user_playing<br /><br /><p>This attempts to return a nice user friendly  currently playing string</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodget_user_state"></a>
-	<h3>method get_user_state <span class="smalllinenumber">[line 635]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void get_user_state(
-
-$state)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		get_user_state<br /><br /><p>This function returns a user friendly version  of the current player state</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$state</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodinstall"></a>
-	<h3>method install <span class="smalllinenumber">[line 189]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void install(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		install<br /><br /><p>This runs the install for the localplay controller we've  currently got pimped out</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodnext"></a>
-	<h3>method next <span class="smalllinenumber">[line 462]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void next(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		next<br /><br /><p>This isn't a required function, it tells the daemon to go to the next  song</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodpause"></a>
-	<h3>method pause <span class="smalllinenumber">[line 495]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void pause(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		pause<br /><br /><p>This isn't a required function, it tells the daemon to pause the  song</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodplay"></a>
-	<h3>method play <span class="smalllinenumber">[line 238]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void play(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		play<br /><br /><p>This function passes NULL and calls the play function of the player  object</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodplayer_loaded"></a>
-	<h3>method player_loaded <span class="smalllinenumber">[line 65]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void player_loaded(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		player_loaded<br /><br /><p>This returns true / false if the player load  failed / worked</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodprev"></a>
-	<h3>method prev <span class="smalllinenumber">[line 478]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void prev(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		prev<br /><br /><p>This isn't a required function, it tells the daemon to go the the previous  song</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodrandom"></a>
-	<h3>method random <span class="smalllinenumber">[line 322]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void random(
-
-$state)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		random<br /><br /><p>This turns on the random feature of a localplay method  It takes a 0/1 value</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$state</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodrepeat"></a>
-	<h3>method repeat <span class="smalllinenumber">[line 305]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void repeat(
-
-$state)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		repeat<br /><br /><p>This turns the repeat feature of a localplay method on or  off, takes a 0/1 value</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$state</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodset_active_instance"></a>
-	<h3>method set_active_instance <span class="smalllinenumber">[line 578]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void set_active_instance(
-
-$instance)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		set_active_instance<br /><br /><p>This sets the active instance of the localplay controller</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$instance</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodskip"></a>
-	<h3>method skip <span class="smalllinenumber">[line 446]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void skip(
-
-$track_id)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		skip<br /><br /><p>This isn't a required function, it tells the daemon to skip to the specified song</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$track_id</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodstatus"></a>
-	<h3>method status <span class="smalllinenumber">[line 339]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void status(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		status<br /><br /><p>This returns current information about the state of the player  There is an expected array format</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodstop"></a>
-	<h3>method stop <span class="smalllinenumber">[line 254]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void stop(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		stop<br /><br /><p>This functions passes NULl and calls the stop function of the player  object, it should recieve a true/false boolean value</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methoduninstall"></a>
-	<h3>method uninstall <span class="smalllinenumber">[line 203]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void uninstall(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		uninstall<br /><br /><p>This runs the uninstall for the localplay controller we've  currently pimped out</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodupdate_instance"></a>
-	<h3>method update_instance <span class="smalllinenumber">[line 546]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void update_instance(
-
-$uid, 
-$data)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		update_instance<br /><br /><p>This updates the specified instance with a named array of data (_POST most likely)</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$uid</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$data</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodvolume_down"></a>
-	<h3>method volume_down <span class="smalllinenumber">[line 415]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void volume_down(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		volume_down  This function isn't required. It tells the daemon to decrese the volume  by a pre-defined amount controlled by the controller.<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodvolume_mute"></a>
-	<h3>method volume_mute <span class="smalllinenumber">[line 431]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void volume_mute(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		volume_mute<br /><br /><p>This function isn't required, It tells the daemon to mute all output  It's up to the controller to decide what that actually entails</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodvolume_set"></a>
-	<h3>method volume_set <span class="smalllinenumber">[line 377]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void volume_set(
-
-$value)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		volume_set<br /><br /><p>This isn't a required function, it sets the volume to a specified value  as passed in the variable it is a 0 - 100 scale the controller is  responsible for adjusting the scale if nessecary</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <h4>Parameters:</h4>
-    <div class="tags">
-    <table border="0" cellspacing="0" cellpadding="0">
-          <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>$value</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-        </table>
-    </div><br />
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
-	<a name="methodvolume_up"></a>
-	<h3>method volume_up <span class="smalllinenumber">[line 399]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>void volume_up(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		volume_up<br /><br /><p>This function isn't required. It tells the daemon to increase the volume  by a pre-defined amount controlled by the controller</p><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-</div><br />
-
-
-        <div class="credit">
-		    <hr />
-		    Documentation generated on Thu, 12 Feb 2009 08:00:00 +0900 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
-	      </div>
-      </td></tr></table>
-    </td>
-  </tr>
-</table>
-
-</body>
+	<p class="notes" id="credit">
+		Documentation generated on Thu, 03 Feb 2011 10:59:34 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+	</p>
+	</div></body>
 </html>
