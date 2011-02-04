@@ -92,6 +92,8 @@ if (document.getElementById) {
 			var tree = new WebFXTree('<span class="package">Modules</span>');
 		tree.setBehavior('classic');
 	
+					var todos = new WebFXTreeItem('To-do List', 'todolist.html');
+			tree.add(todos);
 		
 		var class_trees = new WebFXTreeItem('Class trees', 'classtrees_Modules.html');
 		tree.add(class_trees);
@@ -104,7 +106,7 @@ if (document.getElementById) {
 			
 		    		    			var tree_classe = new WebFXTreeItem('Interface(s)', '');
     			
-    			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			
+    			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			    			        			
     			tree.add(tree_classe);
     						    		    			var tree_classe = new WebFXTreeItem('Class(es)', '');
     			
@@ -122,6 +124,8 @@ if (document.getElementById) {
         				tree_classe.add(classe);
         			    			    			            				var classe = new WebFXTreeItem('jamendoSearch', 'Modules/jamendoSearch.html');
         				tree_classe.add(classe);
+        			    			    			            				var classe = new WebFXTreeItem('LastFMSearch', 'Modules/LastFMSearch.html');
+        				tree_classe.add(classe);
         			    			    			            				var classe = new WebFXTreeItem('mp3tunes', 'Modules/mp3tunes.html');
         				tree_classe.add(classe);
         			    			    			            				var classe = new WebFXTreeItem('VlcPlayer', 'Modules/VlcPlayer.html');
@@ -129,26 +133,6 @@ if (document.getElementById) {
         			    			    	
     			tree.add(tree_classe);
     				
-					var tree_function = new WebFXTreeItem('Function(s)', '');
-			
-							var fic = new WebFXTreeItem('album_search', 'Modules/_modules---infotools---lastfm.class.php.html#functionalbum_search');
-				tree_function.add(fic);
-							var fic = new WebFXTreeItem('artist_search', 'Modules/_modules---infotools---lastfm.class.php.html#functionartist_search');
-				tree_function.add(fic);
-							var fic = new WebFXTreeItem('cdata', 'Modules/_modules---infotools---lastfm.class.php.html#functioncdata');
-				tree_function.add(fic);
-							var fic = new WebFXTreeItem('create_parser', 'Modules/_modules---infotools---lastfm.class.php.html#functioncreate_parser');
-				tree_function.add(fic);
-							var fic = new WebFXTreeItem('end_element', 'Modules/_modules---infotools---lastfm.class.php.html#functionend_element');
-				tree_function.add(fic);
-							var fic = new WebFXTreeItem('run_search', 'Modules/_modules---infotools---lastfm.class.php.html#functionrun_search');
-				tree_function.add(fic);
-							var fic = new WebFXTreeItem('setProxy', 'Modules/_modules---infotools---lastfm.class.php.html#functionsetProxy');
-				tree_function.add(fic);
-							var fic = new WebFXTreeItem('start_element', 'Modules/_modules---infotools---lastfm.class.php.html#functionstart_element');
-				tree_function.add(fic);
-					
-			tree.add(tree_function);
 			
 					var tree_file = new WebFXTreeItem('File(s)', '');
 	

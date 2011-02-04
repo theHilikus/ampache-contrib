@@ -92,6 +92,8 @@ if (document.getElementById) {
 			var tree = new WebFXTree('<span class="package">Files</span>');
 		tree.setBehavior('classic');
 	
+					var todos = new WebFXTreeItem('To-do List', 'todolist.html');
+			tree.add(todos);
 		
 		var class_trees = new WebFXTreeItem('Class trees', 'classtrees_Files.html');
 		tree.add(class_trees);
@@ -128,9 +130,15 @@ if (document.getElementById) {
 				tree_file.add(file);
 							var file = new WebFXTreeItem('index.php', 'Files/_index.php.html');
 				tree_file.add(file);
+							var file = new WebFXTreeItem('info.php', 'Files/_info.php.html');
+				tree_file.add(file);
 							var file = new WebFXTreeItem('install.php', 'Files/_install.php.html');
 				tree_file.add(file);
 							var file = new WebFXTreeItem('localplay.php', 'Files/_localplay.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('login.php', 'Files/_login.php.html');
+				tree_file.add(file);
+							var file = new WebFXTreeItem('logout.php', 'Files/_logout.php.html');
 				tree_file.add(file);
 							var file = new WebFXTreeItem('lostpassword.php', 'Files/_lostpassword.php.html');
 				tree_file.add(file);

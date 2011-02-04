@@ -92,6 +92,8 @@ if (document.getElementById) {
 			var tree = new WebFXTree('<span class="package">Ampache</span>');
 		tree.setBehavior('classic');
 	
+					var todos = new WebFXTreeItem('To-do List', 'todolist.html');
+			tree.add(todos);
 		
 		var class_trees = new WebFXTreeItem('Class trees', 'classtrees_Ampache.html');
 		tree.add(class_trees);
@@ -232,15 +234,9 @@ if (document.getElementById) {
 				tree_file.add(file);
 							var file = new WebFXTreeItem('flag.class.php', 'Ampache/_lib---class---flag.class.php.html');
 				tree_file.add(file);
-							var file = new WebFXTreeItem('info.php', 'Ampache/_info.php.html');
-				tree_file.add(file);
 							var file = new WebFXTreeItem('localplay.abstract.php', 'Ampache/_lib---class---localplay.abstract.php.html');
 				tree_file.add(file);
 							var file = new WebFXTreeItem('localplay.class.php', 'Ampache/_lib---class---localplay.class.php.html');
-				tree_file.add(file);
-							var file = new WebFXTreeItem('login.php', 'Ampache/_login.php.html');
-				tree_file.add(file);
-							var file = new WebFXTreeItem('logout.php', 'Ampache/_logout.php.html');
 				tree_file.add(file);
 							var file = new WebFXTreeItem('media.interface.php', 'Ampache/_lib---class---media.interface.php.html');
 				tree_file.add(file);
@@ -265,8 +261,6 @@ if (document.getElementById) {
 							var file = new WebFXTreeItem('scrobbler.class.php', 'Ampache/_lib---class---scrobbler.class.php.html');
 				tree_file.add(file);
 							var file = new WebFXTreeItem('shoutbox.class.php', 'Ampache/_lib---class---shoutbox.class.php.html');
-				tree_file.add(file);
-							var file = new WebFXTreeItem('show_popular.inc.php', 'Ampache/_templates---show_popular.inc.php.html');
 				tree_file.add(file);
 							var file = new WebFXTreeItem('song.class.php', 'Ampache/_lib---class---song.class.php.html');
 				tree_file.add(file);
