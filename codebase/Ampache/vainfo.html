@@ -132,13 +132,17 @@
 								</div>
 		<div class="info-box-body">
 			<div class="var-summary">
-																																																																																																																								<div class="var-title">
+																																																																																																																																<div class="var-title">
 					<span class="var-type">string</span>
 					<a href="#$encoding" title="details" class="var-name">$encoding</a>
 				</div>
 																<div class="var-title">
 					<span class="var-type">string</span>
 					<a href="#$encoding_id3v1" title="details" class="var-name">$encoding_id3v1</a>
+				</div>
+																<div class="var-title">
+					<span class="var-type">string</span>
+					<a href="#$encoding_id3v2" title="details" class="var-name">$encoding_id3v2</a>
 				</div>
 																<div class="var-title">
 					<span class="var-type">string</span>
@@ -226,15 +230,15 @@
 									</div>
 																						
 				<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">array</span>
 										<a href="#set_broken" title="details" class="method-name">set_broken</a>
 										()
 									</div>
 														
 				<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">string</span>
 										<a href="#_clean_tag" title="details" class="method-name">_clean_tag</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$tag</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">null</span>])
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tag</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">null</span>])
 									</div>
 														
 				<div class="method-definition">
@@ -268,9 +272,9 @@
 									</div>
 														
 				<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">mixed</span>
 										<a href="#_id3v2_tag_to_frame" title="details" class="method-name">_id3v2_tag_to_frame</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$tag_name</span>)
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$tag_name</span>)
 									</div>
 														
 				<div class="method-definition">
@@ -286,9 +290,9 @@
 									</div>
 														
 				<div class="method-definition">
-											<span class="method-result">void</span>
+											<span class="method-result">array</span>
 										<a href="#_parse_filename" title="details" class="method-name">_parse_filename</a>
-											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>)
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
 									</div>
 														
 				<div class="method-definition">
@@ -391,7 +395,7 @@
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$encoding_id3v1</span>
-			 = <span class="var-default"> 'ISO-8859-1'</span>			(line <span class="line-number">65</span>)
+			 = <span class="var-default"> 'UTF-8'</span>			(line <span class="line-number">65</span>)
 		</span>
 	</div>
 
@@ -406,14 +410,36 @@
 		
 
 </div>
-<a name="var$filename" id="$filename"><!-- --></A>
+<a name="var$encoding_id3v2" id="$encoding_id3v2"><!-- --></A>
 <div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">string</span>
+			<span class="var-name">$encoding_id3v2</span>
+			 = <span class="var-default"> 'UTF-8'</span>			(line <span class="line-number">72</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default id3v2 encoding</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$filename" id="$filename"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">string</span>
 			<span class="var-name">$filename</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">73</span>)
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">80</span>)
 		</span>
 	</div>
 
@@ -429,13 +455,13 @@
 
 </div>
 <a name="var$tags" id="$tags"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">array</span>
 			<span class="var-name">$tags</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">87</span>)
+			 = <span class="var-default">array()</span>			(line <span class="line-number">94</span>)
 		</span>
 	</div>
 
@@ -451,13 +477,13 @@
 
 </div>
 <a name="var$type" id="$type"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$type</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">80</span>)
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">87</span>)
 		</span>
 	</div>
 
@@ -473,13 +499,13 @@
 
 </div>
 <a name="var$_broken" id="$_broken"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">boolean</span>
 			<span class="var-name">$_broken</span>
-			 = <span class="var-default"> false</span>			(line <span class="line-number">145</span>)
+			 = <span class="var-default"> false</span>			(line <span class="line-number">152</span>)
 		</span>
 	</div>
 
@@ -495,13 +521,13 @@
 
 </div>
 <a name="var$_dir_pattern" id="$_dir_pattern"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$_dir_pattern</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">130</span>)
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">137</span>)
 		</span>
 	</div>
 
@@ -517,13 +543,13 @@
 
 </div>
 <a name="var$_file_encoding" id="$_file_encoding"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$_file_encoding</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">116</span>)
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">123</span>)
 		</span>
 	</div>
 
@@ -539,13 +565,13 @@
 
 </div>
 <a name="var$_file_pattern" id="$_file_pattern"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">string</span>
 			<span class="var-name">$_file_pattern</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">123</span>)
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">130</span>)
 		</span>
 	</div>
 
@@ -561,13 +587,13 @@
 
 </div>
 <a name="var$_getID3" id="$_getID3"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">object</span>
 			<span class="var-name">$_getID3</span>
-			 = <span class="var-default"> ''</span>			(line <span class="line-number">102</span>)
+			 = <span class="var-default"> ''</span>			(line <span class="line-number">109</span>)
 		</span>
 	</div>
 
@@ -583,13 +609,13 @@
 
 </div>
 <a name="var$_iconv" id="$_iconv"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">boolean</span>
 			<span class="var-name">$_iconv</span>
-			 = <span class="var-default"> false</span>			(line <span class="line-number">109</span>)
+			 = <span class="var-default"> false</span>			(line <span class="line-number">116</span>)
 		</span>
 	</div>
 
@@ -605,13 +631,13 @@
 
 </div>
 <a name="var$_pathinfo" id="$_pathinfo"><!-- --></A>
-<div class="evenrow">
+<div class="oddrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">array</span>
 			<span class="var-name">$_pathinfo</span>
-						(line <span class="line-number">138</span>)
+						(line <span class="line-number">145</span>)
 		</span>
 	</div>
 
@@ -627,13 +653,13 @@
 
 </div>
 <a name="var$_raw" id="$_raw"><!-- --></A>
-<div class="oddrow">
+<div class="evenrow">
 
 	<div class="var-header">
 		<span class="var-title">
 			<span class="var-type">array</span>
 			<span class="var-name">$_raw</span>
-			 = <span class="var-default">array()</span>			(line <span class="line-number">95</span>)
+			 = <span class="var-default">array()</span>			(line <span class="line-number">102</span>)
 		</span>
 	</div>
 
@@ -664,10 +690,10 @@
 		<div class="info-box-body">
 			<A NAME='method_detail'></A>
 <a name="methodclean_tag_info" id="clean_tag_info"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">static clean_tag_info</span> (line <span class="line-number">328</span>)
+		<span class="method-title">static clean_tag_info</span> (line <span class="line-number">361</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -700,10 +726,10 @@
 			
 	</div>
 <a name="methodget_tag_type" id="get_tag_type"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">static get_tag_type</span> (line <span class="line-number">297</span>)
+		<span class="method-title">static get_tag_type</span> (line <span class="line-number">330</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -733,10 +759,10 @@
 			
 	</div>
 <a name="method__construct" id="__construct"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">Constructor __construct</span> (line <span class="line-number">165</span>)
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">172</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -783,10 +809,10 @@
 			
 	</div>
 <a name="methodget_info" id="get_info"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">get_info</span> (line <span class="line-number">256</span>)
+		<span class="method-title">get_info</span> (line <span class="line-number">289</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -808,21 +834,22 @@
 			
 	</div>
 <a name="methodset_broken" id="set_broken"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">set_broken</span> (line <span class="line-number">1147</span>)
+		<span class="method-title">set_broken</span> (line <span class="line-number">1196</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">set_broken</p>
 <p class="description"><p>This fills all tag types with Unknown (Broken)</p></p>
 	<ul class="tags">
+				<li><span class="field">return:</span> Return broken title, album, artist</li>
 				<li><span class="field">access:</span> public</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">array</span>
 		<span class="method-name">
 			set_broken
 		</span>
@@ -833,43 +860,44 @@
 			
 	</div>
 <a name="method_clean_tag" id="_clean_tag"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">_clean_tag</span> (line <span class="line-number">1120</span>)
+		<span class="method-title">_clean_tag</span> (line <span class="line-number">1166</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">_clean_tag</p>
 <p class="description"><p>This function cleans up the tag that it's passed using Iconv  if we've got it. It also takes an optional encoding param  for the cases where we know what the tags source encoding  is, and or if it's different then the encoding recorded  in the file</p></p>
 	<ul class="tags">
+				<li><span class="field">return:</span> Return encoded string</li>
 				<li><span class="field">access:</span> private</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">string</span>
 		<span class="method-name">
 			_clean_tag
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$tag</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">null</span>])
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tag</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$encoding</span> = <span class="var-default">null</span>])
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$tag</span>			</li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tag</span><span class="var-description">: Encoding string</span>			</li>
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$encoding</span>			</li>
+				<span class="var-type">string</span>
+				<span class="var-name">$encoding</span><span class="var-description">: Encode charset</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="method_clean_type" id="_clean_type"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">_clean_type</span> (line <span class="line-number">667</span>)
+		<span class="method-title">_clean_type</span> (line <span class="line-number">700</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -895,10 +923,10 @@
 			
 	</div>
 <a name="method_get_info" id="_get_info"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">_get_info</span> (line <span class="line-number">624</span>)
+		<span class="method-title">_get_info</span> (line <span class="line-number">657</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -920,10 +948,10 @@
 			
 	</div>
 <a name="method_get_plugin_tags" id="_get_plugin_tags"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">_get_plugin_tags</span> (line <span class="line-number">602</span>)
+		<span class="method-title">_get_plugin_tags</span> (line <span class="line-number">635</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -945,10 +973,10 @@
 			
 	</div>
 <a name="method_get_tags" id="_get_tags"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">_get_tags</span> (line <span class="line-number">527</span>)
+		<span class="method-title">_get_tags</span> (line <span class="line-number">560</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -970,10 +998,10 @@
 			
 	</div>
 <a name="method_get_type" id="_get_type"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">_get_type</span> (line <span class="line-number">474</span>)
+		<span class="method-title">_get_type</span> (line <span class="line-number">507</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -995,40 +1023,41 @@
 			
 	</div>
 <a name="method_id3v2_tag_to_frame" id="_id3v2_tag_to_frame"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">_id3v2_tag_to_frame</span> (line <span class="line-number">1091</span>)
+		<span class="method-title">_id3v2_tag_to_frame</span> (line <span class="line-number">1132</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">_id3v2_tag_to_frame</p>
 <p class="description"><p>This translates the tag name to a frame, if there a many it returns the first  one if finds that exists in the raw</p></p>
 	<ul class="tags">
+				<li><span class="field">return:</span> If found id3v2 frame, return frame. If not found, return false.</li>
 				<li><span class="field">access:</span> private</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">mixed</span>
 		<span class="method-name">
 			_id3v2_tag_to_frame
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$tag_name</span>)
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$tag_name</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$tag_name</span>			</li>
+				<span class="var-type">string</span>
+				<span class="var-name">$tag_name</span><span class="var-description">: Tag name</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="method_parse_ape" id="_parse_ape"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_ape</span> (line <span class="line-number">859</span>)
+		<span class="method-title">_parse_ape</span> (line <span class="line-number">892</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1055,10 +1084,10 @@
 			
 	</div>
 <a name="method_parse_avi" id="_parse_avi"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_avi</span> (line <span class="line-number">951</span>)
+		<span class="method-title">_parse_avi</span> (line <span class="line-number">984</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1085,40 +1114,41 @@
 			
 	</div>
 <a name="method_parse_filename" id="_parse_filename"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_filename</span> (line <span class="line-number">1047</span>)
+		<span class="method-title">_parse_filename</span> (line <span class="line-number">1084</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
 <p class="short-description">_parse_filename</p>
 <p class="description"><p>This function uses the passed file and dir patterns  To pull out extra tag information and populate it into  its own array</p></p>
 	<ul class="tags">
+				<li><span class="field">return:</span> Parsed results</li>
 				<li><span class="field">access:</span> private</li>
 			</ul>
 	
 	<div class="method-signature">
-		<span class="method-result">void</span>
+		<span class="method-result">array</span>
 		<span class="method-name">
 			_parse_filename
 		</span>
-					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>)
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$filename</span>)
 			</div>
 	
 			<ul class="parameters">
 					<li>
-				<span class="var-type"></span>
-				<span class="var-name">$filename</span>			</li>
+				<span class="var-type">string</span>
+				<span class="var-name">$filename</span><span class="var-description">: Filename that want to parse</span>			</li>
 				</ul>
 		
 			
 	</div>
 <a name="method_parse_flv" id="_parse_flv"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_flv</span> (line <span class="line-number">1025</span>)
+		<span class="method-title">_parse_flv</span> (line <span class="line-number">1058</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1145,10 +1175,10 @@
 			
 	</div>
 <a name="method_parse_id3v1" id="_parse_id3v1"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_id3v1</span> (line <span class="line-number">768</span>)
+		<span class="method-title">_parse_id3v1</span> (line <span class="line-number">801</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1174,10 +1204,10 @@
 			
 	</div>
 <a name="method_parse_id3v2" id="_parse_id3v2"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_id3v2</span> (line <span class="line-number">792</span>)
+		<span class="method-title">_parse_id3v2</span> (line <span class="line-number">825</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1203,10 +1233,10 @@
 			
 	</div>
 <a name="method_parse_lyrics" id="_parse_lyrics"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_lyrics</span> (line <span class="line-number">701</span>)
+		<span class="method-title">_parse_lyrics</span> (line <span class="line-number">734</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1233,10 +1263,10 @@
 			
 	</div>
 <a name="method_parse_mpg" id="_parse_mpg"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_mpg</span> (line <span class="line-number">972</span>)
+		<span class="method-title">_parse_mpg</span> (line <span class="line-number">1005</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1263,10 +1293,10 @@
 			
 	</div>
 <a name="method_parse_quicktime" id="_parse_quicktime"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_quicktime</span> (line <span class="line-number">912</span>)
+		<span class="method-title">_parse_quicktime</span> (line <span class="line-number">945</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1293,10 +1323,10 @@
 			
 	</div>
 <a name="method_parse_riff" id="_parse_riff"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_riff</span> (line <span class="line-number">887</span>)
+		<span class="method-title">_parse_riff</span> (line <span class="line-number">920</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1323,10 +1353,10 @@
 			
 	</div>
 <a name="method_parse_vorbiscomment" id="_parse_vorbiscomment"><!-- --></a>
-<div class="evenrow">
+<div class="oddrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_vorbiscomment</span> (line <span class="line-number">725</span>)
+		<span class="method-title">_parse_vorbiscomment</span> (line <span class="line-number">758</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1353,10 +1383,10 @@
 			
 	</div>
 <a name="method_parse_wmv" id="_parse_wmv"><!-- --></a>
-<div class="oddrow">
+<div class="evenrow">
 	
 	<div class="method-header">
-		<span class="method-title">_parse_wmv</span> (line <span class="line-number">993</span>)
+		<span class="method-title">_parse_wmv</span> (line <span class="line-number">1026</span>)
 	</div> 
 	
 	<!-- ========== Info from phpDoc block ========= -->
@@ -1388,7 +1418,7 @@
 
 
 	<p class="notes" id="credit">
-		Documentation generated on Fri, 04 Feb 2011 09:46:16 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
+		Documentation generated on Mon, 07 Feb 2011 13:05:44 +0900 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.3</a>
 	</p>
 	</div></body>
 </html>
